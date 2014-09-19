@@ -39,15 +39,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
-        $.get("head.html", function (data) {
-            $("#head").html(data);
-        });
-
-        $.get("footer.html", function (data) {
-            alert(data);
-            $('body').append(data);
-            //$(data).appendTo('body');
-        });
+        //公共部分加载
+        $("#head").load("head.html");
+        $("#footer").load("footer.html");
     </script>
 </head>
 <body>
@@ -466,6 +460,6 @@
         </div>
 
     </div>
-
+    <div id="footer"></div>
 </body>
 </html>
