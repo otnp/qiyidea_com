@@ -60,3 +60,25 @@ width: 60px;
 .item-rate em {
 color: #555;
 }
+
+/* index page footer img logo */
+.partner {
+    margin-top:50px;
+padding-top: 33px;
+height: 83px;
+background: #d0e0e3;
+text-align: center;
+}
+.partner ul{margin:0}
+.list-inline>li:first-child {
+padding-left: 0;
+}
+.list-inline>li {
+display: inline-block;
+}
+
+footer-info {
+height: 226px;
+background: #424242;
+padding-top: 24px;
+}
