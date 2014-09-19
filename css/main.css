@@ -23,8 +23,15 @@ body {
   color: #5a5a5a;
 }
 
-
-
+.mtmb15 {
+margin:15px 0;
+}
+.mt5mb15 {
+margin:5px 0 15px 0;
+}
+div.mp0,p.mp0,h3.mp0 {
+margin:0px; padding:0px;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
