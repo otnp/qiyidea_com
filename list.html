@@ -40,16 +40,17 @@
     <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $.get("head.html", function (data) {
-            //$("#top").html(data);
+            $("#head").html(data);
         });
 
         $.get("footer.html", function (data) {
+            alert(data);
             $(data).appendTo('body');
         });
     </script>
 </head>
 <body>
-
+    <div id="head"></div>
     <div class="container">
         <h2 class="bs-docs-featurette-title text-center">为所有学生提供一个孵化梦想的平台。</h2>
         <p class="lead text-center"> 全部  筹资金  筹实物  找伙伴 搞活动   最新  最热</p>
