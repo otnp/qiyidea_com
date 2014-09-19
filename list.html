@@ -461,11 +461,12 @@
         //$("#head").load("head.html");
         $(function () {
             //公共部分加载
-            $("#head").load("head.html");
-            $("#footer").load("footer.html");
-            //$.get("head.html", function (data) {
-            //    $("#head").html(data);
-            //});
+            //$("#head").load("head.html");
+            //$("#footer").load("footer.html");
+            $.get("head.html", function (data) {
+                $("#head").html(data);
+                $("#footer").load("footer.html");
+            });
             //$.get("footer.html", function (data) {
             //    $("#footer").html(data);
             //});
