@@ -1,0 +1,62 @@
+﻿/* index list   */
+.thumbnail {
+padding:0;
+}
+.thumbnail>.caption>p.intro {
+    overflow:hidden;
+    max-height:100px;
+    height:100px;
+}
+.thumbnail> a> img {
+    height: 140px; width: 220px; display: block;
+}
+.thumbnail > .progress {
+    margin-bottom:0px; border-radius:0; height:5px;
+}
+.thumbnail > .progress>.progress-bar {
+    background-color:#62D8FF;
+}
+
+
+.caption h5 {
+    min-height:30px;
+    overflow:hidden;
+    max-height:30px;
+    height:30px;
+}
+.caption h5 a {
+    color:#333;
+}
+    .caption h5 a:hover {
+        text-decoration:none;
+        color:#FF6699; 
+    }
+.item-rate {
+padding: 8px 10px 15px 10px;
+line-height: 18px;
+color: #A4A4A4;
+position: relative;
+}
+
+.rate1 {
+display: block;
+float: left;
+text-align: left;
+width: 50px;
+}
+.rate2 {
+display: block;
+float: left;
+text-align: center;
+width: 76px;
+}
+.rate3 {
+display: block;
+float: right;
+text-align: right;
+width: 60px;
+}
+
+.item-rate em {
+color: #555;
+}
