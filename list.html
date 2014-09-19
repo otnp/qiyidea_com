@@ -45,7 +45,8 @@
 
         $.get("footer.html", function (data) {
             alert(data);
-            $(data).appendTo('body');
+            $('body').append(data);
+            //$(data).appendTo('body');
         });
     </script>
 </head>
