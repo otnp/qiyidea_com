@@ -478,8 +478,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
@@ -488,10 +488,11 @@
             //公共部分加载
             $("#head").load("head.html");
             $("#footer").load("footer.html");
-            $.scrollUp({
-                animation: 'fade',
-                activeOverlay: '#00FFFF'
-            });
+            //$.scrollUp({
+            //    animation: 'fade',
+            //    activeOverlay: '#00FFFF'
+            //});
+            $.scrollUp();
         })
         //$.get("head.html", function (data) {
         //    $("#head").html(data);
