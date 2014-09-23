@@ -2,7 +2,12 @@
     font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif !important;
 }
 
-
+.cursor {
+    cursor:pointer;
+}
+.nocursor {
+    cursor:default;
+}
 /********************************************** navbar-static-top.css **************************************/
 .navbar-static-top {
     margin-bottom: 0px;
@@ -26,6 +31,7 @@
 body {
     /* padding-bottom: 40px; */
     color: #5a5a5a;
+    background-color:#fbfbfb;
 }
 
 .mtmb15 {
@@ -34,6 +40,12 @@ body {
 
 .mt5mb15 {
     margin: 5px 0 15px 0;
+}
+.pl15 {
+    padding-left:15px;
+}
+.pt10 {
+    padding-top:10px;
 }
 
 div.mp0, p.mp0, h3.mp0 {
@@ -213,4 +225,25 @@ div.mp0, p.mp0, h3.mp0 {
 
 span.ren-info-msg-bell-badge {
 position: absolute; top: 10px; left: 28px; height: 18px; min-width: 20px; padding: 0 3px; border-radius: 8px; background: #e62828; text-align: center; line-height: 17px; color: white; font-size: 11px; z-index:99
+}
+
+/* tab css */
+.tabbable > .nav > li {
+    padding:0;
+}
+.tabbable > .nav>li > a {
+    margin-right:0;
+    border-radius:0;
+    border: 0;
+    border-right: 1px solid #dddddd;
+}
+.tabbable > .nav>li > a:hover {
+    border: 0;
+    margin-bottom:0px;
+    border-right: 1px solid #dddddd;
+}
+
+/* ren-dropdown-menu icon */
+.ren-dropdown-menu i {
+    color:#CACED5;
 }
