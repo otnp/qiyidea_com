@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
+    <meta name="keywords" content="众筹,在校学生众筹,校园众筹,大学生,电商,社交,sns,创业,就业,创客,投资,支持,项目,学生创业,愿望">
+    <meta name="description" content="奇异点（qiyidea.com）——在校学生创业平台，首家利用新概念模式（筹资金、找伙伴、谈想法、搞活动）为在校学生解决社会上创业问题的综合性平台网站。">
+    <meta name="author" content="qiyi.com">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>奇异点・qiyidea.com | 在校学生创业平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/non-responsive.css" rel="stylesheet">
+    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/lyp.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui-noscript.css"></noscript>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../js/assets/html5shiv.min.js"></script>
+      <script src="../js/assets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="carousel slide" data-ride="carousel">
+        <div class="container">
+            <div class="row martop100">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Panel heading without title</div>
+                    <div class="panel-body text-center">
+                        <form role="form" id="choose-school" style="display:block;">
+                            <div class="row text-center martop30 marbottom20">
+                                <p id="nu-section-header" class="section-header">查找你的学校</p>
+                            </div>
+                            <div class="row width70">
+                                <input type="text" class="form-control school-name" id="school-name" placeholder="学校名称">
+                            </div>
+                            <div class="row text-center martop30 marbottom100">
+                                <p id="nu-section-header" class="section-1">查找不到你的学校，<a id="add-school" href="javascript:void(0)">在此添加</a></p>
+                            </div>
+                        </form>
+                        <form role="form" id="add-school-info" style="display:none;">
+                            <div class="row text-center martop30 marbottom20">
+                                <p id="nu-section-header" class="section-header">在下面添加你的学校</p>
+                            </div>
+                            <div class="row" style="width:80%;margin:0px auto;">
+                                <div class="panel panel-default">
+                                    <div class="panel-body paddbottom50">
+                                        <input type="text" class="form-control add-school-name" id="add-school-name" placeholder="学校名称">
+                                        <div class="alert alert-warning alert-danger warning text-left" role="alert" style="display:none;margin-bottom:0px;padding:5px;">
+                                            <strong>出错啦</strong> 学校名称必须填写.
+                                        </div>
+                                        <br>
+                                        <input type="text" class="form-control add-school-address" id="add-school-address" placeholder="地址"><br>
+                                        <div class="dropdown pull-left">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                国家/洲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown pull-left marleft27">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                省份/直辖市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown pull-left marleft27">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                城市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown pull-left marleft27">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                区域&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer text-right">
+                                        <a id="back-search-school" class="pull-left martop5" href="javascript:void(0)">>>返回学校搜索</a>
+                                        <button type="button" class="btn btn-primary add-school-once">添加</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="edit-info-form" class="width70 marbottom50" style="display:none;">
+                            <div class="row text-center martop30 marbottom20">
+                                <p id="nu-section-header" class="section-header">设置你的个人信息</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="text- marbottom100">
+                                    <form name="img-upload" id="img-upload" method="post" enctype="multipart/form-data">
+
+                                        <a class="pull-right userinfo-image" href="#">
+                                            <img class="media-object" src="../img/login/44_140.jpg" alt="...">
+                                            <!-- <section class="c6 clearLeft boxSite">
+                              <figure>
+
+                                  <img class="media-object" src="../img/login/44_140.jpg" alt="...">
+                              </figure>
+                              <div id="img-div" style=";display:none;width:140px;height:140px">
+                                  <p>单击选择图片</p>
+                          <input type="file" id="user-img" name="files[]" multiple="" style="opacity: 0;">
+                              </div>
+                          </section>-->
+
+
+                                            <span class="btn btn-primary fileinput-button martop5 width140">
+                                                <i class="glyphicon glyphicon-upload"></i>
+                                                <span>确定上传新图片</span>
+                                                <input type="file" name="files[]" multiple="">
+                                            </span>
+                                        </a>
+                                    </form>
+                                    <form name="content-upload" id="content-upload">
+                                        <div class="form-group text-left">
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control user-name" id="user-name" placeholder="姓名"><br />
+                                                <div class="dropdown pull-left">
+                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                        年级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="dropdown pull-left marleft27">
+                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                        入学年份&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="comfirm-info-form" class="width70 marbottom50" style="display:none;">
+                            <div class="row text-center martop30 marbottom20">
+                                <p id="nu-section-header" class="section-header">显示标题</p>
+                            </div>
+
+                            <div class="row">
+                                111
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer text-right">
+                        <div class="btn-group">
+                            <button type="button" id="back-first-step" class="btn btn-default" style="width:140px;display:none;">返回第1步</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" id="back-second-step" class="btn btn-default" style="width:140px;display:none;">返回第2步</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary next-step disabled" style="width:140px;display:block;">下一步</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary next-step1" style="width:140px;display:none;">下一步</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary success-info" style="width:140px;display:none;">完成</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#footer").load("footer.html");
+            $(".school-name").focus();
+            $(".school-name").keyup(function () {
+                var schoolname = $(".school-name").val();
+                if (schoolname == "") {
+                    $(".next-step").addClass("disabled");
+                } else {
+                    $(".next-step").removeClass("disabled");
+                }
+            });
+
+
+            $(".userinfo-image").mouseover(function () {
+                $("#img-div").show();
+            });
+            $(".userinfo-image").mouseout(function () {
+                $("#img-div").hide();
+            });
+
+
+        });
+        /*添加学校*/
+        $("#add-school").click(function () {
+            $("#choose-school").toggle();
+            $("#add-school-info").toggle();
+            $(".next-step").addClass("disabled");
+        });
+        /*返回搜索学校*/
+        $("#back-search-school").click(function () {
+            $("#choose-school").toggle();
+            $("#add-school-info").toggle();
+            var schoolname = $(".school-name").val();
+            if (schoolname == "") {
+                $(".next-step").addClass("disabled");
+            } else {
+                $(".next-step").removeClass("disabled");
+            }
+        });
+        /*添加学校*/
+        $(".add-school-once").click(function () {
+            if ($.trim($(".add-school-name").val()) == "") {
+                $(".warning").show();
+            } else {
+                /***提交***/
+                $("#choose-school").toggle();
+                $("#add-school-info").toggle();
+                $(".school-name").val($.trim($(".add-school-name").val()));
+                $(".next-step").removeClass("disabled");
+            }
+        });
+        /*添加学校名称*/
+        $(".add-school-name").keyup(function () {
+            var addschoolname = $(".add-school-name").val();
+            if (addschoolname == "") {
+                $(".warning").show();
+            } else {
+                $(".warning").hide();
+            }
+        });
+
+        /*第一步    下一步*/
+        $(".next-step").click(function () {
+            $("#choose-school").hide();
+            $("#edit-info-form").show();
+            $("#back-first-step").show();
+            $(".next-step").hide();
+            $(".next-step1").show();
+        });
+        /*第二步    下一步*/
+        $(".next-step1").click(function () {
+            $("#edit-info-form").hide();
+            $("#comfirm-info-form").show();
+            $("#back-first-step").hide();
+            $("#back-second-step").show();
+            $(".next-step1").hide();
+            $(".success-info").show();
+        });
+
+        /*返回第一步*/
+        $("#back-first-step").click(function () {
+            $("#choose-school").show();
+            $("#edit-info-form").hide();
+            $(".next-step").show();
+            $(".next-step1").hide();
+            $("#back-first-step").hide();
+        });
+        /*返回第二步*/
+        $("#back-second-step").click(function () {
+            $("#edit-info-form").show();
+            $("#comfirm-info-form").hide();
+            $(".success-info").hide();
+            $("#back-first-step").show();
+            $("#back-second-step").hide();
+            $(".next-step1").show();
+        });
+        var reimg = $("#user-img").val();
+        $("#user-img").on('input', function (e) {
+            alert('Changed!')
+        });
+    </script>
+
+    <!-- The basic File Upload plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>
+
+</body>
+</html>
