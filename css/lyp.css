@@ -34,7 +34,7 @@ box-sizing: border-box;
 }
 
 
-。user-signin-1 .panel {
+.user-signin-1 .panel {
     position:absolute;
     width:100%;
     /* background-color: #FFF; */
@@ -55,6 +55,12 @@ border-radius: 5px;
 -ms-box-sizing: border-box;
 box-sizing: border-box;
     */
+}
+.paddright0 {
+    padding-right:0px;
+}
+.paddleft0 {
+    padding-left:0px;
 }
 a {
     color: #379CE0;
@@ -85,7 +91,7 @@ line-height: 20px;
     border-top: 1px solid #BBB;
 }
 hr {
-    margin-top:0px;border:0;background-color:#bbb;height:1px;
+    margin-top:7px;border:0;background-color:#bbb;height:1px;
 }
 #forgot-pwd-form p{
     font-size: 13px;

@@ -19,7 +19,7 @@
     <!-- Custom styles for this template -->
     <link href="../css/non-responsive.css" rel="stylesheet">
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
     <link href="../css/lyp.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui.css">
     <!-- CSS adjustments for browsers with JavaScript disabled -->
@@ -121,27 +121,29 @@
                             <div class="row">
                                 <div class="text- marbottom100">
                                     <form name="img-upload" id="img-upload" method="post" enctype="multipart/form-data">
+                                        <div class="col-sm-4 pull-right">
+                                            <a class="userinfo-image" href="#">
+                                                <img class="media-object" src="../img/login/44_140.jpg" alt="...">
+                                                <!-- <section class="c6 clearLeft boxSite">
+                                                    <figure>
 
-                                        <a class="pull-right userinfo-image" href="#">
-                                            <img class="media-object" src="../img/login/44_140.jpg" alt="...">
-                                            <!-- <section class="c6 clearLeft boxSite">
-                              <figure>
-
-                                  <img class="media-object" src="../img/login/44_140.jpg" alt="...">
-                              </figure>
-                              <div id="img-div" style=";display:none;width:140px;height:140px">
-                                  <p>单击选择图片</p>
-                          <input type="file" id="user-img" name="files[]" multiple="" style="opacity: 0;">
-                              </div>
-                          </section>-->
-
-
-                                            <span class="btn btn-primary fileinput-button martop5 width140">
-                                                <i class="glyphicon glyphicon-upload"></i>
-                                                <span>确定上传新图片</span>
+                                                        <img class="media-object" src="../img/login/44_140.jpg" alt="...">
+                                                    </figure>
+                                                    <div id="img-div" style=";display:none;width:140px;height:140px">
+                                                        <p>单击选择图片</p>
+                                                <input type="file" id="user-img" name="files[]" multiple="" style="opacity: 0;">
+                                                    </div>
+                                                </section>-->
+                                               
+                                            </a>
+                                            <div class="martop5">
                                                 <input type="file" name="files[]" multiple="">
-                                            </span>
-                                        </a>
+                                                <button type="submit" class="btn btn-primary martop5 start width140 pull-left">
+                                                    <i class="glyphicon glyphicon-upload"></i>
+                                                    <span>开始上传新图片</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </form>
                                     <form name="content-upload" id="content-upload">
                                         <div class="form-group text-left">
@@ -212,6 +214,8 @@
             </div>
         </div>
     </div>
+
+    <div id="footer"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
