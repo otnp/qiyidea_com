@@ -8,6 +8,13 @@
 .nocursor {
     cursor:default;
 }
+a.nulinkunderline:hover {
+    text-decoration:none;
+}
+
+.dropdown-menu {
+  min-width: 0px;
+}
 /********************************************** navbar-static-top.css **************************************/
 .navbar-static-top {
     margin-bottom: 0px;

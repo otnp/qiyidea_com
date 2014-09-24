@@ -15,7 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../css/non-responsive.css" rel="stylesheet">
@@ -36,9 +36,9 @@
 </head>
 <body>
     <div id="head"></div>
-    <div class="clearfix mtmb15" ></div>
+    <div class="clearfix mtmb15"></div>
     <div class="container">
-         
+
         <div class="row">
             <!--left-->
             <div class="col-xs-3">
@@ -50,8 +50,9 @@
                             </a>
                             <div class="media-body">
                                 <h5 class="media-heading">张二天王大一</h5>
-                                <p class="small">项目管理<br>
-                                身份认证信息
+                                <p class="small">
+                                    项目管理<br>
+                                    身份认证信息
                                 </p>
                             </div>
                         </div>
@@ -61,17 +62,29 @@
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-6">群组</div>
+                            <div class="col-lg-6">小组列表</div>
                             <div class="col-lg-6 text-right">
-                                <i class="glyphicon glyphicon-plus cursor"><span class="sr-only">新增</span></i>
+                                <!--<i class="glyphicon glyphicon-plus cursor ren-btn-add-group" data-container="body" data-toggle="popover" data-placement="bottom" ><span class="sr-only">新增</span>
+                                </i>-->
+                                <!-- Split button -->
+                                <div class="btn-group">
+
+                                    <i class="glyphicon glyphicon-plus" data-toggle="dropdown">
+                                        <span class="sr-only">新增</span>
+                                    </i>
+                                    <ul class="dropdown-menu"  role="menu">
+                                        <li><a href="#" ><i class="glyphicon glyphicon-plus"></i>  新建</a></li>
+                                        <li><a href="#"><i class="glyphicon glyphicon-hand-down"></i>  加入</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- List group -->
                     <div class="list-group">
-                        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item">Web设计</a>
                         <a href="#" class="list-group-item">Morbi leo risus</a>
-                        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item">APP开发</a>
                         <a href="#" class="list-group-item">
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">更多</div>
@@ -82,28 +95,33 @@
                         </a>
                     </div>
                 </div>
-                 
+
                 <div class="list-group ">
                     <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
+                        校区<span class="sr-only">此列表为学校群组推荐</span>
+                    </a>
+                    <a href="#" class="list-group-item">Web设计小组</a>
+                    <a href="#" class="list-group-item">电影赏析小组</a>
+                    <a href="#" class="list-group-item">
                         <div class="row">
-                            <div class="col-lg-6">群组</div>
-                            <div class="col-lg-6 text-right">
-                                <i class="glyphicon glyphicon-plus cursor"><span class="sr-only">新增</span></i>
+                            <div class="col-sm-8 col-lg-8">APP开发</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-bullhorn"></i><span class="sr-only">推荐</span>
                             </div>
                         </div>
                     </a>
-                    <a href="#" class="list-group-item">Web设计</a>
-                    <a href="#" class="list-group-item">Morbi leo risus</a>
-                    <a href="#" class="list-group-item">APP开发</a>
+
                     <a href="#" class="list-group-item">
                         <div class="row">
-                            <div class="col-sm-6 col-lg-6">更多</div>
-                            <div class="col-sm-6 col-lg-6 text-right">
+                            <div class="col-sm-8 col-lg-8">更多</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
                                 <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
                             </div>
                         </div>
                     </a>
                 </div>
+
+
             </div>
             <!--right box-->
             <div class="col-xs-9">
@@ -116,7 +134,7 @@
                         <li><a href="#panel-3" data-toggle="tab"><i class="glyphicon glyphicon-ok-circle"></i>&nbsp; 项目</a></li>
                         <li><a href="#panel-4" data-toggle="tab"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; 任务</a></li>
                         <li><a href="#panel-5" data-toggle="tab"><i class="glyphicon glyphicon-signal"></i>&nbsp; 投票</a></li>
-                       
+
                     </ul>
                     <div class="tab-content" style="background: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); padding:20px; ">
                         <div class="tab-pane active" id="panel-1">
@@ -166,9 +184,9 @@
                                                 </div>
                                                 <div class="btn-group btn-group-sm">
                                                     <button type="button" class="btn btn-default ren-btn-tooltip" data-placement="bottom" title="定时信息" data-toggle="modal" data-target=".bs-datetimepicker-modal"><span class="glyphicon glyphicon-time"></span>  <span class="sr-only0 ren-show-datetime-txt"></span></button>
-                                                    
+
                                                 </div>
-                                                  
+
                                             </div>
                                         </div>
                                         <div class="col-lg-4 text-right">
@@ -176,9 +194,9 @@
                                         </div>
 
                                     </div>
-                                </div>    
+                                </div>
                             </form>
-                           
+
 
                         </div>
                         <div class="tab-pane" id="panel-2">
@@ -206,7 +224,7 @@
                                                 <option>New Orleans Saints</option>
                                                 <option>Tampa Bay Buccaneers</option>
                                             </optgroup>
-                                            
+
 
                                         </select>
                                     </div>
@@ -214,7 +232,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="btn-toolbar" role="toolbar">
-                                                 
+
                                                 <div class="btn-group btn-group-sm">
                                                     <button type="button" class="btn btn-default ren-btn-tooltip" data-placement="bottom" title="定时" data-toggle="modal" data-target=".bs-datetimepicker-modal"><span class="glyphicon glyphicon-time"></span> <span class="sr-only">定时信息</span></button>
                                                 </div>
@@ -239,7 +257,7 @@
                         <div class="tab-pane" id="panel-5" contenteditable="true">
                             <p>第5部分内容.</p>
                         </div>
-                         
+
                     </div>
                 </div>
 
@@ -286,13 +304,13 @@
                                         <i class="glyphicon glyphicon-cog ren-icon-edit cursor"><span class="sr-only">编辑</span></i>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
-                     <div class="panel-footer">
-                         <div class="text-right">5小时前</div>
-                     </div>
+                    <div class="panel-footer">
+                        <div class="text-right">5小时前</div>
+                    </div>
                 </div>
 
             </div>
@@ -301,61 +319,7 @@
 
     <div class="clearfix mtmb15"></div>
 
-   
-    <!--<div id="footer">
-        <ul class="ft">
-            <li><span>Qiyidea &copy; 2014 </span></li>
-            <li>
-                <a href="/about">
-                    团队介绍
-                </a>
-            </li>
-            
-            <li>
-                <a href="/newsroom">
-                    联系我们
-                </a>
-            </li>
-            <li>
-                <a href="/contact">
-                    加入我们
-                </a>
-            </li>
-            <li>
-                <a href="/classrooms">
-                    帮助中心
-                </a>
-            </li>
-            
-            <li>
-                <a href="/community">
-                    社区
-                </a>
-            </li>
-            <li>
-                <a href="blog" class="ft-blog">
-                    博客
-                </a>
-            </li>
-            <li>
-                <a href="/support">
-                    项目发起规范
-                </a>
-            </li>
-            <li>
-                <a href="/corporate/privacy-policy?language=en">
-                    隐私
-                </a>
-            </li>
-            <li>
-                <a href="/corporate/terms-of-service?language=en">
-                    服务条款
-                </a>
-            </li>
-             
-
-        </ul>
-    </div>-->
+ 
     <div id="footer"></div>
 
     <!--dialog modal-->
@@ -387,7 +351,7 @@
                                 <input type='text' id="ren-input-time" class="form-control" />
                             </div>
                         </div>
-                      
+
                     </form>
                     <div class="mt5mb15"></div>
                 </div>
@@ -399,6 +363,7 @@
         </div>
     </div>
 
+ 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -410,7 +375,7 @@
     <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
     <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
     <script src="../js/chosen/chosen.jquery.js"></script>
-   
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
@@ -419,6 +384,7 @@
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
+            //最信消息区域鼠标移动显示图标
             $('.ren-icon-edit').hide();
             $('.ren-newest-info').mouseover(function () {
                 $(this).find('.ren-icon-edit').show();
@@ -426,10 +392,14 @@
             $('.ren-newest-info').mouseout(function () {
                 $('.ren-icon-edit').hide();
             });
+            //鼠标移出结束
             //$('.ren-info-note-chosen').chosen();
-            
-           // $('.ren-btn-tooltip').tooltip('toggle');
+
+            // $('.ren-btn-tooltip').tooltip('toggle');
+
             $('.ren-btn-tooltip').tooltip('hide');
+
+            //点击textarea 显示隐藏区域
             $('.ren-more-input-box').hide();
             $('.ren-textarea').click(function () {
                 $(this).attr('rows', 3);
@@ -440,7 +410,8 @@
                 $('.ren-textarea').attr('rows', 1);
                 $('.ren-more-input-box').hide();
             });
-
+            //textarea 结束
+            //时间日历
             $('#datetimepicker5').datetimepicker({
                 language: 'zh-CN',
                 pickTime: false
@@ -451,10 +422,11 @@
             });
 
             $('#ren-btn-submit-datetime').click(function () {
-                
+
                 $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
                 $('.bs-datetimepicker-modal').modal('hide');
             });
+            //日历时间结束
 
         })
 
