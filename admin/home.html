@@ -59,22 +59,22 @@
                     </div>
                 </div>
 
-                <div class="panel panel-info">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-6">小组列表</div>
+                            <div class="col-lg-6">群组列表</div>
                             <div class="col-lg-6 text-right">
                                 <!--<i class="glyphicon glyphicon-plus cursor ren-btn-add-group" data-container="body" data-toggle="popover" data-placement="bottom" ><span class="sr-only">新增</span>
-                                </i>-->
+                                    </i>-->
                                 <!-- Split button -->
                                 <div class="btn-group">
 
-                                    <i class="glyphicon glyphicon-plus" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-plus cursor" data-toggle="dropdown">
                                         <span class="sr-only">新增</span>
                                     </i>
-                                    <ul class="dropdown-menu"  role="menu">
+                                    <ul class="dropdown-menu" role="menu">
                                         <li><a href="#" ><i class="glyphicon glyphicon-plus"></i>  新建</a></li>
-                                        <li><a href="#"><i class="glyphicon glyphicon-hand-down"></i>  加入</a></li>
+                                        <li><a href="#" data-toggle="modal" data-target=".ren-bs-join-group-modal-sm"><i class="glyphicon glyphicon-hand-down"></i>  加入</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                         <a href="#" class="list-group-item">Web设计</a>
                         <a href="#" class="list-group-item">Morbi leo risus</a>
                         <a href="#" class="list-group-item">APP开发</a>
-                        <a href="#" class="list-group-item">
+                        <a href="group-list.html" class="list-group-item">
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">显示全部</div>
                                 <div class="col-sm-6 col-lg-6 text-right">
@@ -98,7 +98,7 @@
 
                 <div class="list-group ">
                     <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
-                        校区<span class="sr-only">此列表为学校群组推荐</span>
+                        学校<span class="sr-only">此列表为学校群组推荐</span>
                     </a>
                     <a href="#" class="list-group-item">Web设计小组</a>
                     <a href="#" class="list-group-item">电影赏析小组</a>
@@ -283,6 +283,33 @@
                         </div>
                     </div>
                     <div class="panel-body">
+                        <p class="pt10 text-center">
+                            暂无任何信息！ 尝试选择不同群组，或更改过滤规则。
+                        </p>
+                    </div>
+                     
+                </div>
+                <!--为post 消息列表-->
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-danger">
+                        <div class="row">
+                            <div class="col-lg-6">最新消息</div>
+                            <div class="col-lg-6 text-right">
+                                <!-- Small button group -->
+                                <div class="btn-group">
+                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+                                        排序 <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">默认</a></li>
+                                        <li><a href="#">时间</a></li>
+                                        <li><a href="#">热度</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
                         <div class="media pt10 ren-newest-info">
                             <a class="pull-left" href="#">
                                 <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
@@ -363,7 +390,26 @@
         </div>
     </div>
 
- 
+     
+
+    <!--加入群组-->
+    <div class="modal fade ren-bs-join-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    加入群组
+                </div>
+                <div class="modal-body">
+                    <input type='password' class="form-control btn-sm" id="ren-input-group-pwd" placeholder="小组密码" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
+                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
