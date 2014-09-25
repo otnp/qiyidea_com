@@ -63,6 +63,10 @@ div.mp0, p.mp0, h3.mp0 {
     margin: 0px;
     padding: 0px;
 }
+.fz10 {
+    font-size:10px;
+    font-weight:normal;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
