@@ -11,7 +11,7 @@
 
     <link rel="icon" href="../favicon.ico">
 
-    <title>个人主页 — 奇异点・qiyidea.com | 在校学生创业平台</title>
+    <title>个人资料 — 奇异点・qiyidea.com | 在校学生创业平台</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,303 +42,304 @@
         <div class="row">
             <!--left-->
             <div class="col-xs-3">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="media-heading">张二天王大一</h5>
-                                <p class="small">
-                                    项目管理<br>
-                                    身份认证信息
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-lg-6">群组列表</div>
-                            <div class="col-lg-6 text-right">
-                                <!--<i class="glyphicon glyphicon-plus cursor ren-btn-add-group" data-container="body" data-toggle="popover" data-placement="bottom" ><span class="sr-only">新增</span>
-                                    </i>-->
-                                <!-- Split button -->
-                                <div class="btn-group">
-
-                                    <i class="glyphicon glyphicon-plus cursor" data-toggle="dropdown">
-                                        <span class="sr-only">新增</span>
-                                    </i>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#" ><i class="glyphicon glyphicon-plus"></i>  新建</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target=".ren-bs-join-group-modal-sm"><i class="glyphicon glyphicon-hand-down"></i>  加入</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- List group -->
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">Web设计</a>
-                        <a href="#" class="list-group-item">Morbi leo risus</a>
-                        <a href="#" class="list-group-item">APP开发</a>
-                        <a href="group-list.html" class="list-group-item">
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-6">显示全部</div>
-                                <div class="col-sm-6 col-lg-6 text-right">
-                                    <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
                 <div class="list-group ">
                     <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
-                        学校<span class="sr-only">此列表为学校群组推荐</span>
+                        个人中心<span class="sr-only">个人中心</span>
                     </a>
-                    <a href="#" class="list-group-item">Web设计小组</a>
-                    <a href="#" class="list-group-item">电影赏析小组</a>
-                    <a href="#" class="list-group-item">
+                    <a href="user-page.html" class="list-group-item list-group-item-info">
                         <div class="row">
-                            <div class="col-sm-8 col-lg-8">APP开发</div>
+                            <div class="col-sm-8 col-lg-8">个人资料</div>
                             <div class="col-sm-4 col-lg-4 text-right">
-                                <i class="glyphicon glyphicon-bullhorn"></i><span class="sr-only">推荐</span>
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">完善信息</span>
                             </div>
                         </div>
                     </a>
+                    <a href="user-page-upload.html" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">修改头像</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="user-page-tag.html" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">我的标签</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
+                    
 
-                    <a href="#" class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-8 col-lg-8">显示全部</div>
-                            <div class="col-sm-4 col-lg-4 text-right">
-                                <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
-                            </div>
-                        </div>
-                    </a>
                 </div>
 
 
             </div>
             <!--right box-->
             <div class="col-xs-9">
-                <!--发送信息的区域-->
-                <div class="tabbable" id="tabs-736012">
-                    <!-- Only required for left/right tabs -->
-                    <ul class="nav nav-tabs" style="background: #F3F5F6; border-top: 1px solid #dddddd;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); padding:0px; margin:0;">
-                        <li class="active"><a href="#panel-1" data-toggle="tab"><i class="glyphicon glyphicon-edit"></i>&nbsp; 帖子</a></li>
-                        <li class=""><a href="#panel-2" data-toggle="tab"><i class="glyphicon glyphicon-warning-sign"></i>&nbsp; 提醒</a></li>
-                        <li><a href="#panel-3" data-toggle="tab"><i class="glyphicon glyphicon-ok-circle"></i>&nbsp; 项目</a></li>
-                        <li><a href="#panel-4" data-toggle="tab"><i class="glyphicon glyphicon-question-sign"></i>&nbsp; 任务</a></li>
-                        <li><a href="#panel-5" data-toggle="tab"><i class="glyphicon glyphicon-signal"></i>&nbsp; 投票</a></li>
 
-                    </ul>
-                    <div class="tab-content" style="background: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); padding:20px; ">
-                        <div class="tab-pane active" id="panel-1">
-                            <form role="form">
+                <!--为post 消息列表-->
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-danger">
+                        个人资料
+                    </div>
+                    <div class="panel-body">
+                        <div class="pt10">
+
+                            <form class="form-horizontal" method="post" role="form">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="sr-only">内容</label>
-                                    <textarea class="form-control ren-textarea" placeholder="说点什么吧…" rows="1"></textarea>
+                                    <label class="col-sm-2 control-label" for="inputEmail">登录名</label>
+                                    <div class="col-sm-9">
+                                        <span>otnp50@hotmail.com</span>
+                                    </div>
                                 </div>
-                                <div class="ren-more-input-box">
-                                    <div class="form-group">
-                                        <select data-placeholder="输入联系人或群组的名字…" class="chosen-select ren-info-note-chosen" style="width:100%;" multiple tabindex="6">
-                                            <option value=""></option>
-                                            <optgroup label="联系人">
-                                                <option>Dallas Cowboys</option>
-                                                <option>New York Giants</option>
-                                                <option>Philadelphia Eagles</option>
-                                                <option>Washington Redskins</option>
-                                                <option>Chicago Bears</option>
-                                                <option>Detroit Lions</option>
-                                                <option>Green Bay Packers</option>
-                                                <option>Minnesota Vikings</option>
-                                                <option>Atlanta Falcons</option>
-                                                <option>Carolina Panthers</option>
-                                                <option>New Orleans Saints</option>
-                                                <option>Tampa Bay Buccaneers</option>
-                                            </optgroup>
-                                            <optgroup label="群组">
-                                                <option>Arizona Cardinals</option>
-                                                <option>St. Louis Rams</option>
-                                                <option>San Francisco 49ers</option>
-                                                <option>Seattle Seahawks</option>
-                                                <option>Buffalo Bills</option>
-                                                <option>Miami Dolphins</option>
-                                                <option>New England Patriots</option>
-                                                <option>New York Jets</option>
-                                            </optgroup>
-
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputNick">昵称</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputNick" value="rener" name="nickname" placeholder="请输入昵称">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputAddress">所在地</label>
+                                    <div class="col-sm-9">
+                                        <select style="width:128px;" id="inputAddress" name="province_id">
+                                            <option value="1">北京市</option>
+                                            <option value="2">天津市</option>
+                                            <option value="3">重庆市</option>
+                                            <option value="4">上海市</option>
+                                            <option value="7">河北省</option>
+                                            <option value="19">山西省</option>
+                                            <option value="31">内蒙古</option>
+                                            <option value="44">辽宁</option>
+                                            <option value="59">吉林</option>
+                                            <option value="69">黑龙江</option>
+                                            <option value="83">江苏</option>
+                                            <option value="99">浙江</option>
+                                            <option value="111">安徽</option>
+                                            <option value="129">福建</option>
+                                            <option value="139">江西</option>
+                                            <option value="151">山东</option>
+                                            <option value="169">河南</option>
+                                            <option value="187">湖北</option>
+                                            <option value="201">湖南</option>
+                                            <option value="216" selected="selected">广东</option>
+                                            <option value="238">广西</option>
+                                            <option value="253">海南</option>
+                                            <option value="256">四川</option>
+                                            <option value="278">贵州</option>
+                                            <option value="288">云南</option>
+                                            <option value="305">西藏</option>
+                                            <option value="314">陕西</option>
+                                            <option value="325">甘肃</option>
+                                            <option value="340">青海</option>
+                                            <option value="349">宁夏</option>
+                                            <option value="355">新疆</option>
+                                            <option value="371"> 香港</option>
+                                            <option value="372">澳门</option>
+                                            <option value="373">台湾</option>
+                                        </select>
+                                        <select style="width:128px;" id="inputCity" name="city_id">
+                                            <option value="217" selected="selected">广州</option>
+                                            <option value="218">深圳</option>
+                                            <option value="219">珠海</option>
+                                            <option value="220">汕头</option>
+                                            <option value="221">韶关</option>
+                                            <option value="222">佛山</option>
+                                            <option value="223">江门</option>
+                                            <option value="224">湛江</option>
+                                            <option value="225">茂名</option>
+                                            <option value="226">肇庆</option>
+                                            <option value="227">惠州</option>
+                                            <option value="228">梅州</option>
+                                            <option value="229">汕尾</option>
+                                            <option value="230">河源</option>
+                                            <option value="231">阳江</option>
+                                            <option value="232">清远</option>
+                                            <option value="233"> 东莞</option>
+                                            <option value="234">中山</option>
+                                            <option value="235">潮州</option>
+                                            <option value="236">揭阳</option>
+                                            <option value="237">云浮</option>
                                         </select>
                                     </div>
-                                    <div class="clearfix mt5mb15"></div>
-                                    <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="btn-toolbar" role="toolbar">
-                                                <div class="btn-group btn-group-sm">
-                                                    <button type="button" class="btn btn-default ren-btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="文件"><span class="glyphicon glyphicon-list-alt"></span> <span class="sr-only">文件</span></button>
-                                                    <button type="button" class="btn btn-default ren-btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="链接"><span class="glyphicon glyphicon-link"></span> <span class="sr-only">分享链接</span></button>
-                                                </div>
-                                                <div class="btn-group btn-group-sm">
-                                                    <button type="button" class="btn btn-default ren-btn-tooltip" data-placement="bottom" title="定时信息" data-toggle="modal" data-target=".bs-datetimepicker-modal"><span class="glyphicon glyphicon-time"></span>  <span class="sr-only0 ren-show-datetime-txt"></span></button>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSex">性别</label>
+                                    <div class="col-sm-9">
+                                        <select id="inputSex" name="sex">
+                                            <option value="1" selected="selected">男</option>
+                                            <option value="0">女</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputBirthday">生日</label>
+                                    <div class="col-sm-9">
+                                        <select style="width:84px;" id="inputBirthday" name="Y">
+                                            <option value="1950">1950</option>
+                                            <option value="1951">1951</option>
+                                            <option value="1952">1952</option>
+                                            <option value="1953">1953</option>
+                                            <option value="1954">1954</option>
+                                            <option value="1955">1955</option>
+                                            <option value="1956">1956</option>
+                                            <option value="1957">1957</option>
+                                            <option value="1958">1958</option>
+                                            <option value="1959">1959</option>
+                                            <option value="1960">1960</option>
+                                            <option value="1961">1961</option>
+                                            <option value="1962">1962</option>
+                                            <option value="1963">1963</option>
+                                            <option value="1964">1964</option>
+                                            <option value="1965">1965</option>
+                                            <option value="1966">1966</option>
+                                            <option value="1967">1967</option>
+                                            <option value="1968">1968</option>
+                                            <option value="1969">1969</option>
+                                            <option value="1970">1970</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1990" selected="selected">1990</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1999">1999</option>
+                                            <option value="2000">2000</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                        </select>
+                                        <select style="width:84px;" name="M">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <select style="width:84px;" name="D">
+                                            <option value="1" selected="selected">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputBlood">血型</label>
+                                    <div class="col-sm-9">
+                                        <select style="width:100px;" id="inputBlood" name="blood">
+                                            <option value="1">A</option>
+                                            <option value="2">B</option>
+                                            <option value="3">AB</option>
+                                            <option value="4">O</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputQQ">QQ</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputQQ" name="QQ" placeholder="请输入QQ" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputWeibo">新浪微博</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="inputWeibo" name="weibo" placeholder="请输入微博地址" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="inputSelf">自我介绍</label>
+                                    <div class="col-sm-9">
+                                        <textarea id="inputSelf" class="form-control" name="summary">这人很懒，神马都没留下。</textarea>
+                                    </div>
+                                </div>
+                               
 
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 text-right">
-                                            <button type="button" class="btn-link">取 消</button>  或 &nbsp;&nbsp; <button type="submit" class="btn btn-primary btn-sm">发 送</button>
-                                        </div>
-
+                                <div class="clearfix mt5mb15"></div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-primary">保存设置</button>
                                     </div>
                                 </div>
                             </form>
 
-
+                         
                         </div>
-                        <div class="tab-pane" id="panel-2">
-
-                            <form role="form">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1" class="sr-only">内容</label>
-                                    <textarea class="form-control ren-textarea" placeholder="输入提醒信息…" rows="1"></textarea>
-                                </div>
-                                <div class="ren-more-input-box">
-                                    <div class="form-group">
-                                        <select data-placeholder="发送给" class="chosen-select ren-info-send-chosen" style="width:100%;" multiple tabindex="6">
-                                            <option value=""></option>
-                                            <optgroup label="联系人">
-                                                <option>Dallas Cowboys</option>
-                                                <option>New York Giants</option>
-                                                <option>Philadelphia Eagles</option>
-                                                <option>Washington Redskins</option>
-                                                <option>Chicago Bears</option>
-                                                <option>Detroit Lions</option>
-                                                <option>Green Bay Packers</option>
-                                                <option>Minnesota Vikings</option>
-                                                <option>Atlanta Falcons</option>
-                                                <option>Carolina Panthers</option>
-                                                <option>New Orleans Saints</option>
-                                                <option>Tampa Bay Buccaneers</option>
-                                            </optgroup>
-
-
-                                        </select>
-                                    </div>
-                                    <div class="clearfix mt5mb15"></div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="btn-toolbar" role="toolbar">
-
-                                                <div class="btn-group btn-group-sm">
-                                                    <button type="button" class="btn btn-default ren-btn-tooltip" data-placement="bottom" title="定时" data-toggle="modal" data-target=".bs-datetimepicker-modal"><span class="glyphicon glyphicon-time"></span> <span class="sr-only">定时信息</span></button>
-                                                </div>
-                                                <h5>h5. Bootstrap heading</h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 text-right">
-                                            <button type="button" class="btn-link">取 消</button>  或 &nbsp;&nbsp; <button type="submit" class="btn btn-primary btn-sm">发 送</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                        <div class="tab-pane" id="panel-3" contenteditable="true">
-                            <p>第3部分内容.</p>
-                        </div>
-                        <div class="tab-pane" id="panel-4" contenteditable="true">
-                            <p>第4部分内容.</p>
-                        </div>
-                        <div class="tab-pane" id="panel-5" contenteditable="true">
-                            <p>第5部分内容.</p>
-                        </div>
-
                     </div>
+
                 </div>
 
-                <div class="clearfix mtmb15"></div>
-                <!--为post 消息列表-->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-danger">
-                        <div class="row">
-                            <div class="col-lg-6">最新消息</div>
-                            <div class="col-lg-6 text-right">
-                                <!-- Small button group -->
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        排序 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">默认</a></li>
-                                        <li><a href="#">时间</a></li>
-                                        <li><a href="#">热度</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <p class="pt10 text-center">
-                            暂无任何信息！ 尝试选择不同群组，或更改过滤规则。
-                        </p>
-                    </div>
-                     
-                </div>
-                <!--为post 消息列表-->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-danger">
-                        <div class="row">
-                            <div class="col-lg-6">最新消息</div>
-                            <div class="col-lg-6 text-right">
-                                <!-- Small button group -->
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        排序 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">默认</a></li>
-                                        <li><a href="#">时间</a></li>
-                                        <li><a href="#">热度</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="media pt10 ren-newest-info">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
-                            </a>
-                            <div class="media-body pl15">
-                                <div class="row">
-                                    <div class="col-lg-11">
-                                        <dl>
-                                            <dt>Description lists</dt>
-                                            <dd>A description list is perfect for defining terms.</dd>
-                                            <dt>Euismod</dt>
-                                            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-                                            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                            <dt>Malesuada porta</dt>
-                                            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                                        </dl>
-                                    </div>
-                                    <div class="col-lg-1">
-                                        <i class="glyphicon glyphicon-cog ren-icon-edit cursor"><span class="sr-only">编辑</span></i>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="text-right">5小时前</div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -346,70 +347,10 @@
 
     <div class="clearfix mtmb15"></div>
 
- 
+
     <div id="footer"></div>
 
-    <!--dialog modal-->
 
-    <div class="modal bs-datetimepicker-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                    <h5 class="modal-title" id="mySmallModalLabel">安排发布</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="mt5mb15"></div>
-                    <form class="form-inline" role="form">
-
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker5'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                                <input type='text' id="ren-input-date" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择日子" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker4'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                                <input type='text' id="ren-input-time" class="form-control" />
-                            </div>
-                        </div>
-
-                    </form>
-                    <div class="mt5mb15"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
-                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     
-
-    <!--加入群组-->
-    <div class="modal fade ren-bs-join-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    加入群组
-                </div>
-                <div class="modal-body">
-                    <input type='password' class="form-control btn-sm" id="ren-input-group-pwd" placeholder="小组密码" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
-                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -431,48 +372,29 @@
             $("#head").load("head.html");
             $("#footer").load("footer.html");
             //最信消息区域鼠标移动显示图标
-            $('.ren-icon-edit').hide();
+            $('.ren-icon-add-group-list').hide();
             $('.ren-newest-info').mouseover(function () {
-                $(this).find('.ren-icon-edit').show();
+                $(this).find('.ren-icon-add-group-list').show();
             })
             $('.ren-newest-info').mouseout(function () {
-                $('.ren-icon-edit').hide();
+                $('.ren-icon-add-group-list').hide();
             });
+            $('.ren-icon-add-group-list').click(function () {
+                if ($(this).hasClass('glyphicon-star')) {
+                    $(this).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+                } else
+                    $(this).addClass('glyphicon-star').removeClass('glyphicon-star-empty');
+            })
             //鼠标移出结束
             //$('.ren-info-note-chosen').chosen();
 
             // $('.ren-btn-tooltip').tooltip('toggle');
 
-            $('.ren-btn-tooltip').tooltip('hide');
 
-            //点击textarea 显示隐藏区域
-            $('.ren-more-input-box').hide();
-            $('.ren-textarea').click(function () {
-                $(this).attr('rows', 3);
-                $(this).parent().next().show();
-                $(this).parent().next().find('select').chosen();
-            });
-            $('.nav-tabs li').click(function () {
-                $('.ren-textarea').attr('rows', 1);
-                $('.ren-more-input-box').hide();
-            });
-            //textarea 结束
-            //时间日历
-            $('#datetimepicker5').datetimepicker({
-                language: 'zh-CN',
-                pickTime: false
-            });
-            $('#datetimepicker4').datetimepicker({
-                language: 'ru',
-                pickDate: false
-            });
 
-            $('#ren-btn-submit-datetime').click(function () {
 
-                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
-                $('.bs-datetimepicker-modal').modal('hide');
-            });
-            //日历时间结束
+
+
 
         })
 

@@ -2,3 +2,7 @@
     color:#A5ABB8;
 }
 
+.ren-my-tag-box >h4>span> span.badge {
+    padding:0px 0px 0px 7px;
+    background:none;
+}
