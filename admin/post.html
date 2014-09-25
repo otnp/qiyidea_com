@@ -24,6 +24,7 @@
     <link href="../js/chosen/chosen.css" rel="stylesheet">
     <link href="../css/footer.css" rel="stylesheet">
     <link href="../css/rener.css" rel="stylesheet">
+    <link href="../css/lyp.css" rel="stylesheet">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../js/assets/ie-emulation-modes-warning.js"></script>
@@ -42,78 +43,38 @@
         <div class="row">
             <!--left-->
             <div class="col-xs-3">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
-                            </a>
-                            <div class="media-body">
-                                <h5 class="media-heading">张二天王大一</h5>
-                                <p class="small">
-                                    项目管理<br>
-                                    身份认证信息
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-primary">
+                <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-6">群组列表</div>
-                            <div class="col-lg-6 text-right">
-                                <!--<i class="glyphicon glyphicon-plus cursor ren-btn-add-group" data-container="body" data-toggle="popover" data-placement="bottom" ><span class="sr-only">新增</span>
-                                    </i>-->
-                                <!-- Split button -->
-                                <div class="btn-group">
-
-                                    <i class="glyphicon glyphicon-plus cursor" data-toggle="dropdown">
-                                        <span class="sr-only">新增</span>
-                                    </i>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#" ><i class="glyphicon glyphicon-plus"></i>  新建</a></li>
-                                        <li><a href="#" data-toggle="modal" data-target=".ren-bs-join-group-modal-sm"><i class="glyphicon glyphicon-hand-down"></i>  加入</a></li>
-                                    </ul>
+                            <div class="media padd">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="../img/login/group-img.png" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="group-title media-heading">Mr. 张's 高等教育 group</h4>
+                                    小组
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <!-- List group -->
                     <div class="list-group">
-                        <a href="post.html" class="list-group-item">Web设计</a>
-                        <a href="post.html#" class="list-group-item">Morbi leo risus</a>
-                        <a href="post.html#" class="list-group-item">APP开发</a>
-                        <a href="group-list.html" class="list-group-item">
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-6">显示全部</div>
-                                <div class="col-sm-6 col-lg-6 text-right">
-                                    <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
-                                </div>
-                            </div>
-                        </a>
+                        <a href="post.html" class="list-group-item active">发帖</a>
+                        <a href="menber.html" class="list-group-item">成员</a>
                     </div>
                 </div>
 
                 <div class="list-group ">
                     <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
-                        学校<span class="sr-only">此列表为学校群组推荐</span>
+                        其他组<span class="sr-only">此列表为学校群组推荐</span>
                     </a>
                     <a href="#" class="list-group-item">Web设计小组</a>
-                    <a href="#" class="list-group-item">电影赏析小组</a>
-                    <a href="#" class="list-group-item">
-                        <div class="row">
-                            <div class="col-sm-8 col-lg-8">APP开发</div>
-                            <div class="col-sm-4 col-lg-4 text-right">
-                                <i class="glyphicon glyphicon-bullhorn"></i><span class="sr-only">推荐</span>
-                            </div>
-                        </div>
-                    </a>
+
 
                     <a href="#" class="list-group-item">
                         <div class="row">
-                            <div class="col-sm-8 col-lg-8">显示全部</div>
+                            <div class="col-sm-8 col-lg-8">更多</div>
                             <div class="col-sm-4 col-lg-4 text-right">
                                 <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
                             </div>
@@ -262,34 +223,7 @@
                 </div>
 
                 <div class="clearfix mtmb15"></div>
-                <!--为post 消息列表-->
-                <div class="panel panel-default">
-                    <div class="panel-heading panel-danger">
-                        <div class="row">
-                            <div class="col-lg-6">最新消息</div>
-                            <div class="col-lg-6 text-right">
-                                <!-- Small button group -->
-                                <div class="btn-group">
-                                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
-                                        排序 <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">默认</a></li>
-                                        <li><a href="#">时间</a></li>
-                                        <li><a href="#">热度</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <p class="pt10 text-center">
-                            暂无任何信息！ 尝试选择不同群组，或更改过滤规则。
-                        </p>
-                    </div>
-                     
-                </div>
-                <!--为post 消息列表-->
+                <!--帖子回复1-->
                 <div class="panel panel-default">
                     <div class="panel-heading panel-danger">
                         <div class="row">
@@ -318,13 +252,15 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <dl>
-                                            <dt>Description lists</dt>
-                                            <dd>A description list is perfect for defining terms.</dd>
-                                            <dt>Euismod</dt>
-                                            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-                                            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-                                            <dt>Malesuada porta</dt>
-                                            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                            <dt>
+                                                <span class="sender-and-recipients">
+                                                    <a class="msg-receiver sender-name" href="/home#/profile/53045947">张先生</a>至
+                                                    <a href="#/group?id=10279195" class="msg-receiver">
+                                                        <span class="receiver-square" style="background-color:#336699"></span>Mr. 山田's 12th grade group
+                                                    </a>
+                                                </span>
+                                            </dt>
+                                            <dd>这是一个神奇的网站</dd>
                                         </dl>
                                     </div>
                                     <div class="col-lg-1">
@@ -336,17 +272,169 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <div class="text-right">5小时前</div>
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <div class="text-right ">
+                                    <a href="javascript:void(0)" class="repaly-post">
+                                        <span class="glyphicon glyphicon-comment"> </span><span class="total-reply"></span> 评论
+                                    </a>
+                                    <a href="javascript:void(0)" class="marleft10">
+                                        <span class="glyphicon glyphicon-share"> </span><span class="total-reply">转发 </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="marleft10">
+                                        <span class="glyphicon glyphicon-star"> </span><span class="total-reply">收藏 </span>
+                                    </a>
+                                    <a href="javascript:void(0)" class="marleft10">
+                                        <span class="glyphicon glyphicon-share"> </span><span class="total-reply">举报 </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="text-right">5小时前</div>
+                            </div>
+                        </div>
+                        <div class="row reply-quyu"  style="display:none;">
+                            <hr style="background-color:#ddd" />
+                            <div class="row marbottom10">
+                                <div class="col-lg-9 marleft27">
+                                    <textarea class="form-control reply-textarea" id="replay-content" placeholder="输入评论" style="height:34px;"></textarea>
+                                </div>
+                                <div class="col-lg-2">
+                                    <button type="button" class="btn btn-default btn-block disabled btn-reply" id="register">评论</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-------------------------------------帖子回复2~~~~n------------------------------>
+                <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="media pt10 ren-newest-info">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
+                                </a>
+                                <div class="media-body pl15">
+                                    <div class="row">
+                                        <div class="col-lg-11">
+                                            <dl>
+                                                <dt>
+                                                    <span class="sender-and-recipients">
+                                                        <a class="msg-receiver sender-name" href="/home#/profile/53045947">张先生</a>至
+                                                        <a href="#/group?id=10279195" class="msg-receiver">
+                                                            <span class="receiver-square" style="background-color:#336699"></span>Mr. 山田's 12th grade group
+                                                        </a>
+                                                    </span>
+                                                </dt>
+                                                <dd>这是一个神奇的网站</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="col-lg-1">
+                                            <i class="glyphicon glyphicon-cog ren-icon-edit cursor"><span class="sr-only">编辑</span></i>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="text-right ">
+                                        <a href="javascript:void(0)" class="repaly-post">
+                                            <span class="glyphicon glyphicon-comment"> </span><span class="total-reply">2个</span>评论
+                                        </a>
+                                        <a href="javascript:void(0)" class="marleft10">
+                                            <span class="glyphicon glyphicon-share"> </span><span class="total-reply">转发 </span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="marleft10">
+                                            <span class="glyphicon glyphicon-star"> </span><span class="total-reply">收藏 </span>
+                                        </a>
+                                        <a href="javascript:void(0)" class="marleft10">
+                                            <span class="glyphicon glyphicon-share"> </span><span class="total-reply">举报 </span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="text-right">5小时前</div>
+                                </div>
+                            </div>
+                            <div class="row reply-quyu" style="display:none;">
+                                <hr style="background-color:#ddd;"  class="marbottom10"/>
+                                <!------------------------------------评论者信息开始------------------------------------------>
+                                <div class="row">
+                                    <div class="media reply-user-info  ren-newest-info">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src="../img/default_avatar.gif" alt="35*35" title="35*35" style="height:35px; width:35px;">
+                                        </a>
+                                        <div class="media-body pl15">
+                                            <div class="row">
+                                                <div class="col-lg-11">
+                                                    <dl>
+                                                        <dt>
+                                                            <span class="sender-and-recipients">
+                                                                <a class="msg-receiver sender-name" href="/home#/profile/53045947">张先生</a>&nbsp;&nbsp;<span class="subtext">说58 分钟前</span>
+                                                            </span>
+                                                        </dt>
+                                                        <dd>很好 很强大</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <i class="glyphicon glyphicon-cog ren-icon-edit cursor"><span class="sr-only">编辑</span></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="background-color:#ddd;margin-top:-10px;" />
+                                <div class="row">
+                                    <div class="media reply-user-info ren-newest-info">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src="../img/default_avatar.gif" alt="35*35" title="35*35" style="height:35px; width:35px;">
+                                        </a>
+                                        <div class="media-body pl15">
+                                            <div class="row">
+                                                <div class="col-lg-11">
+                                                    <dl>
+                                                        <dt>
+                                                            <span class="sender-and-recipients">
+                                                                <a class="msg-receiver sender-name" href="/home#/profile/53045947">张先生</a>&nbsp;&nbsp;<span class="subtext">说58 分钟前</span>
+                                                            </span>
+                                                        </dt>
+                                                        <dd>很好 很强大</dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <i class="glyphicon glyphicon-cog ren-icon-edit cursor"><span class="sr-only">编辑</span></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr style="background-color:#ddd;margin-top:-10px;" />
+                                <!----------------------------------------评论者信息结束-------------------------------------->
+                                <div class="row marbottom10">
+                                    <div class="col-lg-9 marleft27">
+                                        <textarea class="form-control reply-textarea" id="replay-content" placeholder="输入评论" style="height:34px;"></textarea>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <button type="button" class="btn btn-default btn-block disabled btn-reply" id="register">评论</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="clearfix mtmb15"></div>
 
- 
+
     <div id="footer"></div>
 
     <!--dialog modal-->
@@ -390,26 +478,7 @@
         </div>
     </div>
 
-     
 
-    <!--加入群组-->
-    <div class="modal fade ren-bs-join-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    加入群组
-                </div>
-                <div class="modal-body">
-                    <input type='password' class="form-control btn-sm" id="ren-input-group-pwd" placeholder="小组密码" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
-                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -473,7 +542,22 @@
                 $('.bs-datetimepicker-modal').modal('hide');
             });
             //日历时间结束
-
+            $(".repaly-post").click(function () {
+                $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
+            });
+            $(".reply-textarea").keyup(function () {
+                var replytextarea = $(this).val();
+                if (replytextarea == "") {
+                    $(this).parent().parent().find("button").addClass("disabled");
+                } else {
+                    $(this).parent().parent().find("button").removeClass("disabled");
+                }
+            });
+            $("textarea").on("scroll", function (event) {
+                var $this = $(this);
+                scrollHeight = $this[0].scrollHeight;
+                $this.height(scrollHeight);
+            });
         })
 
     </script>

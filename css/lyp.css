@@ -213,3 +213,55 @@ filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcol
 	padding:10px 0px 30px 0px;
 	color: #777;
 }
+.padd {
+    padding:0px 10px 0px 10px;
+}
+.group-title {
+    font-size: 15px;
+}
+.sender-and-recipients {
+    font: 13px Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #383d48;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+}
+.marleft10 {
+    margin-left: 10px;
+}
+textarea {
+    height:34px;overflow-y:visible;resize: none;
+}
+.marbottom10 {
+    margin-bottom:10px;
+}
+.reply-user-info {
+    width:90%;
+    margin-left:44px;
+}
+.subtext {
+    color: #839096;
+}
+.total-reply {
+    margin-left:4px;
+}
+.menber-class{
+    font-size: 24px;
+font-weight: 200;
+line-height: 32px;
+}
+.martop0 {
+    margin-top:0px;
+}
+.is-add-firend-info{
+    margin-top:5px;
+}
+.marbottom15 {
+    margin-bottom:15px;
+}
+.width95 {
+    width:95px;
+}
+.width150 {
+    width:150px;
+}
