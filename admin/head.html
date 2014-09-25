@@ -23,7 +23,7 @@
                 <li><a href="#contact">帮助中心</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" style="padding:15px 20px 8px 20px;"><span class="badge ren-info-msg-bell-badge">5</span><span class="glyphicon glyphicon-bell" style="font-size:22px;"></span><div class="sr-only">消息</div></a></li>
+                <li id="ren-btn-notifications"><a href="#" style="padding:15px 20px 8px 20px;"><span class="badge ren-info-msg-bell-badge">5</span><span class="glyphicon glyphicon-bell" style="font-size:22px;"></span><div class="sr-only">消息</div></a></li>
                 <li id="fat-menu" class="dropdown">
 
                     <a href="#" class="dropdown-toggle ren-dropdown-toggle-user" data-toggle="dropdown"><img src="../img/avatar2_small.jpg" class="img-circle pointer dropdown-toggle" data-toggle="dropdown"> admin <span class="caret"></span></a>
@@ -52,3 +52,6 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+
+<!--弹出消息中心提示层-->
+<div class="popover" id="ren-notifications" role="tooltip"><div class="arrow"></div><h3 class="popover-title">最新消息</h3><div class="popover-content">一些消息内容</div></div>
