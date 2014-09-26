@@ -142,8 +142,64 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-10">
                                 <h4 class="panel-title">群组管理员</h4>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default lyp-btn-add-administrator" data-toggle="modal" >添加管理员</button>
+                                </div>
+                            </div>
+                            <!-- Large modal -->
+
+                            <div class="modal fade add-administrator" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">添加管理员</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                             
+                                                <div class="form-group">
+                                                    <select data-placeholder="输入联系人或群组的名字…" class="chosen-select lyp-info-note-chosen1" style="width:100%;" multiple tabindex="6">
+                                                        <option value=""></option>
+                                                        <optgroup label="联系人">
+                                                            <option>Dallas Cowboys</option>
+                                                            <option>New York Giants</option>
+                                                            <option>Philadelphia Eagles</option>
+                                                            <option>Washington Redskins</option>
+                                                            <option>Chicago Bears</option>
+                                                            <option>Detroit Lions</option>
+                                                            <option>Green Bay Packers</option>
+                                                            <option>Minnesota Vikings</option>
+                                                            <option>Atlanta Falcons</option>
+                                                            <option>Carolina Panthers</option>
+                                                            <option>New Orleans Saints</option>
+                                                            <option>Tampa Bay Buccaneers</option>
+                                                        </optgroup>
+                                                        <optgroup label="群组">
+                                                            <option>Arizona Cardinals</option>
+                                                            <option>St. Louis Rams</option>
+                                                            <option>San Francisco 49ers</option>
+                                                            <option>Seattle Seahawks</option>
+                                                            <option>Buffalo Bills</option>
+                                                            <option>Miami Dolphins</option>
+                                                            <option>New England Patriots</option>
+                                                            <option>New York Jets</option>
+                                                        </optgroup>
+
+                                                    </select>
+                                                </div>
+                                                <div class="clearfix mt5mb15"></div>
+                                           
+                                            </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,10 +213,10 @@
                                 <div class="input-group input-group-sm">
                                     <div class="dropdown pull-right">
                                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            更指定新的管理员
+                                            指定新的管理员
                                             <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu width150 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
+                                        <ul class="dropdown-menu width136 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">张三</a></li>
                                             <li role="presentation"><a role="menuitem"  tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">李四</a></li>
                                         </ul>
@@ -196,12 +252,12 @@
                                 <div class="input-group input-group-sm">
                                     <div class="dropdown pull-right">
                                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            更指定新的管理员
+                                            指定新的管理员
                                             <span class="caret"></span>
                                         </button>
-                                        <ul class="dropdown-menu  width150 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
+                                        <ul class="dropdown-menu  width136 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-2">赵六</a></li>
-                                            <li role="presentation"><a role="menuitem"  tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-2">刘七</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-2">刘七</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -337,49 +393,49 @@
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
-            //最信消息区域鼠标移动显示图标
-            $('.ren-icon-edit').hide();
-            $('.ren-newest-info').mouseover(function () {
-                $(this).find('.ren-icon-edit').show();
-            })
-            $('.ren-newest-info').mouseout(function () {
-                $('.ren-icon-edit').hide();
-            });
+            ////最信消息区域鼠标移动显示图标
+            //$('.ren-icon-edit').hide();
+            //$('.ren-newest-info').mouseover(function () {
+            //    $(this).find('.ren-icon-edit').show();
+            //})
+            //$('.ren-newest-info').mouseout(function () {
+            //    $('.ren-icon-edit').hide();
+            //});
             //鼠标移出结束
             //$('.ren-info-note-chosen').chosen();
 
             // $('.ren-btn-tooltip').tooltip('toggle');
 
-            $('.ren-btn-tooltip').tooltip('hide');
+           // $('.ren-btn-tooltip').tooltip('hide');
 
-            //点击textarea 显示隐藏区域
-            $('.ren-more-input-box').hide();
-            $('.ren-textarea').click(function () {
-                $(this).attr('rows', 3);
-                $(this).parent().next().show();
-                $(this).parent().next().find('select').chosen();
-            });
-            $('.nav-tabs li').click(function () {
-                $('.ren-textarea').attr('rows', 1);
-                $('.ren-more-input-box').hide();
-            });
-            //textarea 结束
-            //时间日历
-            $('#datetimepicker5').datetimepicker({
-                language: 'zh-CN',
-                pickTime: false
-            });
-            $('#datetimepicker4').datetimepicker({
-                language: 'ru',
-                pickDate: false
-            });
+            ////点击textarea 显示隐藏区域
+            //$('.ren-more-input-box').hide();
+            //$('.ren-textarea').click(function () {
+            //    $(this).attr('rows', 3);
+            //    $(this).parent().next().show();
+            //    $(this).parent().next().find('select').chosen();
+            //});
+            //$('.nav-tabs li').click(function () {
+            //    $('.ren-textarea').attr('rows', 1);
+            //    $('.ren-more-input-box').hide();
+            //});
+            ////textarea 结束
+            ////时间日历
+            //$('#datetimepicker5').datetimepicker({
+            //    language: 'zh-CN',
+            //    pickTime: false
+            //});
+            //$('#datetimepicker4').datetimepicker({
+            //    language: 'ru',
+            //    pickDate: false
+            //});
 
-            $('#ren-btn-submit-datetime').click(function () {
+            //$('#ren-btn-submit-datetime').click(function () {
 
-                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
-                $('.bs-datetimepicker-modal').modal('hide');
-            });
-            //日历时间结束
+            //    $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
+            //    $('.bs-datetimepicker-modal').modal('hide');
+            //});
+            ////日历时间结束
             $(".repaly-post").click(function () {
                 $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
             });
@@ -426,6 +482,12 @@
             $(".replace-administrator-group-yes").click(function () {
                 //  $(".current-administrator-group").val($(".replace-administrator-name").html());
                 $(this).parent().parent().parent().parent().parent().find("input").val($(".replace-administrator-name").html());
+            });
+
+
+            $(".lyp-btn-add-administrator").click(function () {
+                $(".add-administrator").modal('show');
+                $('.lyp-info-note-chosen1').chosen();
             });
         });
       
