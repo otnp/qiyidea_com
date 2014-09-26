@@ -27,7 +27,7 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../js/assets/ie-emulation-modes-warning.js"></script>
-    
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
 
                 <div class="panel panel-primary">
@@ -147,17 +147,17 @@
                             </div>
                             <div class="col-lg-2">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-default lyp-btn-add-administrator" data-toggle="modal" >添加管理员</button>
+                                    <button type="button" class="btn btn-default lyp-btn-add-administrator" data-toggle="modal">添加管理员</button>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="panel-body">
                         <!-------------------------------------管理员--------------------------------------->
                         <div class="row marbottom15">
                             <div class="col-lg-7">
-                                <input type="text" class="form-control input-panduan current-administrator-group"  disabled value="王五">
+                                <input type="text" class="form-control input-panduan current-administrator-group" disabled value="王五">
                             </div>
                             <div class="col-lg-5">
                                 <div class="input-group input-group-sm">
@@ -168,7 +168,7 @@
                                         </button>
                                         <ul class="dropdown-menu width136 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">张三</a></li>
-                                            <li role="presentation"><a role="menuitem"  tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">李四</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">李四</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
     </div>
 
     <div class="clearfix mtmb15"></div>
-
+   
 
     <div id="footer"></div>
 
@@ -321,7 +321,6 @@
             </div>
         </div>
     </div>-->
-
     <!-- Large modal -->
     <div class="modal fade add-administrator" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -332,8 +331,8 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="form-group">
-                        <select data-placeholder="输入联系人或群组的名字…" class="chosen-select lyp-info-note-chosen1" style="width:100%;" multiple tabindex="6">
+                    <div class="form-group" id="ren-select">
+                        <select data-placeholder="输入联系人或群组的名字…" class="chosen-select lyp-info-note-chosen1" style="width: 100%; display: none;" multiple="" tabindex="-1">
                             <option value=""></option>
                             <optgroup label="联系人">
                                 <option>Dallas Cowboys</option>
@@ -359,8 +358,38 @@
                                 <option>New England Patriots</option>
                                 <option>New York Jets</option>
                             </optgroup>
-
                         </select>
+                        <div class="chosen-container chosen-container-multi chosen-with-drop chosen-container-active" title="">
+                            <ul class="chosen-choices">
+                                <li class="search-field"><input type="text" value="输入联系人或群组的名字…" class="default" autocomplete="off" style="width: 179px;" tabindex="6"></li>
+                            </ul>
+                            <div class="chosen-drop">
+                                <ul class="chosen-results">
+                                    <li class="group-result">联系人</li>
+                                    <li class="active-result group-option" data-option-array-index="2">Dallas Cowboys</li>
+                                    <li class="active-result group-option" data-option-array-index="3">New York Giants</li>
+                                    <li class="active-result group-option" data-option-array-index="4">Philadelphia Eagles</li>
+                                    <li class="active-result group-option" data-option-array-index="5">Washington Redskins</li>
+                                    <li class="active-result group-option" data-option-array-index="6">Chicago Bears</li>
+                                    <li class="active-result group-option" data-option-array-index="7">Detroit Lions</li>
+                                    <li class="active-result group-option" data-option-array-index="8">Green Bay Packers</li>
+                                    <li class="active-result group-option" data-option-array-index="9">Minnesota Vikings</li>
+                                    <li class="active-result group-option" data-option-array-index="10">Atlanta Falcons</li>
+                                    <li class="active-result group-option" data-option-array-index="11">Carolina Panthers</li>
+                                    <li class="active-result group-option" data-option-array-index="12">New Orleans Saints</li>
+                                    <li class="active-result group-option" data-option-array-index="13">Tampa Bay Buccaneers</li>
+                                    <li class="group-result">群组</li>
+                                    <li class="active-result group-option" data-option-array-index="15">Arizona Cardinals</li>
+                                    <li class="active-result group-option" data-option-array-index="16">St. Louis Rams</li>
+                                    <li class="active-result group-option" data-option-array-index="17">San Francisco 49ers</li>
+                                    <li class="active-result group-option" data-option-array-index="18">Seattle Seahawks</li>
+                                    <li class="active-result group-option" data-option-array-index="19">Buffalo Bills</li>
+                                    <li class="active-result group-option" data-option-array-index="20">Miami Dolphins</li>
+                                    <li class="active-result group-option" data-option-array-index="21">New England Patriots</li>
+                                    <li class="active-result group-option" data-option-array-index="22">New York Jets</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="clearfix mt5mb15"></div>
 
@@ -405,7 +434,7 @@
 
             // $('.ren-btn-tooltip').tooltip('toggle');
 
-           // $('.ren-btn-tooltip').tooltip('hide');
+            // $('.ren-btn-tooltip').tooltip('hide');
 
             ////点击textarea 显示隐藏区域
             //$('.ren-more-input-box').hide();
@@ -471,7 +500,7 @@
             });
             $(".input-panduan").keyup(function () {
                 var val = $(this).val();
-                var str = val.substr(0,val.length-1);
+                var str = val.substr(0, val.length - 1);
                 $(this).val(str);
             });
             //更换群组管理员确认
@@ -483,13 +512,13 @@
                 $(this).parent().parent().parent().parent().parent().find("input").val($(".replace-administrator-name").html());
             });
 
-
+            $('.lyp-info-note-chosen1').chosen();
             $(".lyp-btn-add-administrator").click(function () {
                 $(".add-administrator").modal('show');
-                $('.lyp-info-note-chosen1').chosen();
+
             });
         });
-      
+
 
     </script>
 
