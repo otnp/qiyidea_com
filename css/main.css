@@ -15,6 +15,10 @@ a.nulinkunderline:hover {
 .dropdown-menu {
   min-width: 0px;
 }
+
+.color-grey {
+color:#A5ABB8;
+}
 /********************************************** navbar-static-top.css **************************************/
 .navbar-static-top {
     margin-bottom: 0px;
