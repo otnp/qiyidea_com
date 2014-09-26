@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
+    <meta name="keywords" content="众筹,在校学生众筹,校园众筹,大学生,电商,社交,sns,创业,就业,创客,投资,支持,项目,学生创业,愿望">
+    <meta name="description" content="奇异点（qiyidea.com）——在校学生创业平台，首家利用新概念模式（筹资金、找伙伴、谈想法、搞活动）为在校学生解决社会上创业问题的综合性平台网站。">
+    <meta name="author" content="qiyi.com">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="../favicon.ico">
+
+    <title>创建群组 — 奇异点・qiyidea.com | 在校学生创业平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/non-responsive.css" rel="stylesheet">
+    <!--<link href="../css/sticky-footer-navbar.css" rel="stylesheet">-->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../js/chosen/chosen.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/rener.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../js/assets/html5shiv.min.js"></script>
+      <script src="../js/assets/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+    <div id="head"></div>
+    <div class="clearfix mtmb15"></div>
+    <div class="container">
+
+        <div class="row">
+            <!--left-->
+            <div class="col-xs-3">
+
+
+                <div class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
+                        我的校园<span class="sr-only">我的校园</span>
+                    </a>
+                    <a href="user-page-upload.html" class="list-group-item list-group-item-info">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">创建群组</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="user-page.html" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">个人资料</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">完善信息</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="user-page-tag.html" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">我的标签</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+
+
+            </div>
+            <!--right box-->
+            <div class="col-xs-9">
+
+                <!--为post 消息列表-->
+                <div class="panel panel-default">
+                    <div class="panel-heading panel-danger">
+                        创建群组
+                    </div>
+                    <div class="panel-body">
+                        <div class="pt10">
+                            <form name="img-upload" class="form-horizontal" id="img-upload" method="post" enctype="multipart/form-data">
+                                <div class="col-sm-4 col-lg-4">
+                                    <div class="ren-image-pre-box">
+                                        <img id="ImgPr" class="media-object" src="../img/login/44_140.jpg" alt="...">
+                                    </div>
+                                    <div class="clearfix">
+                                        <input type="file" name="files[]" multiple="" id="up">
+                                        <button type="submit" class="btn btn-info mtmb15 start pull-left">
+                                            <span class="glyphicon glyphicon-upload"></span>
+                                            <span>上传群组标识</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="form-horizontal" role="form">
+                                <div class="col-sm-8 col-lg-8">
+                                    <div class="form-group">
+                                        <label class="control-label sr-only" for="groupname">添加标签</label>
+                                        <div class="col-lg-11">
+                                            <input type="text" class="form-control" name="groupname" id="groupname" placeholder="输入要创建的群组名称" maxlength="200" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label sr-only" for="addTag">填写群组简介</label>
+                                        <div class="col-lg-11">
+                                            <textarea rows="5" class="form-control" id="" name="groupname" placeholder="填写群组简介…"></textarea>
+
+                                        </div>
+                                    </div>
+                                    <div class="clearfix mt5mb15"></div>
+                                    <div class="form-group">
+                                        <div class="col-lg-10">
+                                            <button type="submit" class="btn btn-primary">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                                立即创建
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="panel-footer text-center">
+                        申请邮件将发送到****老师处。
+                        您可以与ta联系，加速认证。<br />
+                        ****邮箱: <a href="#" class="alert-link">ABC@dfg.com</a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix mtmb15"></div>
+
+
+    <div id="footer"></div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
+    <script src="../js/chosen/chosen.jquery.js"></script>
+    <script src="../js/fileupload-ui/uploadPreview.min.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#head").load("head.html");
+            $("#footer").load("footer.html");
+            //最信消息区域鼠标移动显示图标
+            $('.ren-icon-add-group-list').hide();
+            $('.ren-newest-info').mouseover(function () {
+                $(this).find('.ren-icon-add-group-list').show();
+            })
+            $('.ren-newest-info').mouseout(function () {
+                $('.ren-icon-add-group-list').hide();
+            });
+            $('.ren-icon-add-group-list').click(function () {
+                if ($(this).hasClass('glyphicon-star')) {
+                    $(this).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+                } else
+                    $(this).addClass('glyphicon-star').removeClass('glyphicon-star-empty');
+            })
+            //鼠标移出结束
+            //$('.ren-info-note-chosen').chosen();
+
+            // $('.ren-btn-tooltip').tooltip('toggle');
+            //图片上传本地预览
+            $("#up").uploadPreview({ Img: "ImgPr", Width: 120, Height: 120, ImgType: ["gif", "jpeg", "jpg", "bmp", "png"], Callback: function () { } });
+
+
+
+
+
+        })
+
+    </script>
+
+
+</body>
+</html>

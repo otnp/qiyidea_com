@@ -6,3 +6,21 @@
     padding:0px 0px 0px 7px;
     background:none;
 }
+
+#ImgPr {
+max-width: 190px;max-height: 190px;
+vertical-align: middle;
+}
+* html #ImgPr { /* for IE6 */
+width: expression(this.width > 190 && this.width > this.height ? 190 : auto);
+height: expression(this.height > 190 ? 190 : auto);
+}
+
+.ren-image-pre-box {
+min-height:150px;
+max-height:150px;
+min-width:190px;
+max-width:190px;
+overflow:hidden;
+vertical-align: middle;
+}
