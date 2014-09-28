@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade  send-msgs-modal " id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -181,13 +181,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------踢走--------------------------------------------------->
-                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade bs-example-modal-sm lyp-kick-modal" id="kick-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">确定</button>
+                                    <button type="button" class="btn btn-primary kick-user-yes">确定</button>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade send-msgs-modal" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -285,13 +285,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------踢走--------------------------------------------------->
-                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade bs-example-modal-sm lyp-kick-modal" id="kick-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -303,7 +303,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">确定</button>
+                                    <button type="button" class="btn btn-primary  kick-user-yes">确定</button>
                                 </div>
                             </div>
                         </div>
@@ -389,6 +389,13 @@
             $(".member-info li").click(function () {
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
                 
+            });
+            $(".kick-user-yes").click(function () {
+                //重新加载页面。。。
+                $('.lyp-kick-modal').modal('hide');
+            });
+            $(".send-msgs-yes").click(function () {
+                $('.lyp-kick-modal').modal('hide');
             });
 
         })
