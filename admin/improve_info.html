@@ -226,7 +226,7 @@
                             <button type="button" class="btn btn-primary next-step1" style="width:140px;display:none;">下一步</button>
                         </div>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary success-info" style="width:140px;display:none;">完成</button>
+                            <button type="button" class="btn btn-primary success-info " style="width:140px;display:none;">完成</button>
                         </div>
                     </div>
                 </div>
@@ -349,6 +349,9 @@
             $(".next-step1").show();
             $(".third").hide();
             $(".second").show();
+        });
+        $(".success-info").click(function () {
+            $(windows).load(function(){ location.href = "index.html"; });
         });
         
     </script>
