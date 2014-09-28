@@ -174,7 +174,7 @@
                                 </div>
                             </div>
                             <!---------------------------更换群管理员------------------------------>
-                            <div class="modal fade replace-administrator-1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal fade replace-administrator-1  replace-administrator-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -213,7 +213,7 @@
                                 </div>
                             </div>
                             <!---------------------------更换群管理员------------------------------>
-                            <div class="modal fade replace-administrator-2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal fade replace-administrator-2 replace-administrator-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -377,6 +377,7 @@
             //确定更换群主
             $(".replace-admin-group-yes").click(function () {
                 $("#current-main-group").val($(".replace-user-name").html());
+                $(".determine-replace").modal("hide");
             });
             //$(".input-panduan").keyup(function () {
             //    var val = $(this).val();
@@ -385,12 +386,11 @@
             //});
             //更换群组管理员确认
             $(".replace-administrator-group li").click(function () {
-                alert($(this).children().text());
                 $(".replace-administrator-name").html($(this).children().text());
             });
             $(".replace-administrator-group-yes").click(function () {
-                //  $(".current-administrator-group").val($(".replace-administrator-name").html());
                 $(this).parent().parent().parent().parent().parent().find("input").val($(".replace-administrator-name").html());
+                $(".replace-administrator-modal").modal("hide");
             });
 
             $('.lyp-info-note-chosen1').chosen();
@@ -400,7 +400,7 @@
             });
             $(".add-administrator-yes").click(function () {
                 //重新加载页面，查询数据
-
+                $(".add-administrator").modal("hide");
             });
         });
 

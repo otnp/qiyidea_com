@@ -135,7 +135,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firend-modal" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -156,13 +156,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade send-msgs-modal" id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -179,7 +179,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firend-modal" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -240,15 +240,15 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    
+
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade send-msgs-modal" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -265,7 +265,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +411,14 @@
             $(".menber-info li").click(function () {
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
             });
-
+            //添加好友验证
+            $(".add-firends-yes").click(function () {
+                $(".add-firend-modal").modal("hide");
+            });
+            //发送消息
+            $(".send-msgs-yes").click(function () {
+                $(".send-msgs-modal").modal("hide");
+            });
 
         })
 

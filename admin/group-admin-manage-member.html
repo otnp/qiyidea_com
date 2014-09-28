@@ -137,7 +137,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firends-modal" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -158,7 +158,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firends-modal" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -262,7 +262,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
@@ -390,12 +390,18 @@
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
                 
             });
+            //踢人
             $(".kick-user-yes").click(function () {
                 //重新加载页面。。。
                 $('.lyp-kick-modal').modal('hide');
             });
+            //发送消息
             $(".send-msgs-yes").click(function () {
-                $('.lyp-kick-modal').modal('hide');
+                $('.send-msgs-modal').modal('hide');
+            });
+            //加好友验证
+            $(".add-firends-yes").click(function () {
+                $('.add-firends-modal').modal('hide');
             });
 
         })
