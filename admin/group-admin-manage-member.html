@@ -62,6 +62,7 @@
                     <div class="list-group">
                         <a href="group-post.html" class="list-group-item">发帖</a>
                         <a href="group-menber.html" class="list-group-item active">成员</a>
+                        <a href="group-admin-manege.html" class="list-group-item">群组管理</a>
                     </div>
                 </div>
 
@@ -103,7 +104,6 @@
                     </div>
                     <!--------------------------组员信息------------------------------->
                     <div class="panel-body">
-                        <a>11</a>
                         <div class="dropdown pull-right">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                 更多
@@ -137,7 +137,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firends-modal" id="add-firend-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -146,11 +146,11 @@
                                 </div>
                                 <div class="modal-body" style="padding:20px 30px 50px 30px">
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-2">
                                             <img class="media-object" src="../img/default_avatar.gif" alt="80*80" title="80*80" style="height:80px; width:80px;">
-                                            <p class="is-add-firend-info"><a class="kick-username" href="javascript:void(0);"></a></p>
+                                            <p class="is-add-firend-info text-center" style="width:80px;"><a class="kick-username" href="javascript:void(0);"></a></p>
                                         </div>
-                                        <div class="col-lg-9">
+                                        <div class="col-lg-10">
                                             <p>请输入验证信息：</p>
                                             <textarea class="form-control reply-textarea" id="replay-content" placeholder="我是..." style="height:100px;"></textarea>
                                         </div>
@@ -158,13 +158,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade  send-msgs-modal " id="send-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -181,13 +181,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------踢走--------------------------------------------------->
-                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade bs-example-modal-sm lyp-kick-modal" id="kick-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">确定</button>
+                                    <button type="button" class="btn btn-primary kick-user-yes">确定</button>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                     </div>
                     <hr style="background-color:#ddd;margin-bottom:0px;">
                     <!-------------------------------------------------添加好友--------------------------------------------------->
-                    <div class="modal fade" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade add-firends-modal" id="add-firend-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -250,11 +250,11 @@
                                 </div>
                                 <div class="modal-body" style="padding:20px 30px 50px 30px">
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-2">
                                             <img class="media-object" src="../img/default_avatar.gif" alt="80*80" title="80*80" style="height:80px; width:80px;">
-                                            <p class="is-add-firend-info"><a class="kick-username" href="javascript:void(0);"></a></p>
+                                            <p class="is-add-firend-info text-center" style="width:80px;"><a class="kick-username" href="javascript:void(0);"></a></p>
                                         </div>
-                                        <div class="col-lg-9">
+                                        <div class="col-lg-10">
                                             <p>请输入验证信息：</p>
                                             <textarea class="form-control reply-textarea" id="replay-content" placeholder="我是..." style="height:100px;"></textarea>
                                         </div>
@@ -262,13 +262,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">下一步</button>
+                                    <button type="button" class="btn btn-primary add-firends-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------发送消息--------------------------------------------------->
-                    <div class="modal fade" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade send-msgs-modal" id="send-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -285,13 +285,13 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">发送</button>
+                                    <button type="button" class="btn btn-primary send-msgs-yes">发送</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-------------------------------------------------踢走--------------------------------------------------->
-                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade bs-example-modal-sm lyp-kick-modal" id="kick-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -303,7 +303,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                    <button type="button" class="btn btn-primary">确定</button>
+                                    <button type="button" class="btn btn-primary  kick-user-yes">确定</button>
                                 </div>
                             </div>
                         </div>
@@ -389,6 +389,19 @@
             $(".member-info li").click(function () {
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
                 
+            });
+            //踢人
+            $(".kick-user-yes").click(function () {
+                //重新加载页面。。。
+                $('.lyp-kick-modal').modal('hide');
+            });
+            //发送消息
+            $(".send-msgs-yes").click(function () {
+                $('.send-msgs-modal').modal('hide');
+            });
+            //加好友验证
+            $(".add-firends-yes").click(function () {
+                $('.add-firends-modal').modal('hide');
             });
 
         })
