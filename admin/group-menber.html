@@ -144,11 +144,11 @@
                                 </div>
                                 <div class="modal-body" style="padding:20px 30px 50px 30px">
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-2">
                                             <img class="media-object" src="../img/default_avatar.gif" alt="80*80" title="80*80" style="height:80px; width:80px;">
-                                            <p class="is-add-firend-info"><a class="kick-username" href="javascript:void(0);"></a></p>
+                                            <p class="is-add-firend-info text-center" style="width:80px;"><a class="kick-username" href="javascript:void(0);"></a></p>
                                         </div>
-                                        <div class="col-lg-9">
+                                        <div class="col-lg-10">
                                             <p>请输入验证信息：</p>
                                             <textarea class="form-control reply-textarea" id="replay-content" placeholder="我是..." style="height:100px;"></textarea>
                                         </div>
@@ -229,11 +229,11 @@
                                 </div>
                                 <div class="modal-body" style="padding:20px 30px 50px 30px">
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-2">
                                             <img class="media-object" src="../img/default_avatar.gif" alt="80*80" title="80*80" style="height:80px; width:80px;">
-                                            <p class="is-add-firend-info"><a class="kick-username" href="javascript:void(0);"></a></p>
+                                            <p class="is-add-firend- text-center" style="width:80px;"><a class="kick-username" href="javascript:void(0);"></a></p>
                                         </div>
-                                        <div class="col-lg-9">
+                                        <div class="col-lg-10">
                                             <p>请输入验证信息：</p>
                                             <textarea class="form-control reply-textarea" id="replay-content" placeholder="我是..." style="height:100px;"></textarea>
                                         </div>
@@ -408,9 +408,7 @@
                 $(".yanzheng-msg").hide();
                 $(".queren-msg").show();
             });
-            $(".member-info li").click(function () {
-                alert();
-                alert($(this).parent().parent().parent().children().find(".sender-name").text());
+            $(".menber-info li").click(function () {
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
             });
 
