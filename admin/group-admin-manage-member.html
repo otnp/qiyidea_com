@@ -103,14 +103,16 @@
                     </div>
                     <!--------------------------组员信息------------------------------->
                     <div class="panel-body">
+                        <a>11</a>
                         <div class="dropdown pull-right">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                 更多
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu menber-info" role="menu" aria-labelledby="dropdownMenu1">
+                            <ul class="dropdown-menu member-info" role="menu" aria-labelledby="dropdownMenu1">
                                 <li role="presentation"><a role="menuitem" class="add-firends" tabindex="-1" href="#" data-toggle="modal" data-target="#add-firend-modal-1">加好友</a></li>
                                 <li role="presentation"><a role="menuitem" class="send-msgs" tabindex="-1" href="#" data-toggle="modal" data-target="#send-msgs-modal-1">发消息</a></li>
+                                <li role="presentation"><a role="menuitem" class="kick-msgs"  tabindex="-1" href="#" data-toggle="modal" data-target="#kick-msgs-modal-1">踢走</a></li>
                             </ul>
                         </div>
                         <div class="media ren-newest-info martop0">
@@ -184,15 +186,34 @@
                             </div>
                         </div>
                     </div>
+                    <!-------------------------------------------------踢走--------------------------------------------------->
+                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">系统消息</h4>
+                                </div>
+                                <div class="modal-body">
+                                    确定将<a class="kick-username" href="javascript:void(0);"></a>踢出该群组吗？
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary">确定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="panel-body">
                         <div class="dropdown pull-right">
                             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                 更多
                                 <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu menber-info" role="menu" aria-labelledby="dropdownMenu1">
+                            <ul class="dropdown-menu member-info" role="menu" aria-labelledby="dropdownMenu1">
                                 <li role="presentation"><a class="add-firends" role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#add-firend-modal-2">加好友</a></li>
                                 <li role="presentation"><a class="send-msgs" role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#send-msgs-modal-2">发消息</a></li>
+                                <li role="presentation"><a class="kick-msgs" role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target="#kick-msgs-modal-2">踢走</a></li>
                             </ul>
                         </div>
                         <div class="media ren-newest-info martop0">
@@ -240,7 +261,6 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                     <button type="button" class="btn btn-primary">下一步</button>
                                 </div>
@@ -266,6 +286,24 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                                     <button type="button" class="btn btn-primary">发送</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------------------------------踢走--------------------------------------------------->
+                    <div class="modal fade bs-example-modal-sm" id="kick-msgs-modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">系统消息</h4>
+                                </div>
+                                <div class="modal-body">
+                                    确定将<a class="kick-username" href="javascript:void(0);"></a>踢出该群组吗？
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary">确定</button>
                                 </div>
                             </div>
                         </div>
@@ -343,77 +381,15 @@
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
-            //最信消息区域鼠标移动显示图标
-            $('.ren-icon-edit').hide();
-            $('.ren-newest-info').mouseover(function () {
-                $(this).find('.ren-icon-edit').show();
-            })
-            $('.ren-newest-info').mouseout(function () {
-                $('.ren-icon-edit').hide();
-            });
-            //鼠标移出结束
-            //$('.ren-info-note-chosen').chosen();
-
-            // $('.ren-btn-tooltip').tooltip('toggle');
-
-            $('.ren-btn-tooltip').tooltip('hide');
-
-            //点击textarea 显示隐藏区域
-            $('.ren-more-input-box').hide();
-            $('.ren-textarea').click(function () {
-                $(this).attr('rows', 3);
-                $(this).parent().next().show();
-                $(this).parent().next().find('select').chosen();
-            });
-            $('.nav-tabs li').click(function () {
-                $('.ren-textarea').attr('rows', 1);
-                $('.ren-more-input-box').hide();
-            });
-            //textarea 结束
-            //时间日历
-            $('#datetimepicker5').datetimepicker({
-                language: 'zh-CN',
-                pickTime: false
-            });
-            $('#datetimepicker4').datetimepicker({
-                language: 'ru',
-                pickDate: false
-            });
-
-            $('#ren-btn-submit-datetime').click(function () {
-
-                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
-                $('.bs-datetimepicker-modal').modal('hide');
-            });
-            //日历时间结束
-            $(".repaly-post").click(function () {
-                $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
-            });
-            //输入回复时
-            $(".reply-textarea").keyup(function () {
-                var replytextarea = $(this).val();
-                if (replytextarea == "") {
-                    $(this).parent().parent().find("button").addClass("disabled");
-                } else {
-                    $(this).parent().parent().find("button").removeClass("disabled");
-                }
-            });
-            //textarea高度自适应
-            $("textarea").on("scroll", function (event) {
-                var $this = $(this);
-                scrollHeight = $this[0].scrollHeight;
-                $this.height(scrollHeight);
-            });
+    
             $(".add-firend-next-step").click(function () {
                 $(".yanzheng-msg").hide();
                 $(".queren-msg").show();
             });
             $(".member-info li").click(function () {
-                alert();
-                alert($(this).parent().parent().parent().children().find(".sender-name").text());
                 $(".kick-username").html($(this).parent().parent().parent().children().find(".sender-name").text());
+                
             });
-
 
         })
 

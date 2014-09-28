@@ -13,26 +13,6 @@
     padding:0px;
 }
 
-#myloginform {
- min-width:550px;
-position: relative;
-/* background-color: #FFF; */
-background:rgba(255,255,255,0.4);
-/*  startcolorstr 其格式为 #AARRGGBB 。 AA 、 RR 、 GG 、 BB 为十六进制正整数。取值范围为 00 – FF 。 RR 指定红色值， GG 指定绿色值， BB 指定蓝色值，参阅 #RRGGBB 颜色单位。 AA 指定透明度。 00 是完全透明。 FF 是完全不透明。超出取值范围的值将被恢复为默认值。
-　　取值范围为 #FF000000 – #FFFFFFFF 。默认值为 #FF0000FF 。不透明蓝色。
-    */
-filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
--webkit-box-shadow: 0 0 0 1px rgba(255,255,255,.6);
-box-shadow: 0 0 0 1px rgba(255,255,255,.6);
-margin: 1em;
-padding: 1em;
-border-radius: 5px;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
--ms-box-sizing: border-box;
-box-sizing: border-box;
-}
-
 
 .user-signin-1 .panel {
     position:absolute;

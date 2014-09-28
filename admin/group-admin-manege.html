@@ -60,9 +60,9 @@
                     </div>
                     <!-- List group -->
                     <div class="list-group">
-                        <a href="post.html" class="list-group-item">发帖</a>
-                        <a href="menber.html" class="list-group-item">成员</a>
-                        <a href="admin-manege.html" class="list-group-item active">群组管理</a>
+                        <a href="group-post.html" class="list-group-item">发帖</a>
+                        <a href="group-menber.html" class="list-group-item">成员</a>
+                        <a href="group-admin-manege.html" class="list-group-item active">群组管理</a>
                     </div>
                 </div>
 
@@ -303,25 +303,7 @@
             </div>
         </div>
     </div>
-    <!---------------------------更换群管理员------------------------------>
-    <!-- <div class="modal fade replace-administrator" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">系统提示</h4>
-                </div>
-                <div class="modal-body">
-                    确定将<a class="replace-administrator-name" href="javascript:void(0)"></a>设为管理员吗?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary replace-administrator-group-yes">确定</button>
-                </div>
-            </div>
-        </div>
-    </div>-->
-    <!-- Large modal -->
+   
     <div class="modal fade add-administrator" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -330,73 +312,13 @@
                     <h4 class="modal-title" id="myModalLabel">添加管理员</h4>
                 </div>
                 <div class="modal-body">
-
-                    <div class="form-group" id="ren-select">
-                        <select data-placeholder="输入联系人或群组的名字…" class="chosen-select lyp-info-note-chosen1" style="width: 100%; display: none;" multiple="" tabindex="-1">
-                            <option value=""></option>
-                            <optgroup label="联系人">
-                                <option>Dallas Cowboys</option>
-                                <option>New York Giants</option>
-                                <option>Philadelphia Eagles</option>
-                                <option>Washington Redskins</option>
-                                <option>Chicago Bears</option>
-                                <option>Detroit Lions</option>
-                                <option>Green Bay Packers</option>
-                                <option>Minnesota Vikings</option>
-                                <option>Atlanta Falcons</option>
-                                <option>Carolina Panthers</option>
-                                <option>New Orleans Saints</option>
-                                <option>Tampa Bay Buccaneers</option>
-                            </optgroup>
-                            <optgroup label="群组">
-                                <option>Arizona Cardinals</option>
-                                <option>St. Louis Rams</option>
-                                <option>San Francisco 49ers</option>
-                                <option>Seattle Seahawks</option>
-                                <option>Buffalo Bills</option>
-                                <option>Miami Dolphins</option>
-                                <option>New England Patriots</option>
-                                <option>New York Jets</option>
-                            </optgroup>
-                        </select>
-                        <div class="chosen-container chosen-container-multi chosen-with-drop chosen-container-active" title="">
-                            <ul class="chosen-choices">
-                                <li class="search-field"><input type="text" value="输入联系人或群组的名字…" class="default" autocomplete="off" style="width: 179px;" tabindex="6"></li>
-                            </ul>
-                            <div class="chosen-drop">
-                                <ul class="chosen-results">
-                                    <li class="group-result">联系人</li>
-                                    <li class="active-result group-option" data-option-array-index="2">Dallas Cowboys</li>
-                                    <li class="active-result group-option" data-option-array-index="3">New York Giants</li>
-                                    <li class="active-result group-option" data-option-array-index="4">Philadelphia Eagles</li>
-                                    <li class="active-result group-option" data-option-array-index="5">Washington Redskins</li>
-                                    <li class="active-result group-option" data-option-array-index="6">Chicago Bears</li>
-                                    <li class="active-result group-option" data-option-array-index="7">Detroit Lions</li>
-                                    <li class="active-result group-option" data-option-array-index="8">Green Bay Packers</li>
-                                    <li class="active-result group-option" data-option-array-index="9">Minnesota Vikings</li>
-                                    <li class="active-result group-option" data-option-array-index="10">Atlanta Falcons</li>
-                                    <li class="active-result group-option" data-option-array-index="11">Carolina Panthers</li>
-                                    <li class="active-result group-option" data-option-array-index="12">New Orleans Saints</li>
-                                    <li class="active-result group-option" data-option-array-index="13">Tampa Bay Buccaneers</li>
-                                    <li class="group-result">群组</li>
-                                    <li class="active-result group-option" data-option-array-index="15">Arizona Cardinals</li>
-                                    <li class="active-result group-option" data-option-array-index="16">St. Louis Rams</li>
-                                    <li class="active-result group-option" data-option-array-index="17">San Francisco 49ers</li>
-                                    <li class="active-result group-option" data-option-array-index="18">Seattle Seahawks</li>
-                                    <li class="active-result group-option" data-option-array-index="19">Buffalo Bills</li>
-                                    <li class="active-result group-option" data-option-array-index="20">Miami Dolphins</li>
-                                    <li class="active-result group-option" data-option-array-index="21">New England Patriots</li>
-                                    <li class="active-result group-option" data-option-array-index="22">New York Jets</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix mt5mb15"></div>
+                    输入名字：<br /><br />
+                    <input type="text" class="form-control input-panduan add-administrator-username" ><br /><br />
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">确定</button>
+                    <button type="button" class="btn btn-primary add-administrator-yes">确定</button>
                 </div>
             </div>
         </div>
@@ -421,49 +343,7 @@
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
-            ////最信消息区域鼠标移动显示图标
-            //$('.ren-icon-edit').hide();
-            //$('.ren-newest-info').mouseover(function () {
-            //    $(this).find('.ren-icon-edit').show();
-            //})
-            //$('.ren-newest-info').mouseout(function () {
-            //    $('.ren-icon-edit').hide();
-            //});
-            //鼠标移出结束
-            //$('.ren-info-note-chosen').chosen();
-
-            // $('.ren-btn-tooltip').tooltip('toggle');
-
-            // $('.ren-btn-tooltip').tooltip('hide');
-
-            ////点击textarea 显示隐藏区域
-            //$('.ren-more-input-box').hide();
-            //$('.ren-textarea').click(function () {
-            //    $(this).attr('rows', 3);
-            //    $(this).parent().next().show();
-            //    $(this).parent().next().find('select').chosen();
-            //});
-            //$('.nav-tabs li').click(function () {
-            //    $('.ren-textarea').attr('rows', 1);
-            //    $('.ren-more-input-box').hide();
-            //});
-            ////textarea 结束
-            ////时间日历
-            //$('#datetimepicker5').datetimepicker({
-            //    language: 'zh-CN',
-            //    pickTime: false
-            //});
-            //$('#datetimepicker4').datetimepicker({
-            //    language: 'ru',
-            //    pickDate: false
-            //});
-
-            //$('#ren-btn-submit-datetime').click(function () {
-
-            //    $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
-            //    $('.bs-datetimepicker-modal').modal('hide');
-            //});
-            ////日历时间结束
+            
             $(".repaly-post").click(function () {
                 $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
             });
@@ -498,13 +378,14 @@
             $(".replace-admin-group-yes").click(function () {
                 $("#current-main-group").val($(".replace-user-name").html());
             });
-            $(".input-panduan").keyup(function () {
-                var val = $(this).val();
-                var str = val.substr(0, val.length - 1);
-                $(this).val(str);
-            });
+            //$(".input-panduan").keyup(function () {
+            //    var val = $(this).val();
+            //    var str = val.substr(0, val.length - 1);
+            //    $(this).val(str);
+            //});
             //更换群组管理员确认
             $(".replace-administrator-group li").click(function () {
+                alert($(this).children().text());
                 $(".replace-administrator-name").html($(this).children().text());
             });
             $(".replace-administrator-group-yes").click(function () {
@@ -515,6 +396,10 @@
             $('.lyp-info-note-chosen1').chosen();
             $(".lyp-btn-add-administrator").click(function () {
                 $(".add-administrator").modal('show');
+
+            });
+            $(".add-administrator-yes").click(function () {
+                //重新加载页面，查询数据
 
             });
         });
