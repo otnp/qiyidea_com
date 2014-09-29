@@ -95,198 +95,210 @@
 
                 <div class="tab-content" style="background: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); padding:20px; ">
                     <div class="tab-pane active" id="base-group-info">
-                        <div class="row" id="">
-                            222
+
+                        <div class="row">
+                            <div class=" marbottom100">
+                                <div class="media" style="padding:0px 50px 0px 50px">
+                                    <form name="img-upload" id="img-upload" method="post" enctype="multipart/form-data">
+                                        <div class="col-sm-4 pull-right">
+                                            <a class="userinfo-image" href="#">
+                                                <img class="media-object" src="../img/login/44_140.jpg" alt="...">
+                                            </a>
+                                            <div class="martop5">
+                                                <input type="file" name="files[]" multiple="">
+                                                <button type="submit" class="btn btn-primary martop5 start width140 pull-left">
+                                                    <span class="glyphicon glyphicon-upload"></span>
+                                                    <span>上传群组图片</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="media-body">
+                                        <form class="form-inline" role="form">
+                                            <div class="form-group">
+                                                <span >群组名称</span>
+                                                <input type="text" class=" form-control " style="width:300px" id="group-name" placeholder="组名">
+                                            </div>
+                                            <div class="form-group martop10">
+                                                <span>群组密码</span>
+                                                <input type="text" class=" form-control " id="current-pwd" disabled value="123321">
+                                                <button type="button" class="btn btn-default" id="resetpwd">重置密码</button>
+                                            </div>
+                                            <div class="form-group martop10">
+                                                <span>群组介绍</span>
+                                                <textarea class="form-control group-jianjie-textarea" id="group-content" style="width:300px;height:100px" placeholder="输入群组介绍" ></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                               
+                               
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="group-member-manage">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h4 class="panel-title">群组密码</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <input type="text" class="form-control input-panduan" id="current-pwd" disabled value="112233">
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <button type="button" class="btn btn-default" id="resetpwd">重置密码</button>
-                                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h4 class="panel-title">群主</h4>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h4 class="panel-title">群主</h4>
-                                        </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <input type="text" class="form-control input-panduan" id="current-main-group" disabled value="王五">
                                     </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <input type="text" class="form-control input-panduan" id="current-main-group" disabled value="王五">
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <div class="input-group input-group-sm">
-                                                <div class="dropdown pull-right">
-                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                                        更换群主
-                                                        <span class="caret"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu width95 replace-admin-group" role="menu" aria-labelledby="dropdownMenu1">
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">张三</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">李四</a></li>
-                                                    </ul>
-                                                </div>
+                                    <div class="col-lg-5">
+                                        <div class="input-group input-group-sm">
+                                            <div class="dropdown pull-right">
+                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                    更换群主
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu width95 replace-admin-group" role="menu" aria-labelledby="dropdownMenu1">
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">张三</a></li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">李四</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-lg-10">
-                                            <h4 class="panel-title">群组管理员</h4>
-                                        </div>
-                                        <div class="col-lg-2">
-                                                <a href="javascript:void(0)" class="lyp-btn-add-administrator" style="color:white " data-toggle="modal">添加管理员</a>
-                                        </div>
+                        </div>
 
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <h4 class="panel-title">群组管理员</h4>
                                     </div>
+                                    <div class="col-lg-2">
+                                        <a href="javascript:void(0)" class="lyp-btn-add-administrator" style="color:white " data-toggle="modal">添加管理员</a>
+                                    </div>
+
                                 </div>
-                                <div class="panel-body">
+                            </div>
+                            <div class="panel-body">
+                                <!-------------------------------------管理员--------------------------------------->
+                                <div class="row marbottom15">
                                     <!-------------------------------------管理员--------------------------------------->
-                                    <div class="row marbottom15">
-                                        <!-------------------------------------管理员--------------------------------------->
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
-                                            </div>
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
                                         </div>
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
-                                            </div>
+                                    </div>
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
                                         </div>
+                                    </div>
 
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
-                                            </div>
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
                                         </div>
-                                        <!-------------------------------------管理员--------------------------------------->
+                                    </div>
+                                    <!-------------------------------------管理员--------------------------------------->
 
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h4 class="panel-title">群组成员</h4>
                                     </div>
 
 
                                 </div>
                             </div>
-
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <h4 class="panel-title">群组成员</h4>
+                            <div class="panel-body">
+                                <div class="row marbottom15">
+                                    <!-------------------------------------群组成员列表--------------------------------------->
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                            <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                            <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
                                         </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row marbottom15">
-                                        <!-------------------------------------群组成员列表--------------------------------------->
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
-                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
-                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
-                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
-                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine1" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine1</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
-                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
-                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
-                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
-                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="pull-left marleft27 martop10">
-                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
-                                                <div class="text-overflow">sunshine</div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
-                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
-                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
-                                            </div>
-                                        </div>
-                                        <!-------------------------------------群组成员列表--------------------------------------->
                                     </div>
 
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                            <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                            <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine1" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine1</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                            <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                            <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                            <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                            <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="pull-left marleft27 martop10">
+                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                            <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                            <div class="text-overflow">sunshine</div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                            <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                            <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                        </div>
+                                    </div>
+                                    <!-------------------------------------群组成员列表--------------------------------------->
                                 </div>
+
                             </div>
+                        </div>
 
-                        
-                       
-
-                      
-                       
                     </div>
 
 
