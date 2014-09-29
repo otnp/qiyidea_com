@@ -58,8 +58,7 @@
                             </div>
                         </div>
                     </a>
-                     
-
+                    
 
 
                 </div>
@@ -69,56 +68,79 @@
             <!--right box-->
             <div class="col-xs-9">
 
+
+
                 <!--为post 消息列表-->
                 <div class="panel panel-default">
                     <div class="panel-heading panel-danger">
-                       <h4>创建群组</h4> 
+                        <h4>邀请成员加入</h4>
                     </div>
                     <div class="panel-body">
+                        <div class="alert alert-success" role="alert">恭喜你，你已成功创建****群组，快邀请更多人加入吧！</div>
                         <div class="pt10">
-                            <form name="img-upload" class="form-horizontal" id="img-upload" method="post" enctype="multipart/form-data">
-                                <div class="col-sm-4 col-lg-4">
-                                    <div class="ren-image-pre-box">
-                                        <img id="ImgPr" class="media-object" src="../img/login/44_140.jpg" alt="...">
-                                    </div>
-                                    <div class="clearfix">
-                                        <input type="file" name="files[]" multiple="" id="up">
-                                        <button type="submit" class="btn btn-info mtmb15 start pull-left">
-                                            <span class="glyphicon glyphicon-upload"></span>
-                                            <span>上传群组标识</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                            <form class="form-horizontal" role="form">
-                                <div class="col-sm-8 col-lg-8">
-                                    <div class="form-group">
-                                        <label class="control-label sr-only" for="groupname">添加标签</label>
-                                        <div class="col-lg-11">
-                                            <input type="text" class="form-control" name="groupname" id="groupname" placeholder="输入要创建的群组名称" maxlength="200" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label sr-only" for="addTag">填写群组简介</label>
-                                        <div class="col-lg-11">
-                                            <textarea rows="5" class="form-control" id="" name="groupname" placeholder="填写群组简介…"></textarea>
 
+                            <fieldset>
+                                <legend><h5>发送小组链接</h5> </legend>
+                                <input type="text" class="form-control input-sm" disabled value="https://qiyidea.cn/j/aws82k" />
+                                <div class="ptb5">
+                                    <a class="btn btn-primary btn-sm" href="#">复制邀请链接</a>
+                                </div>
+
+
+                            </fieldset>
+                            <div class="clearfix mtmb15"></div>
+                            <fieldset>
+                                <legend><h5>邀请联系人</h5> </legend>
+                                <div>
+                                    <form class="form-horizontal" role="form">
+
+                                        选择你要邀请的人
+
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                               所有关注你的人
+                                            </label>
                                         </div>
-                                    </div>
-                                    <div class="clearfix mt5mb15"></div>
-                                    <div class="form-group">
-                                        <div class="col-lg-10">
-                                            <button type="submit" class="btn btn-primary" onclick=" window.location.href='group-create-ok.html'">
-                                                <span class="glyphicon glyphicon-plus"></span>
-                                                立即创建
-                                            </button>
+
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                相互关注的人
+                                            </label>
                                         </div>
+                                        <br />
+                                        <h6>附上几句邀请语，这样他们可能更愿意接受你的邀请（可选）</h6>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        <div class="ptb5">
+                                            <button class="btn btn-sm btn-primary" >邀 请</button>
+                                        </div>
+                                        
+                                    </form>
+
+                                </div>
+                            </fieldset>
+
+                            <div class="clearfix mtmb15"></div>
+                            <fieldset>
+                                <legend><h5>小组密码</h5> </legend>
+                                 系统自动生成小组密码
+                                <div>
+                                    <input type="text" class="form-control input-sm" disabled value="14aws82k" />
+                                    <div class="ptb5">
+                                        <a class="btn btn-primary btn-sm" href="#" >复制小组密码</a>
                                     </div>
                                 </div>
-                            </form>
+
+                            </fieldset>
                         </div>
                     </div>
                     <div class="panel-footer text-center small color-grey">
+                        <a class="btn btn-success btn-block">
+                            <span class="glyphicon glyphicon-tree-conifer"></span>
+                            申请认证
+                        </a>
+                        <br />
                         申请邮件将发送到****老师处。
                         您可以与ta联系，加速认证。<br />
                         ****邮箱: <a href="#" class="alert-link">ABC@dfg.com</a>
