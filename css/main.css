@@ -19,6 +19,9 @@ a.nulinkunderline:hover {
 .color-grey {
 color:#A5ABB8;
 }
+dt, dd {
+line-height: 1.7;
+}
 /********************************************** navbar-static-top.css **************************************/
 .navbar-static-top {
     margin-bottom: 0px;
