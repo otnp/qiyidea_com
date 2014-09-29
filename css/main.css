@@ -279,3 +279,9 @@ position: absolute; top: 10px; left: 28px; height: 18px; min-width: 20px; paddin
 .ren-dropdown-menu i {
     color:#CACED5;
 }
+.text-overflow{
+width:48px;
+overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+white-space:nowrap;/* 不换行 */
+}
