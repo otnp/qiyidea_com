@@ -298,3 +298,6 @@ white-space:nowrap;/* 不换行 */
     margin-right: 5px;
     padding:1px 8px;
 }
+.already-add-group {
+    font-size:14px;margin-left:15px;display:block;margin-top: 6px;
+}

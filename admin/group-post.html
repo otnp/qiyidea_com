@@ -84,8 +84,50 @@
 
 
             </div>
-            <!--right box-->
             <div class="col-xs-9">
+                <!--群组简介区域-->
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="../img/login/u89578882-4.jpg" alt="...">
+                                    </a>
+                                    <div class="media-body">
+                                        <div >
+                                            <div class="pull-left" style="font-size:20px;">
+                                                Mr. 张's 高等教育 group
+                                                
+                                            </div>
+                                            <div class="pull-left already-add-group">
+                                                我是这个小组的成员 >
+                                                <a href="javascript:void(0)" class="drop-out-group" data-toggle="modal" data-target=".drop-out-group-modal">退出小组</a>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left no-add-group" style="display:none;">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-success add-group">加入小组</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 martop10">
+                                <span>创建于2014-09-29</span>
+                                <span class="marleft27">组长:<a href="javascript:void(0)">Sunshine</a></span>
+                            </div>
+                            <div class="col-lg-12 martop10">
+                                <span>群组简介:现在组里越来越多出相机的贴子，购买的同学们要擦亮眼睛，没有经验的应该事先多了解请教他人，最好面交或者通过淘宝交易。 </span>
+                            </div>
+                        </div>
+                        <!--<div class="row">
+                            <div class="col-lg-12">
+                                <h4>Mr. 张's 高等教育 group</h4>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
                 <!--发送信息的区域-->
                 <div class="tabbable" id="tabs-736012">
                     <!-- Only required for left/right tabs -->
@@ -243,7 +285,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="panel-body"  style=" padding:0px 15px 0px 15px;">
+                    <div class="panel-body" style=" padding:0px 15px 0px 15px;">
                         <!-------------------------------------帖子信息----------------------------------------->
                         <div class="row border-doil">
                             <div class="col-lg-8 title-type">
@@ -291,7 +333,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
@@ -302,41 +344,20 @@
     <div id="footer"></div>
 
     <!--dialog modal-->
-
-    <div class="modal bs-datetimepicker-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <!------------------------------------------------------退出小组------------------------------------------------------------------>
+    <div class="modal fade drop-out-group-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                    <h5 class="modal-title" id="mySmallModalLabel">安排发布</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">系统消息 </h4>
                 </div>
                 <div class="modal-body">
-                    <div class="mt5mb15"></div>
-                    <form class="form-inline" role="form">
-
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker5'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                                <input type='text' id="ren-input-date" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择日子" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker4'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                                <input type='text' id="ren-input-time" class="form-control" />
-                            </div>
-                        </div>
-
-                    </form>
-                    <div class="mt5mb15"></div>
+                    确定退出小组吗?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
-                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
+                    <a href="javascript:void(0)" class="" data-dismiss="modal">取消</a>
+                    <button type="button" class="btn btn-primary drop-out-group-yes">确定</button>
                 </div>
             </div>
         </div>
@@ -421,6 +442,18 @@
                 var $this = $(this);
                 scrollHeight = $this[0].scrollHeight;
                 $this.height(scrollHeight);
+            });
+            //$(".drop-out-group").click(function () {
+            //    $(".drop-out-group-modal").modal("hide");
+            //});
+            $(".drop-out-group-yes").click(function () {
+                $(".drop-out-group-modal").modal("hide");
+                $(".already-add-group").hide();
+                $(".no-add-group").show();
+            });
+            $(".add-group").click(function () {
+                $(".already-add-group").show();
+                $(".no-add-group").hide();
             });
         })
 
