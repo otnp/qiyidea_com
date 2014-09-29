@@ -257,3 +257,44 @@ white-space:nowrap;/* 不换行 */
 .martop10 {
     margin-top:10px;
 }
+.width300 {
+    width:300px;
+}
+.paddright13 {
+    padding-right:13px;
+}
+.border-doil {
+    border-bottom:1px #ddd dotted;
+    border-spacing:2px;
+}
+.title-type{
+width:420px;
+overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+white-space:nowrap;/* 不换行 */
+}
+.padding0 {
+    padding:0px 0px 0px 0px;
+}
+.title-hover-bolor:hover {
+    color:white;
+    background-color:green;
+}
+.post-time-type{
+    margin-left:10px;
+    color:#007722
+}
+.paddrow {
+    padding: 0px 30px 0px 35px;
+}
+.paddrow .on {
+    font-size: 12px;
+    color: #fff;
+    background:#83bf73;
+    border-radius: 3px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin-right: 5px;
+    padding:1px 8px;
+}
