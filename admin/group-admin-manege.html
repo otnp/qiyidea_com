@@ -86,326 +86,460 @@
 
             </div>
             <!--right box-->
-            <div class="col-xs-9">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4 class="panel-title">群组密码</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <input type="text" class="form-control input-panduan" id="current-pwd" disabled value="112233">
-                            </div>
-                            <div class="col-lg-5">
-                                <button type="button" class="btn btn-default" id="resetpwd">重置密码</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xs-9 ">
+                <ul class="nav nav-tabs" id="myTab" style="background: whitesmoke; border-bottom: 1px solid #dddddd; padding:5px 15px 0px 15px; margin:0;">
+                    <li class="active"><a href="#base-group-info">基本信息</a></li>
+                    <li><a href="#group-member-manage">成员管理</a></li>
 
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4 class="panel-title">群主</h4>
-                            </div>
+                </ul>
+
+                <div class="tab-content" style="background: white; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); padding:20px; ">
+                    <div class="tab-pane active" id="base-group-info">
+                        <div class="row" id="">
+                            222
                         </div>
                     </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <input type="text" class="form-control input-panduan" id="current-main-group" disabled value="王五">
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="input-group input-group-sm">
-                                    <div class="dropdown pull-right">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            更换群主
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu width95 replace-admin-group" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">张三</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">李四</a></li>
-                                        </ul>
+                    <div class="tab-pane" id="group-member-manage">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4 class="panel-title">群组密码</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-lg-10">
-                                <h4 class="panel-title">群组管理员</h4>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default lyp-btn-add-administrator" data-toggle="modal">添加管理员</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <!-------------------------------------管理员--------------------------------------->
-                        <div class="row marbottom15">
-                            <div class="col-lg-7">
-                                <input type="text" class="form-control input-panduan current-administrator-group" disabled value="王五">
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="input-group input-group-sm">
-                                    <div class="dropdown pull-right">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            指定新的管理员
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu width136 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">张三</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-1">李四</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!---------------------------更换群管理员------------------------------>
-                            <div class="modal fade replace-administrator-1  replace-administrator-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control input-panduan" id="current-pwd" disabled value="112233">
                                         </div>
-                                        <div class="modal-body">
-                                            确定将<a class="replace-administrator-name" href="javascript:void(0)"></a>设为管理员吗?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                            <button type="button" class="btn btn-primary replace-administrator-group-yes">确定</button>
+                                        <div class="col-lg-5">
+                                            <button type="button" class="btn btn-default" id="resetpwd">重置密码</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!---------------------------更换群管理员------------------------------>
-                        </div>
 
-                        <div class="row marbottom15">
-                            <div class="col-lg-7">
-                                <input type="text" class="form-control input-panduan current-administrator-group" disabled value="王五">
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="input-group input-group-sm">
-                                    <div class="dropdown pull-right">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            指定新的管理员
-                                            <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu  width136 replace-administrator-group" role="menu" aria-labelledby="dropdownMenu1">
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-2">赵六</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".replace-administrator-2">刘七</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!---------------------------更换群管理员------------------------------>
-                            <div class="modal fade replace-administrator-2 replace-administrator-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                            <h4 class="modal-title" id="myModalLabel">系统提示</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            确定将<a class="replace-administrator-name" href="javascript:void(0)"></a>设为管理员吗?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                            <button type="button" class="btn btn-primary replace-administrator-group-yes">确定</button>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4 class="panel-title">群主</h4>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <input type="text" class="form-control input-panduan" id="current-main-group" disabled value="王五">
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="input-group input-group-sm">
+                                                <div class="dropdown pull-right">
+                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                        更换群主
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu width95 replace-admin-group" role="menu" aria-labelledby="dropdownMenu1">
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">张三</a></li>
+                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-toggle="modal" data-target=".determine-replace">李四</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <!---------------------------更换群管理员------------------------------>
-                        </div>
-                        <!-------------------------------------管理员--------------------------------------->
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <h4 class="panel-title">群组管理员</h4>
+                                        </div>
+                                        <div class="col-lg-2">
+                                                <a href="javascript:void(0)" class="lyp-btn-add-administrator" style="color:white " data-toggle="modal">添加管理员</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <!-------------------------------------管理员--------------------------------------->
+                                    <div class="row marbottom15">
+                                        <!-------------------------------------管理员--------------------------------------->
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="cancel-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".cancel-administrator-this-user">取消管理员</a></h5>
+                                            </div>
+                                        </div>
+                                        <!-------------------------------------管理员--------------------------------------->
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h4 class="panel-title">群组成员</h4>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row marbottom15">
+                                        <!-------------------------------------群组成员列表--------------------------------------->
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine1" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine1</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="pull-left marleft27 martop10">
+                                            <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                <img class="media-object" src="../img/login/user_normal.jpg" alt="...">
+                                                <div class="text-overflow">sunshine</div>
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">设为管理员</a></h5>
+                                                <h5 class="media-heading"><a class="kick-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".kick-this-userinfo">踢走</a></h5>
+                                                <h5 class="media-heading"><a class="jin-this-user" href="javascript:void(0)" data-toggle="modal" data-target=".jin-this-userinfo">封禁</a></h5>
+                                            </div>
+                                        </div>
+                                        <!-------------------------------------群组成员列表--------------------------------------->
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        
+                       
+
+                      
+                       
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
 
-    <div class="clearfix mtmb15"></div>
-   
 
-    <div id="footer"></div>
-
-    <!--dialog modal-->
-
-    <div class="modal bs-datetimepicker-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                    <h5 class="modal-title" id="mySmallModalLabel">安排发布</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="mt5mb15"></div>
-                    <form class="form-inline" role="form">
-
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker5'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                                <input type='text' id="ren-input-date" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择日子" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker4'>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-time"></span>
-                                </span>
-                                <input type='text' id="ren-input-time" class="form-control" />
-                            </div>
-                        </div>
-
-                    </form>
-                    <div class="mt5mb15"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
-                    <button type="button" class="btn btn-primary btn-sm" id="ren-btn-submit-datetime">确 认</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!---------------------------更换群主------------------------------>
-    <div class="modal fade determine-replace" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">系统提示</h4>
-                </div>
-                <div class="modal-body">
-                    确定将<a class="replace-user-name" href="javascript:void(0)"></a>设为群主吗?确定后将重新登录!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary replace-admin-group-yes">确定</button>
                 </div>
             </div>
         </div>
-    </div>
-   
-    <div class="modal fade add-administrator" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">添加管理员</h4>
-                </div>
-                <div class="modal-body">
-                    输入名字：<br /><br />
-                    <input type="text" class="form-control input-panduan add-administrator-username" ><br /><br />
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary add-administrator-yes">确定</button>
+        <div class="clearfix mtmb15"></div>
+
+
+        <div id="footer"></div>
+
+
+        <!---------------------------更换群主------------------------------>
+
+        <div class="modal fade determine-replace" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确定将<a class="replace-user-name" href="javascript:void(0)"></a>设为群主吗?确定后将重新登录!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary replace-admin-group-yes">确定</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!---------------------------群管理员------------------------------>
+        <div class="modal fade cancel-administrator-this-user" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确定将<a class="new-administrator-name" href="javascript:void(0)"></a>移除管理员吗?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary cancel-administrator-group-yes">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------群管理员------------------------------>
+        <!---------------------------添加管理员------------------------------>
+        <div class="modal fade add-administrator" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">添加管理员</h4>
+                    </div>
+                    <div class="modal-body">
+                        输入名字：<br /><br />
+                        <input type="text" class="form-control input-panduan add-administrator-username"><br /><br />
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary add-administrator-yes">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------踢出成员------------------------------>
+        <div class="modal fade kick-this-userinfo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确定将<a class="new-administrator-name" href="javascript:void(0)"></a>踢出该群组吗?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary kick-userinfo-group-yes">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------踢出成员------------------------------>
+        <!---------------------------禁闭成员------------------------------>
+        <div class="modal fade jin-this-userinfo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确定封禁<a class="new-administrator-name" href="javascript:void(0)"></a>吗?确定后该用户将无法加入该小组。
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary jin-member-group-yes">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------禁闭成员------------------------------>
+        <!---------------------------设为管理员------------------------------>
+        <div class="modal fade set-administrator-this-user" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">系统提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确定将<a class="new-administrator-name" href="javascript:void(0)"></a>设为管理员吗?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary new-administrator-group-yes">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------------设为管理员------------------------------>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../dist/js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-datetimepicker/js/moment.js"></script>
+        <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
+        <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
+        <script src="../js/chosen/chosen.jquery.js"></script>
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
+        <script type="text/javascript">
+
+            $(function () {
+                $("#head").load("head.html");
+                $("#footer").load("footer.html");
+
+                $(".repaly-post").click(function () {
+                    $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
+                });
+                //输入回复时
+                $(".reply-textarea").keyup(function () {
+                    var replytextarea = $(this).val();
+                    if (replytextarea == "") {
+                        $(this).parent().parent().find("button").addClass("disabled");
+                    } else {
+                        $(this).parent().parent().find("button").removeClass("disabled");
+                    }
+                });
+                //textarea高度自适应
+                $("textarea").on("scroll", function (event) {
+                    var $this = $(this);
+                    scrollHeight = $this[0].scrollHeight;
+                    $this.height(scrollHeight);
+                });
+                $(".add-firend-next-step").click(function () {
+                    $(".yanzheng-msg").hide();
+                    $(".queren-msg").show();
+                });
+                //重置密码
+                $("#resetpwd").click(function () {
+                    $("#current-pwd").val("123456");
+                });
+                //更换群主确认
+                $(".replace-admin-group li").click(function () {
+                    $(".replace-user-name").html($(this).children().text());
+                });
+                //确定更换群主
+                $(".replace-admin-group-yes").click(function () {
+                    $("#current-main-group").val($(".replace-user-name").html());
+                    $(".determine-replace").modal("hide");
+                });
+                //$(".input-panduan").keyup(function () {
+                //    var val = $(this).val();
+                //    var str = val.substr(0, val.length - 1);
+                //    $(this).val(str);
+                //});
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../dist/js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap-datetimepicker/js/moment.js"></script>
-    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
-    <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
-    <script src="../js/chosen/chosen.jquery.js"></script>
+                $('.lyp-info-note-chosen1').chosen();
+                $(".lyp-btn-add-administrator").click(function () {
+                    $(".add-administrator").modal('show');
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
-    <script type="text/javascript">
-
-        $(function () {
-            $("#head").load("head.html");
-            $("#footer").load("footer.html");
-            
-            $(".repaly-post").click(function () {
-                $(this).parent().parent().parent().parent().find(".reply-quyu").toggle();
-            });
-            //输入回复时
-            $(".reply-textarea").keyup(function () {
-                var replytextarea = $(this).val();
-                if (replytextarea == "") {
-                    $(this).parent().parent().find("button").addClass("disabled");
-                } else {
-                    $(this).parent().parent().find("button").removeClass("disabled");
-                }
-            });
-            //textarea高度自适应
-            $("textarea").on("scroll", function (event) {
-                var $this = $(this);
-                scrollHeight = $this[0].scrollHeight;
-                $this.height(scrollHeight);
-            });
-            $(".add-firend-next-step").click(function () {
-                $(".yanzheng-msg").hide();
-                $(".queren-msg").show();
-            });
-            //重置密码
-            $("#resetpwd").click(function () {
-                $("#current-pwd").val("123456");
-            });
-            //更换群主确认
-            $(".replace-admin-group li").click(function () {
-                $(".replace-user-name").html($(this).children().text());
-            });
-            //确定更换群主
-            $(".replace-admin-group-yes").click(function () {
-                $("#current-main-group").val($(".replace-user-name").html());
-                $(".determine-replace").modal("hide");
-            });
-            //$(".input-panduan").keyup(function () {
-            //    var val = $(this).val();
-            //    var str = val.substr(0, val.length - 1);
-            //    $(this).val(str);
-            //});
-            //更换群组管理员确认
-            $(".replace-administrator-group li").click(function () {
-                $(".replace-administrator-name").html($(this).children().text());
-            });
-            $(".replace-administrator-group-yes").click(function () {
-                $(this).parent().parent().parent().parent().parent().find("input").val($(".replace-administrator-name").html());
-                $(".replace-administrator-modal").modal("hide");
-            });
-
-            $('.lyp-info-note-chosen1').chosen();
-            $(".lyp-btn-add-administrator").click(function () {
-                $(".add-administrator").modal('show');
+                });
+                //确定添加管理员
+                $(".add-administrator-yes").click(function () {
+                    //重新加载页面，查询数据
+                    $(".add-administrator").modal("hide");
+                });
+                //普通成员管理
+                $(".manage-userinfo-group li").click(function () {
+                    //alert($(this).parent().parent().parent().parent().parent().children().find(".current-administrator-group").val());
+                    //alert($(this).parent().parent().parent().parent().children().find(".current-administrator-group").val());
+                    $(".manage-user-name").html($(this).parent().parent().parent().parent().parent().children().find(".current-administrator-group").val());
+                });
+                //取消管理员身份
+                $(".cancel-administrator-info").click(function () {
+                    $(".new-administrator-name").html($(this).parent().parent().parent().children().find(".text-overflow").text());
+                });
+                //确定取消管理员
+                $(".cancel-administrator-group-yes").click(function () {
+                    $(".cancel-administrator-this-user").modal("hide");
+                    //重新加载页面，查询数据
+                });
+                //设为管理员
+                $(".set-administrator-info").click(function () {
+                    $(".new-administrator-name").html($(this).parent().parent().parent().children().find(".text-overflow").text());
+                });
+                //确定设为新管理员
+                $(".new-administrator-group-yes").click(function () {
+                    $(".set-administrator-this-user").modal("hide");
+                    //重新加载页面
+                });
+                //踢出成员
+                $(".kick-this-user").click(function () {
+                    $(".new-administrator-name").html($(this).parent().parent().parent().children().find(".text-overflow").text());
+                });
+                //确定踢出成员
+                $(".kick-userinfo-group-yes").click(function () {
+                    $(".kick-this-userinfo").modal("hide");
+                    //重新加载页面，查询数据
+                });
+                //封禁成员
+                $(".jin-this-user").click(function () {
+                    $(".new-administrator-name").html($(this).parent().parent().parent().children().find(".text-overflow").text());
+                });
+                //确定禁闭成员
+                $(".jin-member-group-yes").click(function () {
+                    $(".jin-this-userinfo").modal("hide");
+                    //重新加载页面，查询数据
+                });
+                $('#myTab a').click(function (e) {
+                    e.preventDefault();//阻止a链接的跳转行为
+                    $(this).tab('show');//显示当前选中的链接及关联的content
+                })
 
             });
-            $(".add-administrator-yes").click(function () {
-                //重新加载页面，查询数据
-                $(".add-administrator").modal("hide");
-            });
-        });
 
 
-    </script>
+        </script>
 
 
 </body>

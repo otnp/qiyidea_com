@@ -248,3 +248,12 @@ line-height: 32px;
 .paddingtop20 {
     padding-top:20px;
 }
+.text-overflow{
+width:48px;
+overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+white-space:nowrap;/* 不换行 */
+}
+.martop10 {
+    margin-top:10px;
+}
