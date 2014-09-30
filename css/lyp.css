@@ -294,7 +294,7 @@ white-space:nowrap;/* 不换行 */
     padding:1px 8px;
 }
 .already-add-group {
-    font-size:14px;margin-left:15px;display:block;margin-top: 6px;
+   margin-left:15px;display:block;margin-top: 5px;
 }
 .old-user-reply {
     border-left:1px solid #000;
