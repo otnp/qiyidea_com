@@ -53,6 +53,10 @@
                                 <div class="media-body">
                                     <h4 class="group-title media-heading">Mr. 张's 高等教育 group</h4>
                                     小组
+                                    <div class="btn-group pull-right paddright13">
+                                        <a href="../admin/group-admin-manege.html" class="glyphicon glyphicon-cog cursor" title="群组管理">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -119,7 +123,7 @@
                                 </a>
                                 <div class="media-body">
                                     <h5 class="media-heading"><a class="current-username" href="javascript:void(0)">Sunshine</a><span class="post-time-type">2014-09-27 22:19:12</span></h5>
-                                    <span class="current-reply-reply">中间ps的部分用蒙版把明暗涂均匀就完美了! 漂亮!</span>
+                                    <div class="current-reply-reply">中间ps的部分用蒙版把明暗涂均匀就完美了! 漂亮!</div>
                                 </div>
                             </div>
                             <div class="col-lg-12"><a href="javascript:void(0)" class="pull-right  reply-user-1">回复</a></div>
@@ -132,7 +136,21 @@
                                 </a>
                                 <div class="media-body">
                                     <h5 class="media-heading"><a class="current-username" href="javascript:void(0)">Sunshine1</a><span class="post-time-type">2014-09-27 22:19:12</span></h5>
-                                    <span class="current-reply-reply">中间ps的部分用蒙版把明暗涂均匀就完美了! 漂亮!123</span>
+                                    <div class="current-reply-reply">中间ps的部分用蒙版把明暗涂均匀就完美了! 漂亮!123</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12"><a href="javascript:void(0)" class="pull-right reply-user-1">回复</a></div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="../img/login/u89578882-4.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><a class="current-username" href="javascript:void(0)">Sunshine2</a><span class="post-time-type">2014-09-27 22:19:12</span></h5>
+                                    <div class="old-user-reply">中间ps的部分用蒙版把明暗涂均匀就完美了! 漂亮!123<a href="javascript:void(0)" class="marleft27">Sunshine1</a></div>
+                                    <div class="current-reply-reply new-reply-user-content">just so so</div>
                                 </div>
                             </div>
                             <div class="col-lg-12"><a href="javascript:void(0)" class="pull-right reply-user-1">回复</a></div>
@@ -145,12 +163,12 @@
                             <h4>你的回复</h4>
                         </div>
                         <div class="col-lg-12" style="margin-top:10px;">
-                            <div class="alert alert-warning alert-dismissible" role="alert" style="display:none">
-                                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <span class="reply-content"></span><a href="javascript:void(0)" class="marleft10 reply-current-username">Sunshine</a>
+                                <div class="alert alert-warning alert-dismissible" role="alert" style="display:none">
+                                    <button type="button" class="close close-alert-warning" >&times;</button>
+                                    <span class="reply-content"></span><a href="javascript:void(0)" class="marleft10 reply-current-username">Sunshine</a>
+                                </div>
+                                <textarea class="form-control reply-textarea" id="replay-content" placeholder="输入你想说的话..." style="height:200px;"></textarea>
                             </div>
-                            <textarea class="form-control reply-textarea" id="replay-content" placeholder="输入你想说的话..." style="height:200px;"></textarea>
-                        </div>
                         <div class="col-lg-12" style="margin: 10px 0px 30px 0px;">
                             <button type="button" class="btn btn-default btn-reply pull-right" id="register">评论</button>
                         </div>
@@ -251,6 +269,9 @@
                 $(".reply-current-username").html($(this).parent().parent().children().find(".current-username").text());
                 $(".alert-dismissible").show();
                 $(".reply-textarea").focus();
+            });
+            $(".close-alert-warning").click(function () {
+                $(".alert-dismissible").hide();
             });
         })
 
