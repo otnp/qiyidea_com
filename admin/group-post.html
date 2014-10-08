@@ -51,7 +51,7 @@
                                     <img class="media-object" width="51" height="51" style="width:51px;height:51px;" src="../img/login/group-img.png" alt="...">
                                 </a>
                                 <div class="media-body">
-                                    <h4 class="group-title media-heading">Mr. 张's 高等教育 group</h4>
+                                    <h4 class="group-title media-heading">Web设计</h4>
                                     
                                     <div class="btn-group pull-right paddright13">
                                         <a href="../admin/group-admin-manege.html" class="glyphicon glyphicon-cog cursor" title="群组管理">
@@ -119,15 +119,15 @@
 
                                         <div>
                                             <div class="pull-left fz16">
-                                                Mr. 张's 高等教育 group
+                                               Web设计
                                             </div>
                                             <div class="pull-left already-add-group fz12 ">
                                                 我是这个群组的成员 >
                                                 <a href="javascript:void(0)" class="drop-out-group" data-toggle="modal" data-target=".drop-out-group-modal">退出群组</a>
                                             </div>
                                         </div>
-                                        <div class="pull-left no-add-group" style="display:none;">
-                                            <div class="btn-group">
+                                        <div class="pull-left no-add-group fz12" style="display:none;">
+                                            <div class="btn-group" data-toggle="modal" data-target=".lyp-bs-join-group-modal-sm">
                                                 <button type="button" class="btn btn-sm btn-success add-group">加入群组</button>
                                             </div>
                                         </div>
@@ -330,7 +330,24 @@
             </div>
         </div>
     </div>
-
+    <!--加入群组-->
+    <div class="modal fade lyp-bs-join-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    加入群组
+                </div>
+                <div class="modal-body">
+                    <input type='password' class="form-control btn-sm" id="ren-input-group-pwd" placeholder="群组密码" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
+                    <button type="button" class="btn btn-primary btn-sm" id="lyp-btn-submit-datetime">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Bootstrap core JavaScript
@@ -419,9 +436,11 @@
                 $(".already-add-group").hide();
                 $(".no-add-group").show();
             });
-            $(".add-group").click(function () {
+            //确定加入群组
+            $("#lyp-btn-submit-datetime").click(function () {
                 $(".already-add-group").show();
                 $(".no-add-group").hide();
+                $(".lyp-bs-join-group-modal-sm").modal("hide");
             });
         })
 

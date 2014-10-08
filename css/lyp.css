@@ -226,7 +226,6 @@ textarea {
     margin-left:4px;
 }
 .menber-class{
-    font-size: 24px;
 font-weight: 200;
 line-height: 32px;
 }
@@ -302,4 +301,7 @@ white-space:nowrap;/* 不换行 */
 }
 .new-reply-user-content {
     margin-top:20px;
+}
+.no-add-group{
+    margin-left:15px;
 }
