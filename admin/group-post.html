@@ -71,7 +71,24 @@
 
                 <div class="list-group ">
                     <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
-                        群组
+                        已加入群组
+                    </a>
+                    <a href="#" class="list-group-item">Web设计群组</a>
+
+
+                    <a href="#" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">更多</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="list-group ">
+                    <a href="#" class="list-group-item list-group-item-info active disabled nocursor">
+                        已关注群组
                     </a>
                     <a href="#" class="list-group-item">Web设计群组</a>
 
@@ -129,6 +146,11 @@
                                         <div class="pull-left no-add-group fz12" style="display:none;">
                                             <div class="btn-group" data-toggle="modal" data-target=".lyp-bs-join-group-modal-sm">
                                                 <button type="button" class="btn btn-sm btn-success add-group">加入群组</button>
+                                            </div>
+                                        </div>
+                                        <div class="pull-left no-add-group guanzhu-group fz12" style="display:none;">
+                                            <div class="btn-group" data-toggle="modal" data-target=".lyp-bs-guanzhu-group-modal-sm">
+                                                <button type="button" class="btn btn-sm btn-success add-group">关注群组</button>
                                             </div>
                                         </div>
                                         <div class="clearfix"></div>
@@ -342,8 +364,45 @@
                     <input type='password' class="form-control btn-sm" id="ren-input-group-pwd" placeholder="群组密码" />
                 </div>
                 <div class="modal-footer">
+                    <a type="button" class="btn btn-link btn-sm apply-join-group" data-dismiss="modal" data-toggle="modal" data-target=".lyp-bs-apply-join-group-modal-sm">？申请加入</a>
                     <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
                     <button type="button" class="btn btn-primary btn-sm" id="lyp-btn-submit-datetime">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--关注群组-->
+    <div class="modal fade lyp-bs-guanzhu-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    关注群组
+                </div>
+                <div class="modal-body">
+                    已关注该群组
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
+                    <button type="button" class="btn btn-primary btn-sm" id="lyp-btn-submit-guanzhu-datetime">确 认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--申请加入群组-->
+    <div class="modal fade lyp-bs-apply-join-group-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    申请加入群组
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control reply-textarea" id="replay-content" placeholder="加入群组理由..." style="height:100px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">取 消</button> 或 &nbsp;
+                    <button type="button" class="btn btn-primary btn-sm" id="lyp-btn-apply-datetime">确 认</button>
                 </div>
             </div>
         </div>
@@ -441,6 +500,16 @@
                 $(".already-add-group").show();
                 $(".no-add-group").hide();
                 $(".lyp-bs-join-group-modal-sm").modal("hide");
+            });
+            $("#lyp-btn-submit-guanzhu-datetime").click(function () {
+                $(".guanzhu-group").hide();
+                $(".lyp-bs-guanzhu-group-modal-sm").modal("hide");
+            });
+            $(".apply-join-group").click(function(){
+                $(".lyp-bs-join-group-modal-sm").modal("hide");
+            });
+            $("#lyp-btn-apply-datetime").click(function () {
+                $(".lyp-bs-apply-join-group-modal-sm").modal("hide");
             });
         })
 
