@@ -13,6 +13,10 @@ padding:0;
 .thumbnail > .progress,.project-view-status>.progress {
     margin-bottom:0px; border-radius:0; height:5px;
 }
+.project-view-status > .rener-progress {
+    margin-left:15px;
+    margin-right:15px;
+}
 .project-view-status > hr {
 margin-top:10px;
 margin-bottom:10px;
