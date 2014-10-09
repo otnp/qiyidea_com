@@ -72,7 +72,13 @@ body {
     padding-bottom:3px;
 }
 
-div.mp0, p.mp0, h3.mp0 {
+div.mt0, p.mt0, h3.mt0,hr.mt0 {
+    margin-top: 0px;
+}
+div.mb0, p.mb0, h3.mb0,hr.mb0 {
+    margin-bottom: 0px;
+}
+div.mp0, p.mp0, h3.mp0,hr.mp0 {
     margin: 0px;
     padding: 0px;
 }

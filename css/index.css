@@ -10,10 +10,19 @@ padding:0;
 .thumbnail> a> img {
     height: 140px; width: 220px; display: block;
 }
-.thumbnail > .progress {
+.thumbnail > .progress,.project-view-status>.progress {
     margin-bottom:0px; border-radius:0; height:5px;
 }
-.thumbnail > .progress>.progress-bar {
+.project-view-status > hr {
+margin-top:10px;
+margin-bottom:10px;
+border:none;
+border-bottom:1px dashed #e4e4e4;
+}
+.project-view-status > .progress {
+    height:20px;
+}
+.thumbnail > .progress>.progress-bar,.project-view-status>.progress>.progress-bar {
     background-color:#62D8FF;
 }
 
