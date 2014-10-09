@@ -305,3 +305,22 @@ white-space:nowrap;/* 不换行 */
 .no-add-group{
     margin-left:15px;
 }
+.marginr20 {
+    margin-right:20px;
+}
+.fonts {
+    font-size:15px;
+}
+.backgroundc{
+    background-color:#EBF6FE;
+}
+.color{
+    color:#f8b703;
+}
+.font-w {
+    font-weight:bold;
+    color:#777;
+}
+.paddbottom20 {
+    padding-bottom:20px;
+}

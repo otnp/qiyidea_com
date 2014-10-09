@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
+    <meta name="keywords" content="众筹,在校学生众筹,校园众筹,大学生,电商,社交,sns,创业,就业,创客,投资,支持,项目,学生创业,愿望">
+    <meta name="description" content="奇异点（qiyidea.com）——在校学生创业平台，首家利用新概念模式（筹资金、找伙伴、谈想法、搞活动）为在校学生解决社会上创业问题的综合性平台网站。">
+    <meta name="author" content="qiyi.com">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>奇异点・qiyidea.com | 在校学生创业平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/non-responsive.css" rel="stylesheet">
+    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/lyp.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui-noscript.css"></noscript>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../js/assets/html5shiv.min.js"></script>
+      <script src="../js/assets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="carousel slide" data-ride="carousel">
+        <div class="container">
+            <div class="row martop100">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="glyphicon glyphicon-hand-right first" style="display:block;"><span class="marleft10">注册成功</span></h4>
+                        
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="alert alert-success" role="alert"> 验证邮件已发出，请及时登陆邮箱验证。
+					  		<a href="http://mail.qq.com" class="alert-link">登陆邮箱验证</a>
+					  </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+        $(function () {
+           
+            $("#footer").load("footer.html");
+            $(".school-name").focus();
+            $(".school-name").keyup(function () {
+                var schoolname = $(".school-name").val();
+                if (schoolname == "") {
+                    $(".next-step").addClass("disabled");
+                } else {
+                    $(".next-step").removeClass("disabled");
+                }
+            });
+
+
+            $(".userinfo-image").mouseover(function () {
+                $("#img-div").show();
+            });
+            $(".userinfo-image").mouseout(function () {
+                $("#img-div").hide();
+            });
+
+
+        });
+        /*添加学校*/
+        $("#add-school").click(function () {
+            $("#choose-school").toggle();
+            $("#add-school-info").toggle();
+            $(".next-step").addClass("disabled");
+        });
+        /*返回搜索学校*/
+        $("#back-search-school").click(function () {
+            $("#choose-school").toggle();
+            $("#add-school-info").toggle();
+            var schoolname = $(".school-name").val();
+            if (schoolname == "") {
+                $(".next-step").addClass("disabled");
+            } else {
+                $(".next-step").removeClass("disabled");
+            }
+        });
+        /*添加学校*/
+        $(".add-school-once").click(function () {
+            if ($.trim($(".add-school-name").val()) == "") {
+                $(".warning").show();
+            } else {
+                /***提交***/
+                $("#choose-school").toggle();
+                $("#add-school-info").toggle();
+                $(".school-name").val($.trim($(".add-school-name").val()));
+                $(".next-step").removeClass("disabled");
+            }
+        });
+        /*添加学校名称*/
+        $(".add-school-name").keyup(function () {
+            var addschoolname = $(".add-school-name").val();
+            if (addschoolname == "") {
+                $(".warning").show();
+            } else {
+                $(".warning").hide();
+            }
+        });
+
+        /*第一步    下一步*/
+        $(".next-step").click(function () {
+            $("#choose-school").hide();
+            $("#edit-info-form").show();
+            $("#back-first-step").show();
+            $(".next-step").hide();
+            $(".first").hide();
+            $(".second").show();
+            $(".next-step1").show();
+        });
+        /*第二步    下一步*/
+        $(".next-step1").click(function () {
+            $("#edit-info-form").hide();
+            $("#comfirm-info-form").show();
+            $("#back-first-step").hide();
+            $("#back-second-step").show();
+            $(".next-step1").hide();
+            $(".success-info").show();
+            $(".third").show();
+            $(".second").hide();
+        });
+
+        /*返回第一步*/
+        $("#back-first-step").click(function () {
+            $("#choose-school").show();
+            $("#edit-info-form").hide();
+            $(".next-step").show();
+            $(".next-step1").hide();
+            $("#back-first-step").hide();
+            $(".first").show();
+            $(".second").hide();
+           
+        });
+        /*返回第二步*/
+        $("#back-second-step").click(function () {
+            $("#edit-info-form").show();
+            $("#comfirm-info-form").hide();
+            $(".success-info").hide();
+            $("#back-first-step").show();
+            $("#back-second-step").hide();
+            $(".next-step1").show();
+            $(".third").hide();
+            $(".second").show();
+        });
+        $(".success-info").click(function () {
+            $(windows).load(function(){ location.href = "index.html"; });
+        });
+        
+    </script>
+
+    <!-- The basic File Upload plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge; chrome=1">
+    <meta name="keywords" content="众筹,在校学生众筹,校园众筹,大学生,电商,社交,sns,创业,就业,创客,投资,支持,项目,学生创业,愿望">
+    <meta name="description" content="奇异点（qiyidea.com）——在校学生创业平台，首家利用新概念模式（筹资金、找伙伴、谈想法、搞活动）为在校学生解决社会上创业问题的综合性平台网站。">
+    <meta name="author" content="qiyi.com">
+
+    <!-- Note there is no responsive meta tag here -->
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>奇异点・qiyidea.com | 在校学生创业平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/non-responsive.css" rel="stylesheet">
+    <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="../js/chosen/chosen.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <link href="../css/lyp.css" rel="stylesheet">
+    <link href="../css/rener.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui.css">
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link rel="stylesheet" href="../css/fileupload-ui/jquery.fileupload-ui-noscript.css"></noscript>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../js/assets/html5shiv.min.js"></script>
+      <script src="../js/assets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="carousel slide" data-ride="carousel">
+        <div id="head"></div>
+        <div class="clearfix mtmb15"></div>
+        <div class="container">
+            <div class="row">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4>项目详述</h4>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="col-lg-10">
+                            <div class="text-left">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" role="form" action="start-project-2.html">
+                                            <div class="form-group">
+                                                <label for="project-url" class="col-sm-2 control-label">视频链接</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="project-url" placeholder="请输入优酷视频的播放地址">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-target" class="col-sm-2 control-label">项目目标</label>
+                                                <div class="col-sm-10">
+                                                    <textarea rows="5" class="form-control" id="project-target" placeholder="项目目标描述…"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-target" class="col-sm-2 control-label">项目范围</label>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-end-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-range" class="col-sm-2 control-label"> </label>
+                                                <div class="col-sm-10">
+                                                    <textarea rows="5" class="form-control" id="project-range" placeholder="项目范围描述…"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-marker" class="col-sm-2 control-label">里程碑</label>
+                                                <div class="col-sm-10">
+                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td>里程碑</td>
+                                                            <td>描述</td>
+                                                            <td>时间</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-marker" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="project-marker-name" placeholder="里程碑名字">
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-marker-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择时间">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-marker" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-8">
+                                                    <textarea rows="3" class="form-control" id="project-marker-range" placeholder="里程碑描述…"></textarea>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-success pull-right">添加里程碑</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-mission" class="col-sm-2 control-label">具体任务</label>
+                                                <div class="col-sm-10">
+                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td>里程碑</td>
+                                                            <td>任务</td>
+                                                            <td>任务描述</td>
+                                                            <td>开始时间</td>
+                                                            <td>截止时间</td>
+                                                            <td>负责人</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-mission" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="project-mission-name" placeholder="任务名称">
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="dropdown pull-left marleft10">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                            选择里程碑
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-mission" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-mission-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-mission-end-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-mission" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-8">
+                                                    <textarea rows="3" class="form-control" id="project-mission" placeholder="任务描述…"></textarea>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="submit" class="btn btn-success pull-right">添加任务</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-budget" class="col-sm-2 control-label">预算</label>
+                                                <div class="col-sm-10">
+                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td>收入/支出</td>
+                                                            <td>类别</td>
+                                                            <td>摘要</td>
+                                                            <td>单价</td>
+                                                            <td>数量</td>
+                                                            <td>金额</td>
+                                                            <td>金额</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    帮助信息
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="row">
+                            <div class="col-lg-8">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <ul class="nav nav-pills nav-stacked" role="tablist">
+                                                    <li class="active"><a href="#project-video" role="tab" data-toggle="tab">项目视频</a></li>
+                                                    <li><a href="#project-member" role="tab" data-toggle="tab">团队成员</a></li>
+                                                    <li><a href="#project-target" role="tab" data-toggle="tab">项目目标</a></li>
+                                                    <li><a href="#project-range" role="tab" data-toggle="tab">项目范围</a></li>
+                                                    <li><a href="#project-marker" role="tab" data-toggle="tab">里程碑</a></li>
+                                                    <li><a href="#project-mission" role="tab" data-toggle="tab">具体任务</a></li>
+                                                    <li><a href="#project-budget" role="tab" data-toggle="tab">预算</a></li>
+                                                    <li><a href="#project-risk" role="tab" data-toggle="tab">风险预测及应对措施</a></li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div class="col-lg-9 text-left">
+                                                <form class="form-horizontal" role="form" action="start-project-2.html">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="project-video">
+                                                            <input type="text" class="form-control" id="project-name" placeholder="请输入优酷视频的播放地址">
+                                                            <textarea rows="5" class="form-control martop10" id="project-introduction" placeholder="视频描述…"></textarea>
+                                                        </div>
+                                                        <div class="tab-pane" id="project-member">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">团队成员</div>
+                                                                <div class="panel-body">
+                                                                    Panel content
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-5">
+                                                                            <h4 class="panel-title menber-class">联系人</h4>
+                                                                        </div>
+                                                                        <div class="col-lg-7">
+                                                                            <div class="input-group input-group-sm">
+                                                                                <input type="text" class="form-control" placeholder="查找联系人">
+                                                                                <span class="input-group-addon input-group-btn cursor"><i class="glyphicon glyphicon-search"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="panel-body">
+                                                                    <div class="pull-left martop10">
+                                                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                                            <img class="media-object" width="48" height="48" style="width:48px;height:48px;" src="../img/login/user_normal.jpg" alt="...">
+                                                                            <div class="text-overflow">sunshine</div>
+                                                                        </a>
+                                                                        <div class="media-body">
+                                                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">邀请</a></h5>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="pull-left martop10 marleft10">
+                                                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
+                                                                            <img class="media-object" width="48" height="48" style="width:48px;height:48px;" src="../img/login/user_normal.jpg" alt="...">
+                                                                            <div class="text-overflow">sunshine</div>
+                                                                        </a>
+                                                                        <div class="media-body">
+                                                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">邀请</a></h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="project-target">
+                                                            <textarea rows="10" class="form-control" id="project-introduction" placeholder="项目目标描述…"></textarea>
+                                                        </div>
+                                                        <div class="tab-pane" id="project-range">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                                        <span class="input-group-addon">
+                                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                                        </span>
+                                                                        <input type="text" id="project-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                                        <span class="input-group-addon">
+                                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                                        </span>
+                                                                        <input type="text" id="project-end-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <textarea rows="10" class="form-control martop10" id="project-introduction" placeholder="项目范围描述…"></textarea>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        <div class="tab-pane" id="project-marker">...</div>
+                                                        <div class="tab-pane" id="project-mission">...</div>
+                                                        <div class="tab-pane" id="project-budget">...</div>
+                                                        <div class="tab-pane" id="project-risk">
+                                                            <table class="table table-bordered">
+                                                                ...
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        帮助信息
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+
+                    </div>
+                    <!--<div class="panel-footer text-right">
+                       <button class="btn btn-primary">下一步</button>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="footer"></div>-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
+    <script src="../js/fileupload-ui/uploadPreview.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#head").load("head.html");
+            $(".footer").load("footer.html");
+            $(".dropdown-menu li a").bind("click", function () {
+                var $this = $(this);
+                var $a = $this.parent().parent().prev()
+                $a.text($this.text());
+                $a.append("<span class='caret'>");
+            });
+            //时间日历
+            $('.datetimepicker5').datetimepicker({
+                language: 'zh-CN',
+                pickTime: false
+            });
+            $('.datetimepicker4').datetimepicker({
+                language: 'ru',
+                pickDate: false
+            });
+
+            $('#ren-btn-submit-datetime').click(function () {
+
+                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
+                $('.bs-datetimepicker-modal').modal('hide');
+            });
+            //日历时间结束
+            $('#myTab a').click(function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+
+        });
+
+
+
+    </script>
+
+    <!-- The basic File Upload plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin -->
+    <script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>
+
+</body>
+</html>
