@@ -40,3 +40,13 @@ list-style: none;
 .article-option b, .article-option span {
 	display: block;
 }
+
+.timeline >.row> .timedate {
+min-width:70px;
+}
+.timeline >.row> .timedate>i {
+position:absolute; margin-left:50px;margin-left:-1px\9; margin-top:2px; z-index:99; 
+}
+.timeline >.row>.line {
+border-left: 1px solid #dfdfdf;
+}
