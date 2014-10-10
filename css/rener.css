@@ -50,3 +50,7 @@ position:absolute; margin-left:50px;margin-left:-1px\9; margin-top:2px; z-index:
 .timeline >.row>.line {
 border-left: 1px solid #dfdfdf;
 }
+
+div.dot {
+border-bottom:1px dotted #dfdfdf;
+}
