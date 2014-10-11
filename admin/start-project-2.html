@@ -52,7 +52,7 @@
                             <div class="text-left">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
-                                        <form class="form-horizontal" role="form" action="start-project-2.html">
+                                        <form class="form-horizontal" role="form" action="start-project-3.html">
                                             <div class="form-group">
                                                 <label for="project-url" class="col-sm-2 control-label">视频链接</label>
                                                 <div class="col-sm-10">
@@ -85,29 +85,30 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="project-range" class="col-sm-2 control-label"> </label>
+                                                <label for="project-range-description" class="col-sm-2 control-label"> </label>
                                                 <div class="col-sm-10">
-                                                    <textarea rows="5" class="form-control" id="project-range" placeholder="项目范围描述…"></textarea>
+                                                    <textarea rows="5" class="form-control" id="project-range-description" placeholder="项目范围描述…"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-marker" class="col-sm-2 control-label">里程碑</label>
                                                 <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                    <table class="table table-bordered text-center project-marker-table" style="margin-bottom:0px;">
                                                         <tr>
                                                             <td>里程碑</td>
                                                             <td>描述</td>
                                                             <td>时间</td>
+                                                            <td>操作</td>
                                                         </tr>
                                                     </table>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-marker" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-5">
+                                                <div class="col-sm-5 marker-name-error">
                                                     <input type="text" class="form-control" id="project-marker-name" placeholder="里程碑名字">
                                                 </div>
-                                                <div class="col-sm-5">
+                                                <div class="col-sm-5 marker-time-error">
                                                     <div class="input-group date datetimepicker5 pull-left">
                                                         <span class="input-group-addon">
                                                             <span class="glyphicon-calendar glyphicon"></span>
@@ -119,16 +120,16 @@
                                             <div class="form-group">
                                                 <label for="project-marker" class="col-sm-2 control-label"></label>
                                                 <div class="col-sm-8">
-                                                    <textarea rows="3" class="form-control" id="project-marker-range" placeholder="里程碑描述…"></textarea>
+                                                    <textarea rows="3" class="form-control" id="project-marker-description" placeholder="里程碑描述…"></textarea>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="submit" class="btn btn-success pull-right">添加里程碑</button>
+                                                    <button type="button" class="btn btn-success pull-right add-marker-event">添加里程碑</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-mission" class="col-sm-2 control-label">具体任务</label>
                                                 <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                    <table class="table table-bordered text-center project-mission-table" style="margin-bottom:0px;">
                                                         <tr>
                                                             <td>里程碑</td>
                                                             <td>任务</td>
@@ -136,26 +137,39 @@
                                                             <td>开始时间</td>
                                                             <td>截止时间</td>
                                                             <td>负责人</td>
+                                                            <td>操作</td>
                                                         </tr>
                                                     </table>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-mission" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-5">
+                                                <div class="col-sm-4 mission-name-error">
                                                     <input type="text" class="form-control" id="project-mission-name" placeholder="任务名称">
                                                 </div>
-                                                <div class="col-sm-5">
+                                                <div class="col-sm-2">
+                                                    <input type="hidden" class="mission-leader-h" value="" />
+                                                    <div class="dropdown pull-left marleft10">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                            选择负责人
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        
+                                                        <ul class="dropdown-menu mission-leader" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">张三</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">李四</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">王五</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <input type="hidden" class="mission-marker-m" value="" />
                                                     <div class="dropdown pull-left marleft10">
                                                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                                             选择里程碑
                                                             <span class="caret"></span>
                                                         </button>
-                                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                                                        </ul>
+                                                        <ul class="dropdown-menu mission-marker" role="menu" aria-labelledby="dropdownMenu1"> </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -181,16 +195,16 @@
                                             <div class="form-group">
                                                 <label for="project-mission" class="col-sm-2 control-label"></label>
                                                 <div class="col-sm-8">
-                                                    <textarea rows="3" class="form-control" id="project-mission" placeholder="任务描述…"></textarea>
+                                                    <textarea rows="3" class="form-control" id="project-mission-description" placeholder="任务描述…"></textarea>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="submit" class="btn btn-success pull-right">添加任务</button>
+                                                    <button type="button" class="btn btn-success pull-right add-mission-event">添加任务</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-budget" class="col-sm-2 control-label">预算</label>
                                                 <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center" style="margin-bottom:0px;">
+                                                    <table class="table table-bordered text-center project-budget-table" style="margin-bottom:0px;">
                                                         <tr>
                                                             <td>收入/支出</td>
                                                             <td>类别</td>
@@ -198,9 +212,94 @@
                                                             <td>单价</td>
                                                             <td>数量</td>
                                                             <td>金额</td>
-                                                            <td>金额</td>
+                                                            <td>小计</td>
+                                                            <td width="80">是否接受实物支持</td>
+                                                            <td>操作</td>
                                                         </tr>
                                                     </table>
+                                                </div>
+                                            </div>
+                                            <div class="form-group text-left">
+                                                <label for="project-budget" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-2 text-left">
+                                                    <input type="hidden" class="project-budget-type-m" />
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                            收入/支出
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu project-budget-type" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">收入</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">支出</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                    <input type="hidden" class="project-budget-tikect-m" />
+                                                    <div class="dropdown pull-left marleft10">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                            选择类别
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu project-budget-tikect" role="menu" aria-labelledby="dropdownMenu1">
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">收入</a></li>
+                                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">支出</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <input type="text" class="form-control" id="project-budget-abstract" placeholder="摘要">
+                                                </div>
+                                            </div>
+                                            <div class="form-group text-left">
+                                                <label for="project-budget" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-2 text-left project-budget-unit-price-error">
+                                                    <input type="text" class="form-control " id="project-budget-unit-price" placeholder="单价">
+                                                </div>
+                                                <div class="col-sm-2 project-budget-amount-error">
+                                                    <input type="text" class="form-control" id="project-budget-amount" placeholder="数量">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    实物支持 <input type="radio" name="support" value="0" checked/>是 <input type="radio" name="support" value="1" />否
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="button" class="btn btn-success pull-right add-budget-event">添加预算</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-risk" class="col-sm-2 control-label">风险及应对</label>
+                                                <div class="col-sm-10">
+                                                    <table class="table table-bordered text-center project-risk-table" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td>风险事件</td>
+                                                            <td>描述</td>
+                                                            <td>应对措施</td>
+                                                            <td>操作</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-risk" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-5 risk-name-error">
+                                                    <input type="text" class="form-control" id="project-risk-name" placeholder="事件名称">
+                                                </div>
+                                                <div class="col-sm-5 risk-measure-error">
+                                                    <input type="text" class="form-control" id="project-risk-measure" placeholder="风险应对措施">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-risk" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-8">
+                                                    <textarea rows="3" class="form-control" id="project-risk-description" placeholder="风险事件描述…"></textarea>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button type="button" class="btn btn-success pull-right add-risk-event">添加事件</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class=" col-sm-12">
+                                                    <button type="submit" class="btn btn-primary pull-right">下一步</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -216,133 +315,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="row">
-                            <div class="col-lg-8">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <ul class="nav nav-pills nav-stacked" role="tablist">
-                                                    <li class="active"><a href="#project-video" role="tab" data-toggle="tab">项目视频</a></li>
-                                                    <li><a href="#project-member" role="tab" data-toggle="tab">团队成员</a></li>
-                                                    <li><a href="#project-target" role="tab" data-toggle="tab">项目目标</a></li>
-                                                    <li><a href="#project-range" role="tab" data-toggle="tab">项目范围</a></li>
-                                                    <li><a href="#project-marker" role="tab" data-toggle="tab">里程碑</a></li>
-                                                    <li><a href="#project-mission" role="tab" data-toggle="tab">具体任务</a></li>
-                                                    <li><a href="#project-budget" role="tab" data-toggle="tab">预算</a></li>
-                                                    <li><a href="#project-risk" role="tab" data-toggle="tab">风险预测及应对措施</a></li>
-
-                                                </ul>
-
-                                            </div>
-                                            <div class="col-lg-9 text-left">
-                                                <form class="form-horizontal" role="form" action="start-project-2.html">
-                                                    <div class="tab-content">
-                                                        <div class="tab-pane active" id="project-video">
-                                                            <input type="text" class="form-control" id="project-name" placeholder="请输入优酷视频的播放地址">
-                                                            <textarea rows="5" class="form-control martop10" id="project-introduction" placeholder="视频描述…"></textarea>
-                                                        </div>
-                                                        <div class="tab-pane" id="project-member">
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">团队成员</div>
-                                                                <div class="panel-body">
-                                                                    Panel content
-                                                                </div>
-                                                            </div>
-                                                            <div class="panel panel-default">
-                                                                <div class="panel-heading">
-                                                                    <div class="row">
-                                                                        <div class="col-lg-5">
-                                                                            <h4 class="panel-title menber-class">联系人</h4>
-                                                                        </div>
-                                                                        <div class="col-lg-7">
-                                                                            <div class="input-group input-group-sm">
-                                                                                <input type="text" class="form-control" placeholder="查找联系人">
-                                                                                <span class="input-group-addon input-group-btn cursor"><i class="glyphicon glyphicon-search"></i></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                                <div class="panel-body">
-                                                                    <div class="pull-left martop10">
-                                                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                                            <img class="media-object" width="48" height="48" style="width:48px;height:48px;" src="../img/login/user_normal.jpg" alt="...">
-                                                                            <div class="text-overflow">sunshine</div>
-                                                                        </a>
-                                                                        <div class="media-body">
-                                                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">邀请</a></h5>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="pull-left martop10 marleft10">
-                                                                        <a class="pull-left text-center" href="#" title="sunshine" style="margin-right:5px;">
-                                                                            <img class="media-object" width="48" height="48" style="width:48px;height:48px;" src="../img/login/user_normal.jpg" alt="...">
-                                                                            <div class="text-overflow">sunshine</div>
-                                                                        </a>
-                                                                        <div class="media-body">
-                                                                            <h5 class="media-heading"><a class="set-administrator-info" href="javascript:void(0)" data-toggle="modal" data-target=".set-administrator-this-user">邀请</a></h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="tab-pane" id="project-target">
-                                                            <textarea rows="10" class="form-control" id="project-introduction" placeholder="项目目标描述…"></textarea>
-                                                        </div>
-                                                        <div class="tab-pane" id="project-range">
-                                                            <div class="row">
-                                                                <div class="col-lg-6">
-                                                                    <div class="input-group date datetimepicker5 pull-left">
-                                                                        <span class="input-group-addon">
-                                                                            <span class="glyphicon-calendar glyphicon"></span>
-                                                                        </span>
-                                                                        <input type="text" id="project-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6">
-                                                                    <div class="input-group date datetimepicker5 pull-left">
-                                                                        <span class="input-group-addon">
-                                                                            <span class="glyphicon-calendar glyphicon"></span>
-                                                                        </span>
-                                                                        <input type="text" id="project-end-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <textarea rows="10" class="form-control martop10" id="project-introduction" placeholder="项目范围描述…"></textarea>
-                                                                </div>
-                                                                </div>
-                                                            </div>
-                                                        <div class="tab-pane" id="project-marker">...</div>
-                                                        <div class="tab-pane" id="project-mission">...</div>
-                                                        <div class="tab-pane" id="project-budget">...</div>
-                                                        <div class="tab-pane" id="project-risk">
-                                                            <table class="table table-bordered">
-                                                                ...
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                        帮助信息
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-
-
                     </div>
-                    <!--<div class="panel-footer text-right">
-                       <button class="btn btn-primary">下一步</button>
-                    </div>-->
+                   
                 </div>
             </div>
         </div>
@@ -391,13 +365,215 @@
             $('#myTab a').click(function (e) {
                 e.preventDefault()
                 $(this).tab('show')
-            })
-
-
+            });
         });
+        //里程碑开始
+        $("#project-marker-name").focus(function () {
+            if ($("#project-marker-name").val().trim()=="") {
+                 $(".marker-name-error").addClass("has-error");
+            }
+        });
+        $("#project-marker-name").keyup(function () {
+            var marker_name = $("#project-marker-name").val();
+            if (marker_name.trim().length > 0) {
+                $(".marker-name-error").removeClass("has-error");
+            } else {
+                $(".marker-name-error").addClass("has-error");
+            }
+        });
+        $("#project-marker-time").focus(function () {
+            if ($("#project-marker-time").val().trim()=="") {
+                $(".marker-time-error").addClass("has-error");
+            }
+        });
+        $("#project-marker-time").keyup(function () {
+            var marker_time = $("#project-marker-time").val();
+            if (marker_time.trim().length > 0) {
+                $(".marker-time-error").removeClass("has-error");
+            } else {
+                $(".marker-time-error").addClass("has-error");
+            }
+        });
+        //添加里程碑
+        $(".add-marker-event").click(function () {
+            var project_marker_name = $("#project-marker-name").val();
+            var project_marker_time = $("#project-marker-time").val();
+            var project_marker_description = $("#project-marker-description").val();
+            if (project_marker_name.trim() == "" || project_marker_time.trim() == "") {
+                if (project_marker_name.trim() == "") {
+                    $(".marker-name-error").addClass("has-error");
+                }
+                if (project_marker_time.trim() == "") {
+                    $(".marker-time-error").addClass("has-error");
+                }
+            } else {
+                $(".project-marker-table").append('<tr><td>' + project_marker_name + '</td><td>' +
+                    project_marker_description + '</td><td>' + project_marker_time + '</td><td><input type="hidden" class="marker-name" value="' + project_marker_name + '"><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a></td></tr>');
+                $(".mission-marker").append(' <li role="presentation"><a role="menuitem" tabindex="-1" href="#" title="' + project_marker_name + '">' + project_marker_name + '</a></li>');
+                $("#project-marker-name").val("");
+                $("#project-marker-time").val("");
+                $("#project-marker-description").val("");
+            }
+        });
+        //删除里程碑
+        function deltr(delbtn) {
+            $(delbtn).parents("tr").remove();
+            var del_marker_name = $(delbtn).parent().find(".marker-name").val();
+            $(".mission-marker li a").remove("a[title=" + del_marker_name + "]");
+        };
+        //里程碑结束
+        //任务开始
+        $(".mission-leader li").click(function () {
+            $(".mission-leader-h").val($(this).find("a").text());
+        });
+        $(".mission-marker li").click(function () {
+            $(".mission-marker-m").val($(this).find("a").text());
+        });
+        $("#project-mission-name").focus(function () {
+            if ($("#project-mission-name").val().trim()=="") {
+                 $(".mission-name-error").addClass("has-error");
+            }
+        });
+        $("#project-mission-name").keyup(function () {
+            var mission_name = $("#project-mission-name").val();
+            if (mission_name.trim().length > 0) {
+                $(".mission-name-error").removeClass("has-error");
+            } else {
+                $(".mission-name-error").addClass("has-error");
+            }
+        });
+        $(".add-mission-event").click(function () {
+            var project_mission_name = $("#project-mission-name").val();
+            var project_select_marker = $(".mission-marker-m").val();
+            var project_select_marker_people = $(".mission-leader-h").val();
+            var project_mission_start_time = $("#project-mission-start-time").val();
+            var project_mission_end_time = $("#project-mission-end-time").val();
+            var project_mission_description = $("#project-mission-description").val();
+            if (project_mission_name.trim() == "") {
+                $(".mission-name-error").addClass("has-error");
+            }else{
+                $(".project-mission-table").append('<tr><td>' + project_select_marker + '</td><td>' +
+                    project_mission_name + '</td><td>' + project_mission_description + '</td><td>' +
+                    project_mission_start_time + '</td><td>' +
+                    project_mission_end_time + '</td><td>' + project_select_marker_people + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a></td></tr>');
+                $("#project-mission-name").val("");
+                $("#project-mission-start-time").val("");
+                $("#project-mission-end-time").val("");
+                $("#project-mission-description").val("");
+                //$(".mission-marker-m").val("");
+                //$(".mission-leader-h").val("");
 
-
-
+            }
+        });
+        //任务结束
+        //预算开始
+        $(".project-budget-type li").click(function () {
+            $(".project-budget-type-m").val($(this).find("a").text());
+        });
+        $(".project-budget-tikect li").click(function () {
+            $(".project-budget-tikect-m").val($(this).find("a").text());
+        });
+        $("#project-budget-unit-price").focus(function () {
+            if ($("#project-budget-unit-price").val().trim()=="") {
+                $(".project-budget-unit-price-error").addClass("has-error");
+            }
+        });
+        $("#project-budget-unit-price").keyup(function () {
+            var project_budget_unit_price = $("#project-budget-unit-price").val();
+            if (project_budget_unit_price.trim()=="") {
+                $(".project-budget-unit-price-error").addClass("has-error");
+            } else {
+                $(".project-budget-unit-price-error").removeClass("has-error");
+            }
+        });
+        $("#project-budget-amount").focus(function () {
+            if ($("#project-budget-amount").val().trim()=="") {
+                $(".project-budget-amount-error").addClass("has-error");
+            }
+        });
+        $("#project-budget-amount").keyup(function () {
+            var project_budget_amount = $("#project-budget-amount").val();
+            if (project_budget_amount.trim() == "") {
+                $(".project-budget-amount-error").addClass("has-error");
+            } else {
+                $(".project-budget-amount-error").removeClass("has-error");
+            }
+        });
+        $(".add-budget-event").click(function () {
+            var project_budget_unit_price = $("#project-budget-unit-price").val();//单价
+            var project_budget_amount = $("#project-budget-amount").val();//数量
+            var project_budget_abstract = $("#project-budget-abstract").val();//摘要
+            var project_budget_type = $(".project-budget-type-m").val();//收入支出
+            var project_budget_tikect = $(".project-budget-tikect-m").val();//类别
+            var project_budget_support = $('input:radio:checked').val();
+            if (project_budget_unit_price.trim() == "" || project_budget_amount.trim()=="") {
+                if (project_budget_unit_price.trim() == "") {
+                    $(".project-budget-unit-price-error").addClass("has-error");
+                }
+                if (project_budget_amount.trim() == "") {
+                    $(".project-budget-amount-error").addClass("has-error");
+                }
+            } else {
+                var all_amount_money = project_budget_unit_price * project_budget_amount;
+                $(".project-budget-table").append('<tr><td>' + project_budget_type + '</td><td>' +
+                    project_budget_tikect + '</td><td>' + project_budget_abstract + '</td><td>' +
+                    project_budget_unit_price + '</td><td>' + project_budget_amount + '</td><td>' +
+                    all_amount_money + '</td><td>' + all_amount_money + '</td><td>' + project_budget_support
+                    + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a></td></tr>');
+                $("#project-budget-unit-price").val("");
+                $("#project-budget-amount").val("");
+                $("#project-budget-abstract").val("");
+                //$(".project-budget-type-m").val("");
+                //$(".project-budget-tikect-m").val("");
+            }
+        });
+        //预算结束
+        //风险开始
+        $("#project-risk-name").focus(function(){
+            if ($("#project-risk-name").val().trim()=="") {
+                $(".risk-name-error").addClass("has-error");
+            }
+        });
+        $("#project-risk-name").keyup(function () {
+            if ($("#project-risk-name").val().trim().length > 0) {
+                $(".risk-name-error").removeClass("has-error");
+            } else {
+                $(".risk-name-error").addClass("has-error");
+            }
+        });
+        $("#project-risk-measure").focus(function () {
+            if ($("#project-risk-measure").val().trim() == "") {
+                $(".risk-measure-error").addClass("has-error");
+            }
+        });
+        $("#project-risk-measure").keyup(function () {
+            if ($("#project-risk-measure").val().trim().length > 0) {
+                $(".risk-measure-error").removeClass("has-error");
+            } else {
+                $(".risk-measure-error").addClass("has-error");
+            }
+        });
+        $(".add-risk-event").click(function () {
+            var project_risk_name = $("#project-risk-name").val();
+            var project_risk_measure = $("#project-risk-measure").val();
+            var project_risk_description = $("#project-risk-description").val();
+            if (project_risk_name.trim() == "" || project_risk_measure.trim() == "") {
+                if (project_risk_name.trim() == "") {
+                    $(".risk-name-error").addClass("has-error");
+                }
+                if (project_risk_measure.trim() == "") {
+                    $(".risk-measure-error").addClass("has-error");
+                }
+            } else {
+                $(".project-risk-table").append('<tr><td>' + project_risk_name + '</td><td>' +
+                    project_risk_description + '</td><td>' + project_risk_measure
+                    + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a></td></tr>');
+                $("#project-risk-name").val();
+                $("#project-risk-measure").val();
+                $("#project-risk-description").val();
+            }
+        });
+        //风险结束
     </script>
 
     <!-- The basic File Upload plugin -->

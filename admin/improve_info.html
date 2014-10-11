@@ -15,9 +15,12 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-
+       <link href="../js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="../css/non-responsive.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../js/chosen/chosen.css" rel="stylesheet">
+    <link href="../css/rener.css" rel="stylesheet">
     <link href="../css/sticky-footer-navbar.css" rel="stylesheet">
     <link href="../css/footer.css" rel="stylesheet">
     <link href="../css/lyp.css" rel="stylesheet">
@@ -43,31 +46,43 @@
                         <h4 class="glyphicon glyphicon-hand-right first" style="display:block;"><span class="marleft10">第一步</span></h4>
                         <h4 class="glyphicon glyphicon-hand-right second" style="display:none;"><span class="marleft10">第二步</span></h4>
                         <h4 class="glyphicon glyphicon-hand-right third" style="display:none;"><span class="marleft10">第三步</span></h4>
-                        <!-- <div class="progress first" style="display:block;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                0%
-                            </div>
-                        </div>
-                        <div class="progress second" style="display:none;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="50" aria-valuemax="100" style="width: 50%;">
-                                50%
-                            </div>
-                        </div>
-                        <div class="progress third" style="display:none;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" style="width: 100%;">
-                                100%
-                            </div>
-                        </div>-->
                     </div>
                     <div class="panel-body text-center">
                         <form role="form" id="choose-school" style="display:block;">
                             <div class="row text-center martop30 marbottom20">
                                 <p id="nu-section-header" class="section-header">查找你的学校</p>
                             </div>
-                            <div class="row width70">
-                                <input type="text" class="form-control school-name" id="school-name" placeholder="学校名称">
-                            </div>
-                            <div class="row text-center martop30 marbottom100">
+                            <div class="row width70 text-left">
+                                <!--<input type="text" class="form-control school-name" id="school-name" placeholder="学校名称">-->
+                                <div class="ren-more-input-box">
+                                    <div class="form-group">
+                                        <select data-placeholder="输入联系人或群组的名字…" id="school-name" class="chosen-select ren-info-note-chosen" style="width:100%;" multiple tabindex="6">
+                                            <option value=""></option>
+                                                <option>Dallas Cowboys</option>
+                                                <option>New York Giants</option>
+                                                <option>Philadelphia Eagles</option>
+                                                <option>Washington Redskins</option>
+                                                <option>Chicago Bears</option>
+                                                <option>Detroit Lions</option>
+                                                <option>Green Bay Packers</option>
+                                                <option>Minnesota Vikings</option>
+                                                <option>Atlanta Falcons</option>
+                                                <option>Carolina Panthers</option>
+                                                <option>New Orleans Saints</option>
+                                                <option>Tampa Bay Buccaneers</option>
+                                                <option>Arizona Cardinals</option>
+                                                <option>St. Louis Rams</option>
+                                                <option>San Francisco 49ers</option>
+                                                <option>Seattle Seahawks</option>
+                                                <option>Buffalo Bills</option>
+                                                <option>Miami Dolphins</option>
+                                                <option>New England Patriots</option>
+                                                <option>New York Jets</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row text-center martop30 marbottom 100">
                                 <p id="nu-section-header" class="section-1">查找不到你的学校，<a id="add-school" href="javascript:void(0)">在此添加</a></p>
                             </div>
                         </form>
@@ -379,19 +394,24 @@
             </div>
         </div>
     </div>
-
+    <div class="clearfix"></div>
     <div id="footer"></div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery.min.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
-
+    <script src="../js/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
+    <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
+    <script src="../js/chosen/chosen.jquery.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $(function () {
-
+            $("#school-name").trigger("chosen:updated");
+            $('#school-name').chosen();
             $("#footer").load("footer.html");
             $(".school-name").focus();
             $(".school-name").keyup(function () {
@@ -540,15 +560,26 @@
                 }
             });
         });
-        
+        $("#school-name").change(function (i, k) {
+           
+            var str = $("#school-name").val();
+            var i = 0;
+            $(".chosen-choices .search-choice").each(function (q, w) {
+                i++;
+            });
+            if (i > 1) {
+                $(".chosen-choices  li:eq(0)").remove();
+
+            }
+        });
     </script>
 
     <!-- The basic File Upload plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload.js"></script>
+    <!--<script src="../js/fileupload-ui/jquery.fileupload.js"></script>-->
     <!-- The File Upload processing plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>
+    <!--<script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>-->
     <!-- The File Upload image preview & resize plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>
+    <!--<script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>-->
 
 </body>
 </html>
