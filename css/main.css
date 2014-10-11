@@ -61,6 +61,14 @@ body {
 .mt5mb15 {
     margin: 5px 0 15px 0;
 }
+div.mtb15 {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+button.plr30 {
+padding-left:30px;
+padding-right:30px;
+}
 .mt15 {
 margin-top:15px;
 }
