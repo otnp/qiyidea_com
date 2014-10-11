@@ -61,8 +61,18 @@ body {
 .mt5mb15 {
     margin: 5px 0 15px 0;
 }
+.mt15 {
+margin-top:15px;
+}
+.mb5 {
+margin-bottom:5px;
+}
+
 .pl15 {
     padding-left:15px;
+}
+.pl10 {
+padding-left:10px;
 }
 .pt10 {
     padding-top:10px;
@@ -74,7 +84,7 @@ body {
 .pt3 {
     padding-top:3px;
 }
-
+ 
 div.mt0, p.mt0, h3.mt0,hr.mt0 {
     margin-top: 0px;
 }
@@ -91,6 +101,10 @@ div.mp0, p.mp0, h3.mp0,hr.mp0 {
 }
 .fz12 {
     font-size:12px;
+    font-weight:normal;
+}
+.fz14 {
+    font-size:14px;
     font-weight:normal;
 }
 .fz16 {
