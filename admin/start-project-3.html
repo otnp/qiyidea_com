@@ -261,11 +261,69 @@
                                             <!------------------------------------------------------成员招募------------------------------------------------------------------>
 
                                             <div class="form-group">
-                                                <label for="project-url" class="col-sm-2 control-label">成员招募</label>
+                                                <label for="member-recruitment" class="col-sm-2 control-label">成员招募</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="project-url" placeholder="">
+                                                    <table class="table table-bordered text-center physical-support-table" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td width="50">序号</td>
+                                                            <td width="90">任务</td>
+                                                            <td>工作描述</td>
+                                                            <td width="100">技能</td>
+                                                            <td width="90">工作地点</td>
+                                                            <td width="50">操作</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>01</td>
+                                                            <td>500</td>
+                                                            <td class="text-left">123</td>
+                                                            <td>php</td>
+                                                            <td>无</td>
+                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a href="javascript:void(0)" onclick="editingMember(this)">编辑</a></td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             </div>
+                                            <div class="form-group  add-member-recruitment-btn" style="display:block;">
+                                                <label for="physical-support" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <button type="button" class="btn btn-success pull-right add-member-recruitment-btn-click">添加招募信息</button>
+                                                </div>
+                                            </div>
+                                            <div class="add-member-recruitment-div" style="display:none;">
+                                                <div class="form-group edit-physical-support-div" style="margin-bottom:0px;">
+                                                    <label for="" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-10">
+                                                        <div class="alert alert-success edit-member-1" role="alert" style="display:none;">修改招募信息选项<span class="edit-member-option"></span></div>
+                                                        <div class="alert alert-success add-member-1" role="alert" style="display:block;">添加招募信息选项<span class="add-member-option"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="member-recruitment" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-10">
+                                                        <select>
+                                                            <option value="volvo">选择任务</option>
+                                                            <option value="saab">Saab</option>
+                                                            <option value="opel">Opel</option>
+                                                            <option value="audi">Audi</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="project-url" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-10">
+                                                        <textarea rows="3" class="form-control" id="member-recruitment-job" placeholder="工作描述…"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group support-time-error">
+                                                    <label for="physical-support-time" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-10 pull-right">
+                                                        <a href="javascript:void(0)" class="cancel-member-recruitment martop5">取消</a>
+                                                        <button type="button" class="btn btn-success pull-right add-member-recruitment" style="display:block;">保存</button>
+                                                        <button type="button" class="btn btn-success pull-right edit-member-recruitment" style="display:none;">确定修改</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
 
                                             <!------------------------------------------------------成员招募------------------------------------------------------------------>
                                             <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
@@ -285,9 +343,10 @@
                                                     <table class="table table-bordered text-center bank-cards-table" style="margin-bottom:0px;">
                                                         <tr>
                                                             <td width="30">序号</td>
-                                                            <td width="80">银行名称</td>
-                                                            <td width="80">卡号</td>
+                                                            <td width="60">银行名称</td>
+                                                            <td width="100">卡号</td>
                                                             <td width="100">银行网点</td>
+                                                            <td width="60">众筹时间</td>
                                                             <td width="50">操作</td>
                                                         </tr>
                                                         <tr>
@@ -295,6 +354,7 @@
                                                             <td>XX银行</td>
                                                             <td>XXXX XXXX XXXX XXXX XXX</td>
                                                             <td>锦江区东光支行</td>
+                                                            <td>2014-10-13</td>
                                                             <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td>
                                                         </tr>
                                                     </table>
@@ -328,6 +388,21 @@
                                                     <div class="col-sm-10 bank-address-error">
                                                         <input type="text" class="form-control" id="bank-address" placeholder="银行所在支行">
                                                     </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-5 bank-marker-error">
+                                                        <div class="input-group date datetimepicker5 pull-left">
+                                                            <span class="input-group-addon">
+                                                                <span class="glyphicon-calendar glyphicon"></span>
+                                                            </span>
+                                                            <input type="text" id="bank-marker-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择时间">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5 paddleft0 paddtop2">
+                                                       注意:在此日期前结束
+                                                    </div>
+                                                   
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
@@ -760,6 +835,45 @@
             }
         });
         //资金支持结束
+
+        //成员招募开始
+        //取消编辑成员招募
+        $(".cancel-member-recruitment").click(function () {
+            $(".add-member-recruitment-btn").show();
+            $(".add-member-recruitment-div").hide();
+            $(".edit-member-recruitment").hide();
+            $(".edit-member-recruitment").show();
+            $(".edit-member-option").hide();
+            $(".add-member-option").show();
+        });
+        //点击添加按钮
+        $(".add-member-recruitment-btn-click").click(function () {
+            $(".add-member-recruitment-btn").hide();
+            $(".add-member-recruitment-div").show();
+            $(".edit-member-recruitment").hide();
+            $(".add-member-recruitment").show();
+            $(".edit-member-1").hide();
+            $(".add-member-1").show();
+        });
+        //确定添加招募信息
+        $(". add-member-recruitment").click(function () {
+
+        });
+        //编辑成员招募
+        function editingMember(editbtn) {
+            $(".add-member-recruitment-btn").hide();
+            $(".add-member-recruitment-div").show();
+            $(".edit-member-recruitment").show();
+            $(".add-member-recruitment").hide();
+            $(".edit-member-1").show();
+            $(".add-member-1").hide();
+        }
+        //确定修改
+        $(".edit-member-recruitment").click(function () {
+
+        });
+        //成员招募结束
+
         //众筹基本信息开始
         $("#bank-name").focus(function () {
             if ($("#bank-name").val().trim()=="") {
@@ -767,7 +881,7 @@
             }
         });
         $("#bank-name").keyup(function () {
-            if ($("#bank-name").val().trim() > 0) {
+            if ($("#bank-name").val().trim().length > 0) {
                 $(".bank-name-error").removeClass("has-error");
             } else {
                 $(".bank-name-error").addClass("has-error");
@@ -779,12 +893,25 @@
             }
         });
         $("#bank-cards-num").keyup(function () {
-            if ($("#bank-cards-num").val().trim() > 0) {
+            if ($("#bank-cards-num").val().trim().length > 0) {
                 $(".bank-cards-num-error").removeClass("has-error");
             } else {
                 $(".bank-cards-num-error").addClass("has-error");
             }
         });
+        $("#bank-marker-time").focus(function () {
+            if ($("#bank-marker-time").val().trim() == "") {
+                $(".bank-marker-error").addClass("has-error");
+            }
+        });
+        $("#bank-marker-time").keyup(function () {
+            if ($("#bank-marker-time").val().trim().length > 0) {
+                $(".bank-marker-error").removeClass("has-error");
+            } else {
+                $(".bank-marker-error").addClass("has-error");
+            }
+        });
+
         //点击添加银行卡
         $(".add-bank-cards-click").click(function () {
             $(".add-bank-cards-btn").hide();
@@ -818,6 +945,8 @@
             $("#bank-cards-num").val(bank_cards_num);
             var bank_address = $(editbtn).parents("tr").children("td").get(3).innerHTML;
             $("#bank-address").val(bank_address);
+            var bank_marker_time = $(editbtn).parents("tr").children("td").get(4).innerHTML;
+            $("#bank-marker-time").val(bank_marker_time);
         }
         //取消编辑银行卡
         $(".cancel-bank-cards").click(function () {
@@ -835,6 +964,7 @@
             var bank_name = $("#bank-name").val();
             var bank_cards_num = $("#bank-cards-num").val();
             var bank_address = $("#bank-address").val();
+            var bank_marker_time = $("#bank-marker-time").val();
             if (bank_cards_num.trim() == "" || bank_name.trim() == "") {
                 if (bank_cards_num.trim() == "") {
                     $(".bank-cards-num-error").addClass("has-error");
@@ -849,9 +979,11 @@
                         $(this).children("td:eq(1)").html(bank_name);
                         $(this).children("td:eq(2)").html(bank_cards_num);
                         $(this).children("td:eq(3)").html(bank_address);
+                        $(this).children("td:eq(4)").html(bank_marker_time);
                         $("#bank-name").val("");
                         $("#bank-cards-num").val("");
                         $("#bank-address").val("");
+                        $("#bank-marker-time").val("");
                         $(".add-bank-cards-btn").show();
                         $(".add-bank-cards-div").hide();
                         $(".edit-bank-cards").hide();
@@ -866,20 +998,26 @@
             var bank_name = $("#bank-name").val();
             var bank_cards_num = $("#bank-cards-num").val();
             var bank_address = $("#bank-address").val();
-            if (bank_cards_num.trim() == "" || bank_name.trim()=="") {
+            var bank_marker_time = $("#bank-marker-time").val();
+            if (bank_cards_num.trim() == "" || bank_name.trim() == "" || bank_marker_time.trim() == "") {
                 if (bank_cards_num.trim() == "") {
                     $(".bank-cards-num-error").addClass("has-error");
                 }
                 if (bank_name.trim() == "") {
                     $(".bank-name-error").addClass("has-error");
                 }
+                if (bank_marker_time.trim() == "") {
+                    $(".bank-marker-error").addClass("has-error");
+                }
             } else {
                 $(".bank-cards-table").append('<tr><td>' + t_num + '</td><td>' +
                      bank_name + '</td><td>' + bank_cards_num + '</td><td>' +
-                     bank_address + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a  href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td></tr>');
+                     bank_address + '</td><td>' + bank_marker_time +
+                     '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a  href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td></tr>');
                 $("#bank-name").val("");
                 $("#bank-cards-num").val("");
                 $("#bank-address").val("");
+                $("#bank-marker-time").val("");
                 $(".add-bank-cards-btn").show();
                 $(".add-bank-cards-div").hide();
                 $(".edit-bank-cards").hide();
