@@ -327,3 +327,8 @@ white-space:nowrap;/* 不换行 */
 .paddtop2 {
     padding-top:5px;
 }
+.bg-color {
+    background-color:#0bb538;
+    color:white;
+}
+
