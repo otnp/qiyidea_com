@@ -19,6 +19,9 @@ a.nulinkunderline:hover {
 .color-grey {
 color:#A5ABB8;
 }
+.color-danger {
+color:#d9534f;
+}
 dt, dd {
 line-height: 1.7;
 }
@@ -115,8 +118,12 @@ div.mp0, p.mp0, h3.mp0,hr.mp0 {
     font-size:14px;
     font-weight:normal;
 }
-.fz16 {
+.fz16,span.fz16,label.fz16 {
     font-size:16px;
+    font-weight:normal;
+}
+.fz28,span.fz28,label.fz28 {
+    font-size:28px;
     font-weight:normal;
 }
 /* CUSTOMIZE THE NAVBAR
