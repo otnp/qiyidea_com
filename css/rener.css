@@ -79,3 +79,8 @@ background-color:#efefef;
 .bs-callout-danger {
     border-left: 5px solid #d9534f;
 }
+
+.ren-funding > dl > dt, .ren-funding > dl > dd {
+padding-top:5px;
+padding-bottom:5px;
+}
