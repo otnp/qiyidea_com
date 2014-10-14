@@ -45,9 +45,6 @@
             <div class="row">
                 <div class="btn-group btn-group-justified marbottom15">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary active disabled">发起项目声明</button>
-                    </div>
-                    <div class="btn-group">
                         <button type="button" class="btn btn-primary active disabled">基本信息</button>
                     </div>
                     <div class="btn-group">
@@ -55,6 +52,12 @@
                     </div>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary active">项目回馈</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default disabled">预览</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default disabled">发布</button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -64,7 +67,7 @@
                             <div class="text-left">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
-                                        <form class="form-horizontal" role="form" action="start-project-3.html">
+                                        <form class="form-horizontal" role="form" action="start-project-4.html">
                                             <!------------------------------------------------------实物支持------------------------------------------------------------------>
                                             <div class="form-group">
                                                 <label for="physical-support" class="col-sm-2 control-label">实物支持</label>
@@ -406,14 +409,19 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 pull-right">
-                                                        <a href="javascript:void(0)" class="cancel-bank-cards martop5">取消</a>
+                                                    <div class="col-sm-10 pull-right text-right">
+                                                        <a href="javascript:void(0)" class="cancel-bank-cards martop5 marginr20">取消</a>
                                                         <button type="button" class="btn btn-success pull-right add-bank-cards" style="display:block;">保存</button>
                                                         <button type="button" class="btn btn-success pull-right edit-bank-cards" style="display:none;">确定修改</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-4 col-sm-8">
+                                                    <button type="submit" class="btn btn-primary pull-right">下一步</button>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -856,7 +864,7 @@
             $(".add-member-1").show();
         });
         //确定添加招募信息
-        $(". add-member-recruitment").click(function () {
+        $(".add-member-recruitment").click(function () {
 
         });
         //编辑成员招募

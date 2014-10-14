@@ -45,16 +45,19 @@
             <div class="row">
                 <div class="btn-group btn-group-justified marbottom15">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary active disabled">发起项目声明</button>
-                    </div>
-                    <div class="btn-group">
                         <button type="button" class="btn btn-primary active">基本信息</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default">项目详述</button>
+                        <button type="button" class="btn btn-default disabled">项目详述</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default">项目回馈</button>
+                        <button type="button" class="btn btn-default disabled">项目回馈</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default  disabled">预览</button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default disabled">发布</button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -265,133 +268,6 @@
             });
             //图片上传本地预览
             $("#project-cover-image").uploadPreview({ Img: "preview-img", Width: 220, Height: 160, ImgType: ["gif", "jpeg", "jpg", "bmp", "png"], Callback: function () { } });
-        });
-        /*添加学校*/
-        $("#add-school").click(function () {
-            $("#choose-school").toggle();
-            $("#add-school-info").toggle();
-            $(".next-step").addClass("disabled");
-        });
-        /*返回搜索学校*/
-        $("#back-search-school").click(function () {
-            $("#choose-school").toggle();
-            $("#add-school-info").toggle();
-            var schoolname = $(".school-name").val();
-            if (schoolname == "") {
-                $(".next-step").addClass("disabled");
-            } else {
-                $(".next-step").removeClass("disabled");
-            }
-        });
-        /*添加学校*/
-        $(".add-school-once").click(function () {
-            if ($.trim($(".add-school-name").val()) == "") {
-                $(".warning").show();
-            } else {
-                /***提交***/
-                $("#choose-school").toggle();
-                $("#add-school-info").toggle();
-                $(".school-name").val($.trim($(".add-school-name").val()));
-                $(".next-step").removeClass("disabled");
-            }
-        });
-        /*添加学校名称*/
-        $(".add-school-name").keyup(function () {
-            var addschoolname = $(".add-school-name").val();
-            if (addschoolname == "") {
-                $(".warning").show();
-            } else {
-                $(".warning").hide();
-            }
-        });
-
-        /*第一步    下一步*/
-        $(".next-step").click(function () {
-            $("#choose-school").hide();
-            $("#edit-info-form").show();
-            $("#back-first-step").show();
-            $(".next-step").hide();
-            $(".first").hide();
-            $(".second").show();
-            $(".next-step1").show();
-        });
-        /*第二步    下一步*/
-        $(".next-step1").click(function () {
-            $("#edit-info-form").hide();
-            $("#comfirm-info-form").show();
-            $("#back-first-step").hide();
-            $("#back-second-step").show();
-            $(".next-step1").hide();
-            $(".success-info").show();
-            $(".third").show();
-            $(".second").hide();
-        });
-
-        /*返回第一步*/
-        $("#back-first-step").click(function () {
-            $("#choose-school").show();
-            $("#edit-info-form").hide();
-            $(".next-step").show();
-            $(".next-step1").hide();
-            $("#back-first-step").hide();
-            $(".first").show();
-            $(".second").hide();
-
-        });
-        /*返回第二步*/
-        $("#back-second-step").click(function () {
-            $("#edit-info-form").show();
-            $("#comfirm-info-form").hide();
-            $(".success-info").hide();
-            $("#back-first-step").show();
-            $("#back-second-step").hide();
-            $(".next-step1").show();
-            $(".third").hide();
-            $(".second").show();
-        });
-        $(".success-info").click(function () {
-            $(windows).load(function () { location.href = "index.html"; });
-        });
-        //不选中
-        $(".glyphicon-ok").click(function () {
-            $(this).parent().hide();
-            $(this).parent().parent().find(".space-1").show();
-            $(".allcheck").removeAttr("checked");
-        });
-        //选中
-        $(".select").click(function () {
-            $(this).parent().hide();
-            $(this).parent().parent().find(".select-1").show();
-            var i = 0;
-            $(".select").each(function () {
-                if (!$(this).is(":hidden")) {
-                    i++;
-                }
-            });
-            if (i==0) {
-                $(".allcheck").prop("checked", true);
-            }
-        });
-        //全选全不选
-        $(".allcheck").click(function(){
-            if (!$("input[name='allcheck']").is(':checked')) {
-                $(".space-1").show();
-                $(".select-1").hide();
-            } else {
-                $(".space-1").hide();
-                $(".select-1").show();
-            }
-        });
-
-        //确定关注
-        $(".attention-select").click(function () {
-            
-            $(".select-1").each(function () {
-                if (!$(this).is(":hidden")) {
-                    $(this).hide();
-                    $(this).parent().find(".attentioned-1").show();
-                }
-            });
         });
         
     </script>

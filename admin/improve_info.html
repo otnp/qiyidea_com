@@ -276,19 +276,11 @@
                                                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="dropdown pull-left marleft27">
-                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                                        入学年份&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <span class="caret"></span>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-center" role="menu" aria-labelledby="dropdownMenu1">
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                                    </ul>
+                                                <div class="input-group date datetimepicker5 pull-left">
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon-calendar glyphicon"></span>
+                                                    </span>
+                                                    <input type="text" id="project-mission-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
                                                 </div>
                                             </div>
                                         </div>
@@ -492,24 +484,26 @@
             $("#school-name").trigger("chosen:updated");
             $('#school-name').chosen();
             $("#footer").load("footer.html");
-            //$(".school-name").focus();
-            //$(".school-name").keyup(function () {
-            //    var schoolname = $(".school-name").val();
-            //    if (schoolname == "") {
-            //        $(".next-step").addClass("disabled");
-            //    } else {
-            //        $(".next-step").removeClass("disabled");
-            //    }
-            //});
-
-
-            $(".userinfo-image").mouseover(function () {
-                $("#img-div").show();
+            //时间日历
+            $('.datetimepicker5').datetimepicker({
+                language: 'zh-CN',
+                pickTime: false
             });
-            $(".userinfo-image").mouseout(function () {
-                $("#img-div").hide();
+            $('.datetimepicker4').datetimepicker({
+                language: 'ru',
+                pickDate: false
             });
 
+            $('#ren-btn-submit-datetime').click(function () {
+
+                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
+                $('.bs-datetimepicker-modal').modal('hide');
+            });
+            //日历时间结束
+            $('#myTab a').click(function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            });
 
         });
       
