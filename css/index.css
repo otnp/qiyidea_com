@@ -11,7 +11,7 @@ padding:0;
     height: 140px; width: 220px; display: block;
 }
 .thumbnail > .progress,.project-view-status>.progress {
-    margin-bottom:0px; border-radius:0; height:5px;
+    margin-bottom:0px; border-radius:5; height:5px;
 }
 .project-view-status > .rener-progress {
     margin-left:15px;

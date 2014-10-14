@@ -59,11 +59,15 @@
             </div>
             <div class="clearfix mt5mb15"></div>
             <div class="row">
-                <table class="mt15 table table-bordered table-striped">
+                <div class="alert alert-success mt15" role="alert">
+                    <span class="glyphicon glyphicon-ok bg-color-v"></span> 订单提交成功！订单号：123456789
+                </div>
+                <table class="table table-bordered table-striped">
                     <colgroup>
                         <col class="col-xs-3">
                         <col class="col-xs-1">
-                        <col class="col-xs-6">
+                        <col class="col-xs-5">
+                        <col class="col-xs-1">
                         <col class="col-xs-1">
                         <col class="col-xs-1">
                     </colgroup>
@@ -73,6 +77,7 @@
                             <th>发起人</th>
                             <th>回报</th>
                             <th>支持金额</th>
+                            <th>份数</th>
                             <th>配送费用</th>
                         </tr>
                     </thead>
@@ -94,13 +99,16 @@
                             </td>
                             <td><span class="color-danger">￥9</span></td>
                             <td>
+                                1
+                            </td>
+                            <td>
                                 ￥0
                             </td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="5" class="text-right">
+                            <td colspan="6" class="text-right">
                                 <label>应付金额  <span class="fz28 color-danger">￥9</span> </label>
                             </td>
                         </tr>

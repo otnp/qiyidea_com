@@ -23,6 +23,7 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/rener.css" rel="stylesheet">
 
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/assets/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/assets/ie-emulation-modes-warning.js"></script>
@@ -61,7 +62,7 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><span class="glyphicon glyphicon-ok bg-color-v"></span> 订单提交成功：青春就是用来折腾抑郁忧伤低潮，但谁不爱青春？《卡在咽喉的时光》寻求出版支持！</h4>
+                        <h4><!--<span class="glyphicon glyphicon-ok bg-color-v"></span> 订单提交成功：-->青春就是用来折腾抑郁忧伤低潮，但谁不爱青春？《卡在咽喉的时光》寻求出版支持！</h4>
                     </div>
                     <div class="panel-body ren-funding">
                         <dl class="dl-horizontal">
@@ -77,7 +78,7 @@
                                     需要发票填写个人信息。
                                 </p>
                             </dd>
-                             
+
                         </dl>
                         <div class="clearfix dot"></div>
                         <div class="pt10 mtmb15">
@@ -86,10 +87,10 @@
                                 <dd class="fz12 has-error">
                                     <address>
                                         <span> 李琉璃 13980053200 </span><br>
-                                        四川成都市武侯区三环以内xxx街xx号xxx2栋2单元4号   
+                                        四川成都市武侯区三环以内xxx街xx号xxx2栋2单元4号
                                     </address>
                                 </dd>
-                                 
+
                             </dl>
                         </div>
                         <div class="clearfix dot"></div>
@@ -97,7 +98,8 @@
                             <colgroup>
                                 <col class="col-xs-3">
                                 <col class="col-xs-1">
-                                <col class="col-xs-6">
+                                <col class="col-xs-5">
+                                <col class="col-xs-1">
                                 <col class="col-xs-1">
                                 <col class="col-xs-1">
                             </colgroup>
@@ -107,6 +109,7 @@
                                     <th>发起人</th>
                                     <th>回报</th>
                                     <th>支持金额</th>
+                                    <th>份数</th>
                                     <th>配送费用</th>
                                 </tr>
                             </thead>
@@ -126,16 +129,27 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td><span class="color-danger">￥9</span></td>
+                                    <td><span class="color-danger">￥<label class="price">9</label> </span></td>
                                     <td>
-                                        ￥0
+                                         
+                                        <div class="input-group input-group-sm spinner" data-trigger="spinner00">
+                                            <span class="input-group-addon"><a href="javascript:;" class="spin-down small" data-spin="down"><i class="glyphicon glyphicon-minus"></i></a></span>
+                                            <input type="text" class="form-control text-center" value="1" data-rule="quantity" style="width:30px;padding:0px 5px;" >
+                                            <span class="input-group-addon"><a href="javascript:;" class="spin-up small" data-spin="up"><i class="glyphicon glyphicon-plus"></i></a></span>
+                                            
+                                           </div>
+                                       
+
+                                    </td>
+                                    <td>
+                                        ￥<label class="shipping">0</label>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="5" class="text-right">
-                                        <label>应付金额  <span class="fz28 color-danger">￥9</span> </label>
+                                    <td colspan="6" class="text-right">
+                                        <label>支持金额  <span class="fz28 color-danger ">￥<label class="total">9.00</label></span> </label>
                                     </td>
                                 </tr>
                             </tfoot>
@@ -162,6 +176,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery-spinner-bootstrap3/jquery.spinner.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
@@ -196,8 +211,28 @@
                 console.log(isneedfunding);
             })
 
+            //数字加减
+            $(".spinner").spinner('changing', function (e, newVal, oldVal) {
+                $('#spinner-value').html(newVal);
+                //alert(parseInt($('.price').html()) * newVal)
+                $('.total').html(changeTwoDecimal((parseFloat($('.price').html()) * newVal) + parseFloat($('.shipping').html())));
+
+            });
 
         })
+
+        //保留两位小数同时四入五入
+        function changeTwoDecimal(x) {
+            var r = "";
+            var x1 = parseFloat(x);
+            if (isNaN(x1)) {
+                r = x.toString();
+            }
+            else {
+                r = x.toFixed(2);
+            }
+            return r;
+        }
 
     </script>
 
