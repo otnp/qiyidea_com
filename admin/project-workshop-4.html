@@ -130,14 +130,41 @@
                                                 <div class="panel-body">
                                                     <div class="row marbottom15">
                                                         <div class="col-lg-12">
-                                                            <a href="#">联系人2</a>
-                                                            <span>“真人不露相”这句话用在你身上最合适了，在你不爱说话的外表下，藏着一颗勤奋，努力，上进的心，再加上你的聪明，才智，你学什么东西都特别快。瞧你，这一学期进步更加快！要是你还能在大家面前大声地讲话，那我们就更喜欢你了。加油吧，你将会是个很有出息的男孩！</span>
+                                                            <div class="media">
+                                                                <a class="pull-left" href="#">
+                                                                    <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12"><span class=""><a href="#">联系人2</a></span> 2014-10-15</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            “真人不露相”这句话用在你身上最合适了，在你不爱说话的外表下，藏着一颗勤奋，努力，上进的心，再加上你的聪明，才智，你学什么东西都特别快。瞧你，这一学期进步更加快！要是你还能在大家面前大声地讲话，那我们就更喜欢你了。加油吧，你将会是个很有出息的男孩！
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="row marbottom15">
                                                         <div class="col-lg-12">
-                                                            <a href="#">联系人1</a>
-                                                            <span>该生 热爱祖国，关心集体，团结同学，诚实守信，乐于助人，热爱劳动，并积极参与公益活动，自觉遵守中学生日常行为，是一位好学生。该生德智体美兼有德一位有理想，有目标，有动力热爱生活的人。性格活泼开朗，充满自信和活力。该生热爱科学勤奋好学，有良好的心理素质和身体素质，做事脚踏实地，毅力坚韧，不畏困难，百折不挠，从不轻言放弃。该生注重个人修养，有强烈的荣辱观。</span>
+                                                            <div class="media">
+                                                                <a class="pull-left" href="#">
+                                                                    <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12"><span class=""><a href="#">联系人1</a></span> 2014-10-15</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12">
+                                                                            <span>该生 热爱祖国，关心集体，团结同学，诚实守信，乐于助人，热爱劳动，并积极参与公益活动，自觉遵守中学生日常行为，是一位好学生。该生德智体美兼有德一位有理想，有目标，有动力热爱生活的人。性格活泼开朗，充满自信和活力。该生热爱科学勤奋好学，有良好的心理素质和身体素质，做事脚踏实地，毅力坚韧，不畏困难，百折不挠，从不轻言放弃。该生注重个人修养，有强烈的荣辱观。</span>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -220,224 +247,8 @@
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $(function () {
-
-            //时间日历
-            $('.datetimepicker5').datetimepicker({
-                language: 'zh-CN',
-                pickTime: false
-            });
-            $('.datetimepicker4').datetimepicker({
-                language: 'ru',
-                pickDate: false
-            });
-
-            $('#ren-btn-submit-datetime').click(function () {
-
-                $('.ren-show-datetime-txt').html($('#ren-input-date').val() + ' ' + $('#ren-input-time').val())
-                $('.bs-datetimepicker-modal').modal('hide');
-            });
-            //日历时间结束
-            $("#head").load("head.html");
-            $("#footer").load("footer.html");
-            $(".school-name").focus();
-            $(".school-name").keyup(function () {
-                var schoolname = $(".school-name").val();
-                if (schoolname == "") {
-                    $(".next-step").addClass("disabled");
-                } else {
-                    $(".next-step").removeClass("disabled");
-                }
-            });
-            /*************************************************选择学校*********************************************************/
-            //点击省份
-            $(".select-provinces a").click(function () {
-                $(this).html();
-                $(".select-provinces a").each(function () {
-                    $(".select-provinces a").removeClass("bg-color");
-                    $(".select-provinces a").removeClass("active");
-                });
-                $(".select-city a").each(function () {
-                    $(".select-city a").removeClass("bg-color");
-                    $(".select-city a").removeClass("active");
-                });
-                $(this).addClass("bg-color");
-                $(this).addClass("active");
-                $(".select-city-1").show();
-                $(".select-area-1").hide();
-                $(".select-school-1").hide();
-            });
-            //点击城市
-            $(".select-city a").click(function () {
-                $(this).html();
-                $(".select-city a").each(function () {
-                    $(".select-city a").removeClass("bg-color");
-                    $(".select-city a").removeClass("active");
-                });
-                $(".select-area a").each(function () {
-                    $(".select-area a").removeClass("bg-color");
-                    $(".select-area a").removeClass("active");
-                });
-                $(this).addClass("bg-color");
-                $(this).addClass("active");
-                $(".select-area-1").show();
-                $(".select-school-1").hide();
-            });
-            //点击区域
-            $(".select-area a").click(function () {
-                $(this).html();
-                $(".select-area a").each(function () {
-                    $(".select-area a").removeClass("bg-color");
-                    $(".select-area a").removeClass("active");
-                });
-                $(".select-school-3 a").each(function () {
-                    $(".select-school-3 a").removeClass("bg-color");
-                    $(".select-school-3 a").removeClass("active");
-                });
-                $(this).addClass("bg-color");
-                $(this).addClass("active");
-                $(".select-school-1").show();
-            });
-            //点击学校
-            $(".select-school-3 a").click(function () {
-                $(this).html();
-                $(".select-school-3 a").each(function () {
-                    $(".select-school-3 a").removeClass("bg-color");
-                    $(".select-school-3 a").removeClass("active");
-                });
-                $(this).addClass("bg-color");
-                $(this).addClass("active");
-            });
-            //点击搜索按钮
-            $(".seaech-school-click").click(function () {
-
-            });
-            //点击 添加学校
-            $(".add-my-school").click(function () {
-                $(".add-my-school-div").show();
-                $(".select-school-3 a").each(function () {
-                    $(".select-school-3 a").removeClass("bg-color");
-                    $(".select-school-3 a").removeClass("active");
-                });
-                $(".seaech-school").val("");
-                $(".select-school-1").hide();
-            });
-            //点击 返回搜索学校
-            $(".back-serach-school").click(function () {
-                $(".add-my-school-div").hide();
-                $(".add-school-name").val("");
-                $(".select-school-1").show();
-            });
-            //取消选择学校
-            $(".cancel-secelt-school").click(function () {
-                $(".select-provinces a").each(function () {
-                    $(".select-provinces a").removeClass("bg-color");
-                    $(".select-provinces a").removeClass("active");
-                });
-                $(".select-city a").each(function () {
-                    $(".select-city a").removeClass("bg-color");
-                    $(".select-city a").removeClass("active");
-                });
-                $(".select-area a").each(function () {
-                    $(".select-area a").removeClass("bg-color");
-                    $(".select-area a").removeClass("active");
-                });
-                $(".select-school-3 a").each(function () {
-                    $(".select-school-3 a").removeClass("bg-color");
-                    $(".select-school-3 a").removeClass("active");
-                });
-                $(".add-school-name").val("");
-                $(".select-city-1").hide();
-                $(".select-area-1").hide();
-                $(".select-school-1").hide();
-                $(".add-my-school-div").hide();
-                $("#select-school").modal("hide");
-            });
-            //确定选择学校
-            $(".determine-secelt-school").click(function () {
-                var provinces_name = "";
-                var city_name = "";
-                var area_name = "";
-                var school_name = "";
-                $(".select-provinces a").each(function () {
-                    if ($(this).hasClass("active")) {
-                        provinces_name = $(this).text().trim();
-                    }
-                });
-                $(".select-city a").each(function () {
-                    if ($(this).hasClass("active")) {
-                        city_name = $(this).text().trim();
-                    }
-                });
-                $(".select-area a").each(function () {
-                    if ($(this).hasClass("active")) {
-                        area_name = $(this).text().trim();
-                    }
-                });
-                $(".select-school-3 a").each(function () {
-                    if ($(this).hasClass("active")) {
-                        school_name = $(this).text().trim();
-                    }
-                });
-
-                if (school_name == "") {
-                    school_name = $(".add-school-name").val();
-                    if (school_name != "") {
-                        $(".already-select-school").html(provinces_name + city_name + area_name + school_name);
-                    }
-
-                } else {
-                    $(".already-select-school").html(provinces_name + city_name + area_name + school_name);
-                }
-
-
-                $(".select-provinces a").each(function () {
-                    $(".select-provinces a").removeClass("bg-color");
-                    $(".select-provinces a").removeClass("active");
-                });
-                $(".select-city a").each(function () {
-                    $(".select-city a").removeClass("bg-color");
-                    $(".select-city a").removeClass("active");
-                });
-                $(".select-area a").each(function () {
-                    $(".select-area a").removeClass("bg-color");
-                    $(".select-area a").removeClass("active");
-                });
-                $(".select-school-3 a").each(function () {
-                    $(".select-school-3 a").removeClass("bg-color");
-                    $(".select-school-3 a").removeClass("active");
-                });
-                $(".select-city-1").hide();
-                $(".select-area-1").hide();
-                $(".select-school-1").hide();
-                $(".add-my-school-div").hide();
-                $(".add-school-name").val("");
-                $("#select-school").modal("hide");
-            });
-            /*************************************************选择学校*********************************************************/
-            $(".userinfo-image").mouseover(function () {
-                $("#img-div").show();
-            });
-            $(".userinfo-image").mouseout(function () {
-                $("#img-div").hide();
-            });
-            $(".dropdown-menu li a").bind("click", function () {
-                var $this = $(this);
-                var $a = $this.parent().parent().prev()
-                $a.text($this.text());
-                $a.append("<span class='caret'>");
-            });
-            //图片上传本地预览
-            $("#project-cover-image").uploadPreview({ Img: "preview-img", Width: 220, Height: 160, ImgType: ["gif", "jpeg", "jpg", "bmp", "png"], Callback: function () { } });
+           
         });
-
     </script>
-
-    <!-- The basic File Upload plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload.js"></script>
-    <!-- The File Upload processing plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload-process.js"></script>
-    <!-- The File Upload image preview & resize plugin -->
-    <script src="../js/fileupload-ui/jquery.fileupload-image.js"></script>
-
 </body>
 </html>
