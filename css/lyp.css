@@ -336,8 +336,72 @@ white-space:nowrap;/* 不换行 */
 			padding-left: 30px;
 			background: rgba(0, 0, 0, 0) url(https://platform.twitter.com/widgets/images/btn.27237bab4db188ca749164efd38861b0.png) -20px 9px no-repeat;
 		}
-		.btn-twitter:hover {
-			background-position:  -21px -16px;
-		}
+.btn-twitter:hover {
+	background-position:  -21px -16px;
+}
+.edui-image ul li a {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #eaeaea;
+    background: #f8f8f8 url(../img/bg-upd.jpg) no-repeat 50% 40%;
+    display: block;
+    position: relative;
+}
+.edui-image ul li {
+width: 92px;
+height: 90px;
+padding: 5px 20px 20px 0px;
+float: left;
+list-style: none;
+margin-right:10px;
+}
+
+.edui-image ul li a .pos-upd {
+width: 100%;
+height: 22px;
+text-align: center;
+display: block;
+color: #999;
+
+}
+.edui-image ul li input {
+width: 90px;
+height: 90px;
+cursor: pointer;
+display: block;
+margin: 0px;
+padding: 0px;
+position: absolute;
+left: 0;
+top: 0;
+filter: alpha(opacity:0);
+opacity: 0;
+}
+.edui-image ul li img {
+width: 90px;
+height: 90px;
+}
+.edui-image ul li a .pos-bg {
+width: 100%;
+height: 22px;
+display: block;
+background: #FFF;
+filter: alpha(opacity:70);
+opacity: 0.7;
+position: absolute;
+left: 0;
+top: 70px;
+z-index: 2;
+}
+.edui-image ul li a .pos-opt {
+width: 100%;
+height: 22px;
+text-align: center;
+display: block;
+position: absolute;
+left: 0;
+top: 70px;
+z-index: 3;
+}
 
 

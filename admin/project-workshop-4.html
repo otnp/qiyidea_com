@@ -115,12 +115,12 @@
                                                 <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-lg-12">
-                                                            <span class="label label-default marbottom10">初二学生</span>
-                                                            <span class="label label-primary marbottom10">数学达人</span>
-                                                            <span class="label label-success marbottom10">中学生geek党</span>
-                                                            <span class="label label-info marbottom10">机器人爱好者</span>
-                                                            <span class="label label-warning marbottom10">小说爱好者</span>
-                                                            <span class="label label-danger marbottom10">游戏迷</span>
+                                                            <span class="label label-default" style="display: inline-block;">初二学生</span>
+                                                            <span class="label label-primary" style="display: inline-block;">数学达人</span>
+                                                            <span class="label label-success" style="display: inline-block;">中学生geek党</span>
+                                                            <span class="label label-info" style="display: inline-block;">机器人爱好者</span>
+                                                            <span class="label label-warning" style="display: inline-block;">小说爱好者</span>
+                                                            <span class="label label-danger" style="display: inline-block;">游戏迷</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -179,9 +179,10 @@
 
 
                         </div>
-                        <!--<div class="panel-footer text-right">
-                           <button class="btn btn-primary">下一步</button>
-                        </div>-->
+                        <div class="panel-footer text-right">
+                            <button class="btn btn-primary" onclick="window.location.href='project-workshop-3.html'">上一步</button>
+                            <button class="btn btn-primary" onclick="window.location.href = 'info-center-project.html'">完成</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4" style="padding-right:0px;">
@@ -247,7 +248,8 @@
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $(function () {
-           
+            $("#head").load("head.html");
+            $("#footer").load("footer.html");
         });
     </script>
 </body>

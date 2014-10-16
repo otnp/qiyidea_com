@@ -313,27 +313,76 @@
             tmpl_cache: false,
             day: 'now',
             events_source: [
-                {
-                    "id": "1",
-                    "title": "今天的任务是：吃饭 睡觉 打豆豆",
-                    //"url": "http://www.example.com/",
-                    "class": "event-warning",
-                    "start": "1412438400000", // Milliseconds
-                    "end": "1412784000000 "   // Milliseconds
-                },
+               
                  {
-                     "id": "2",
-                     "title": "今天还有一个任务是：吃好 睡好 玩好",
+                     "id": "1",
+                     "title": "里程碑 | 吃饭 睡觉 打豆豆",
+                     //"url": "http://www.example.com/",
+                     "class": "event-smallflag",
+                     "start": "1412092800000", // Milliseconds
+                     "end": "1412784000000 "   // Milliseconds
+                 },
+                  {
+                      "id": "2",
+                      "title": "里程碑 | " + "这是一个神奇的网站",
+                      //"url": "http://www.example.com/",
+                      "class": "event-smallflag",
+                      "start": "1413475200000", // Milliseconds
+                      "end": "1413734400000 "   // Milliseconds
+                  },
+                   {
+                       "id": "3",
+                       "title": "负责人：张三 | 任务：吃饭 睡觉 打豆豆",
+                       //"url": "http://www.example.com/",
+                       "class": "event-warning",
+                       "start": "1412438400000", // Milliseconds
+                       "end": "1412784000000 "   // Milliseconds
+                   },
+                 {
+                     "id": "4",
+                     "title": "负责人：李四，王五 | "+"今天还有一个任务是：吃好 睡好 玩好",
                      //"url": "http://www.example.com/",
                      "class": "event-success",
                      "start": "1412524800000", // Milliseconds
                      "end": "1413129600000 "   // Milliseconds
-                 }
+                 },
+                  {
+                      "id": "5",
+                      "title": "负责人：暂无 | " + "今天还有一个任务是：吃好 睡好 玩好",
+                      //"url": "http://www.example.com/",
+                      "class": "event-noleader",
+                      "start": "1413475200000", // Milliseconds
+                      "end": "1413734400000 "   // Milliseconds
+                  }
             ],
             onAfterViewLoad: function (view) {
                 $('.current-calendar span').text(this.getTitle());
                 $('.btn-group button').removeClass('active');
                 $('button[data-calendar-view="' + view + '"]').addClass('active');
+                $(".cal-month-box .cal-before-eventlist").find("a").each(function () {
+                    if ($(this).hasClass("event-smallflag")) {//里程碑换小旗子
+                        $(this).removeClass("event");
+                        //$(this).addClass("flag-event");
+                        $(this).append('<img src="../img/small-flag.png" style="width:15px;height:15px;" alt="15*15" width="15" height="15"  />');
+                    }
+                });
+                //$(".cal-month-box #cal-slide-box ul li").find("span").each(function () {
+                //    if ($(this).hasClass("event-smallflag")) {//里程碑换小旗子
+                //        $(this).removeClass("event");
+                //        //$(this).addClass("flag-event");
+                //        $(this).append('<img src="../img/small-flag.png" style="width:15px;height:15px;" alt="15*15" width="15" height="15"  />');
+                //    }
+                //});
+                $(".cal-before-eventlist .cal-month-day").click(function () {
+                   // alert($(this).parent().parent().parent().children().find("ul li").hasClass("list-unstyled"));
+                    $(this).parent().parent().parent().children().find("ul li").each(function () {
+                        if ($(this).find("span").hasClass("event-smallflag")) {
+                            $(this).find("span").removeClass("event");
+                            $(this).find("span").addClass("flag-event");
+                            $(this).find("span").append('<img src="../img/small-flag.png" style="width:15px;height:15px;" alt="15*15" width="15" height="15"  />');
+                                }
+                    });
+                });
             }
         });
         $('.btn-group button[data-calendar-nav]').each(function () {

@@ -226,10 +226,30 @@
                                                         <textarea rows="8" class="form-control" id="funds-feedback-content" placeholder="请填写关于回报或任何你希望项目发起人知道的信息，不少于500字..."></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group" style="margin-bottom:0px">
                                                     <label for="funds-feedback-images" class="col-sm-2 control-label"></label>
                                                     <div class="col-sm-10">
                                                         说明图片，支持jpg、jpeg、png、gif格式，大小不超过500KB，最多上传3张。
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="funds-feedback-images" class="col-sm-2 control-label"></label>
+                                                    <!--<div class="col-sm-2">
+            <span class="btn btn-primary fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>添加图片</span>
+                <input type="file" name="files[]" multiple="" id="project-cover-image">
+            </span>
+
+        </div>-->
+                                                    <div class="col-lg-10 edui-image">
+                                                        <ul id="JS-deal_item_imgload">
+                                                            <li class="image-val"><a href="javascript:;"><img src="../img/project/5.jpg"><input type="hidden" name="image[]" value="/attachment/201410/16/10/58758aee52a11c2a6aac21c24a73ade874.jpg"><span class="pos-bg"></span><span class="pos-opt red">删除</span></a></li>
+                                                            <li><a href="javascript:void(0);"><span class="upimg video_lab pos-upd"><input class="testfile" type="file" id="project-cover-image" name="image_file" maxlength="30"></span></a></li>
+                                                        </ul>
+                                                        <!--<img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px; margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">
+            <img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px;margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">
+            <img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px;margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">-->
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -418,8 +438,9 @@
                                             </div>
                                             <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
                                             <div class="form-group">
-                                                <div class="col-sm-offset-4 col-sm-8">
-                                                    <button type="submit" class="btn btn-primary pull-right">下一步</button>
+                                                <div class="col-sm-offset-4 col-sm-8 text-right">
+                                                    <button type="button" class="btn btn-primary" onclick="window.location.href='start-project-2.html'">上一步</button>
+                                                    <button type="submit" class="btn btn-primary">下一步</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -1038,7 +1059,8 @@
             $(delbtn).parents("tr").remove();
         };
 
-
+        //图片上传本地预览
+        $("#project-cover-image").uploadPreview({ Img: "preview-img", Width: 220, Height: 160, ImgType: ["gif", "jpeg", "jpg", "bmp", "png"], Callback: function () { } });
     </script>
 
 </body>
