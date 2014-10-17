@@ -107,7 +107,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="media pt10 ren-newest-info">
-                            <a class="pull-left" href="#" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
+                            <a class="pull-left ren-show-card" tabindex="0"  href="#" >
                                 <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
                             </a>
 
@@ -124,7 +124,10 @@
                                                     </a>
                                                 </span>
                                             </dt>
-                                            <dd class="fz12">显示实物描述:这是一个神奇的网站</dd>
+                                            <dd class="fz12">
+                                                显示实物描述:这是一个神奇的网站
+
+                                            </dd>
                                         </dl>
                                     </div>
                                     <div class="col-lg-1">
@@ -364,8 +367,37 @@
     <div id="footer"></div>
 
 
-    <!-- Large modal -->
 
+    <!--个人名片-->
+    <div class="user-info-card dispalynone">
+        <div class="media ren-newest-info">
+            <a class="pull-left" href="#">
+                <img class="media-object" src="../img/default_avatar.gif" alt="50*50" title="50*50" style="height:50px; width:50px;">
+            </a>
+            <div class="media-body pl15">
+                <dl class="fz12">
+                    <dt>
+                        <a href="../admin/user-index.html">炝炒空心菜</a> &nbsp;<span class="fz10 color-grey">89人关注</span>
+                    </dt>
+                    <dd><span class="glyphicon glyphicon-map-marker"></span>  四川 成都 锦江区 成都七中嘉祥外国语学校  &nbsp; 初二一班 </dd>
+                </dl>
+            </div>
+        </div>
+        <dl class="fz12">
+            <dd>
+                <span class="label label-default">初二学生</span>
+                <span class="label label-primary">数学达人</span>
+                <span class="label label-success">中学生geek党</span>
+                <span class="label label-info">机器人爱好者</span>
+                <span class="label label-warning">小说爱好者</span>
+                <span class="label label-danger">游戏迷</span>
+            </dd>
+            <dd>简介：小清新的女汉子一枚</dd>
+        </dl>
+
+    </div>
+
+    <!-- Large modal -->
     <div class="modal fade ren-invite-rating-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -426,7 +458,7 @@
                             </div>
                         </div>
 
-                       
+
 
 
                     </div>
@@ -477,15 +509,32 @@
                 } else
                     $(this).addClass('glyphicon-star').removeClass('glyphicon-star-empty');
             })
-            //鼠标移出结束
-            //$('.ren-info-note-chosen').chosen();
 
-            // $('.ren-btn-tooltip').tooltip('toggle');
+            //user card info
+            $(".ren-show-card").popover({
+                trigger: 'hover',
+                //delay: { show: 0, hide: 1000 },
+                html: true,
+                content: function () {
+                    return $('.user-info-card').html();
+                }
+            });
 
-
-
-
-
+            $('.user-info-card').mouseover(function () {
+                //$(".ren-show-card").popover('show');
+                $(".ren-show-card").popover({
+                    trigger: 'hover',
+                    //delay: { show: 0, hide: 1000 },
+                    html: true,
+                    content: function () {
+                        return $('.user-info-card').html();
+                    }
+                });
+            })
+            $('.user-info-card').mouseout(function () {
+                $(".ren-show-card").popover('hide');
+            })
+            //end user card info
 
 
         })
