@@ -215,20 +215,63 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">预算执行情况</div>
                                 <div class="panel-body">
-                                    <table class="table table-bordered text-center project-budget-table" style="margin-bottom:0px;">
-                                        <tr>
-                                            <td>收入/支出</td>
-                                            <td>类别</td>
-                                            <td>名称</td>
-                                            <td>单价</td>
-                                            <td>数量</td>
-                                            <td>金额</td>
-                                            <td>小计</td>
-                                            <td width="80">是否接受实物支持</td>
-                                            <td>操作</td>
-                                        </tr>
-                                    </table>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <table class="table table-bordered text-center budget-table" style="margin-bottom:0px;">
+                                                <tr>
+                                                    <td>收入/支出</td>
+                                                    <td>类别</td>
+                                                    <td>名称</td>
+                                                    <td>单价</td>
+                                                    <td>数量</td>
+                                                    <td>金额</td>
+                                                    <td>小计</td>
+                                                    <td>实物</td>
+                                                    <td>实际使用</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>支出</td>
+                                                    <td>发票</td>
+                                                    <td>钢笔</td>
+                                                    <td>5</td>
+                                                    <td>100</td>
+                                                    <td>500</td>
+                                                    <td>500</td>
+                                                    <td>是</td>
+                                                    <td>-480</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>支出</td>
+                                                    <td>发票</td>
+                                                    <td>场地租用</td>
+                                                    <td>1</td>
+                                                    <td>1000</td>
+                                                    <td>1000</td>
+                                                    <td>1000</td>
+                                                    <td>否</td>
+                                                    <td>-1000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>支出</td>
+                                                    <td>发票</td>
+                                                    <td>服装</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                    <td>200</td>
+                                                    <td>200</td>
+                                                    <td>否</td>
+                                                    <td>-300</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                   <div class="row martop10">
+                                       <div class="col-lg-12 text-right">
+                                           <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#extra-budgetary-expenditure">预算外支出</button>
+                                       </div>
+                                   </div>
                                 </div>
+                                <div class="panel-footer text-right">现状：该项目用超了80元钱呢</div>
                             </div>
                         </div>
                     </div>
@@ -466,6 +509,51 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="extra-budgetary-expenditure" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">预算外支出</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row marbottom10">
+                           <div class="col-lg-4">
+                               <input type="text" class="form-control" id="name" placeholder="名称" />
+                           </div>
+                           <div class="col-lg-4">
+                               <select id="sz" name="sz">
+                                   <option>收入/支出</option>
+                                   <option>支出</option>
+                                   <option>收入</option>
+                               </select>
+                           </div>
+                           <div class="col-lg-4">
+                               <select id="type" name="type">
+                                   <option>发票类别</option>
+                                   <option>收入</option>
+                               </select>
+                           </div>
+                       </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="price" placeholder="单价" />
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="number" placeholder="数量" />
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="actual-user" placeholder="实际使用" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" data-dismiss="modal">取消</a>
+                        <button type="button" class="btn btn-primary add-budgetary-expenditure">添加</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="footer"></div>
     </div>
 
@@ -524,9 +612,24 @@
                 }
             });
         });
-
+        //添加记录
         $(".add-record-yes").click(function () {
             $("#add-record").modal("hide");
+        });
+        //添加预算外支出
+        $(".add-budgetary-expenditure").click(function () {
+            var sz = $("#sz").find("option:selected").text();
+            var type = $("#type").find("option:selected").text();
+            var name = $("#name").val();
+            var price =  $("#price").val();
+            var number = $("#number").val();
+            var actual_user = $("#actual-user").val();
+            var total = price * number;
+            $(".budget-table").append('<tr style="background:pink "><td>' + sz + '</td><td>' + type + '</td><td>' + name +
+                '</td><td>' + price + '</td><td>' + number + '</td><td>' + total + '</td><td>' + total +
+                '</td><td>否</td><td>'  + actual_user + '</td></tr>');
+
+            $("#extra-budgetary-expenditure").modal("hide");
         });
 
         var calendar = $(".project-rw-calendar").calendar({
