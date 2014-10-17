@@ -379,6 +379,7 @@
                         if ($(this).find("span").hasClass("event-smallflag")) {
                             $(this).find("span").removeClass("event");
                             $(this).find("span").addClass("flag-event");
+                            if ($(this).find("span img").length==0)
                             $(this).find("span").append('<img src="../img/small-flag.png" style="width:15px;height:15px;" alt="15*15" width="15" height="15"  />');
                                 }
                     });
