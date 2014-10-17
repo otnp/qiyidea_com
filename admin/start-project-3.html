@@ -352,33 +352,67 @@
                                             <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
 
                                             <div class="form-group">
-                                                <label for="project-url" class="col-sm-2 control-label">众筹基本设置</label>
+                                                <label for="raise-public-all-money" class="col-sm-2 control-label">众筹基本设置</label>
                                                 <div class="col-sm-3">
-                                                    <input type="text" class="form-control" id="project-url" placeholder="总金额">
+                                                    <input type="text" class="form-control" id="raise-public-all-money" placeholder="总金额">
                                                 </div>
-                                                <div class="col-sm-7 paddtop2">
+                                                <div class="col-sm-7 padding0 paddtop2">
                                                     /10000 <span class="marleft10">总金额不能超过预算中值</span>
                                                 </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="raise-public-time" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-3 bank-marker-error">
+                                                    <input type="text" class="form-control" id="bank-marker-time" placeholder="众筹时间">
+                                                </div>
+                                                <div class="col-sm-7 padding0 paddtop2"> 天&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最多90天  </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-url" class="col-sm-2 control-label"></label>
                                                 <div class="col-sm-10">
                                                     <table class="table table-bordered text-center bank-cards-table" style="margin-bottom:0px;">
                                                         <tr>
-                                                            <td width="30">序号</td>
-                                                            <td width="60">银行名称</td>
-                                                            <td width="100">卡号</td>
-                                                            <td width="100">银行网点</td>
-                                                            <td width="60">众筹时间</td>
-                                                            <td width="50">操作</td>
+                                                            <td width="50">序号</td>
+                                                            <td width="50">姓名</td>
+                                                            <td width="50">性别</td>
+                                                            <td>身份证号</td>
+                                                            <td width="75">银行名称</td>
+                                                            <td >卡号</td>
+                                                            <td width="120">银行网点</td>
+                                                            <td width="64">操作</td>
                                                         </tr>
                                                         <tr>
                                                             <td>01</td>
+                                                            <td>张三</td>
+                                                            <td>男</td>
+                                                            <td>123456789012345678</td>
                                                             <td>XX银行</td>
                                                             <td>XXXX XXXX XXXX XXXX XXX</td>
                                                             <td>锦江区东光支行</td>
-                                                            <td>2014-10-13</td>
                                                             <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="form-group guardians-info-table">
+                                                <label for="guardians-info" class="col-sm-2 control-label"></label>
+                                                <div class="col-sm-10">
+                                                    <table class="table table-bordered text-center guardians-table" style="margin-bottom:0px;">
+                                                        <tr>
+                                                            <td width="70">序号</td>
+                                                            <td width="70">姓名</td>
+                                                            <td width="70">称呼</td>
+                                                            <td>身份证号</td>
+                                                            <td width="90">手机号码</td>
+                                                            <td width="80">操作</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>01</td>
+                                                            <td>张三</td>
+                                                            <td>父亲</td>
+                                                            <td>123456789012345678</td>
+                                                            <td>12345678901</td>
+                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a href="javascript:void(0)" onclick="editGuardians(this)">编辑</a></td>
                                                         </tr>
                                                     </table>
                                                 </div>
@@ -386,15 +420,62 @@
                                             <div class="form-group  add-bank-cards-btn" style="display:block;">
                                                 <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
                                                 <div class="col-sm-10 feedback-money-error">
+                                                    未满18?<a href="#" class="add-guardian-click">添加监护人</a>
                                                     <button type="button" class="btn btn-success pull-right add-bank-cards-click">添加银行卡</button>
                                                 </div>
                                             </div>
+                                            <!--监护人-->
+                                            <div class="add-guardian-click-div" style="display:none;">
+                                                <div class="form-group add-guardian-info-div" style="display:none;margin-bottom:0px;">
+                                                    <label for="y" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-10 add-guardian-error">
+                                                        <div class="alert alert-success edit-guardian-1" role="alert" style="display:block">修改监护人选项<span class="edit-guardian-option"></span></div>
+                                                        <div class="alert alert-success add-guardian-1" role="alert" style="display:none">添加监护人选项<span class="add-guardian-option"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-3 guardian-name-error">
+                                                        <input type="text" class="form-control" id="guardian-name" placeholder="姓名">
+                                                    </div>
+                                                    <div class="col-sm-2 guardian-call-error">
+                                                        <input type="text" class="form-control" id="guardian-call" placeholder="称呼">
+                                                    </div>
+                                                    <div class="col-sm-5 guardian-phone-num-error">
+                                                        <input type="text" class="form-control" id="guardian-phone" placeholder="手机号码">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-8 guardian-cards-num-error">
+                                                        <input type="text" class="form-control" id="guardian-cards-num" placeholder="身份证号">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <button type="button" class="btn btn-success btn-sm edit-guardian-info" style="display:none">修改</button>
+                                                        <button type="button" class="btn btn-success btn-sm add-guardian-info" style="display:block">保存</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--银行卡-->
                                             <div class="add-bank-cards-div" style="display:none;">
                                                 <div class="form-group edit-bank-cards-div" style="display:none;margin-bottom:0px;">
                                                     <label for="y" class="col-sm-2 control-label"></label>
                                                     <div class="col-sm-10 feedback-money-error">
                                                         <div class="alert alert-success edit-bank-cards-1" role="alert" style="display:block">修改银行卡选项<span class="edit-bank-option"></span></div>
                                                         <div class="alert alert-success add-bank-cards-1" role="alert" style="display:none">添加银行卡选项<span class="add-bank-option"></span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
+                                                    <div class="col-sm-3 stu-name-error">
+                                                        <input type="text" class="form-control" id="stu-name" placeholder="真实姓名">
+                                                    </div>
+                                                    <div class="col-sm-2 paddtop2">
+                                                        <input type="radio" name="stu-sex"  value="0" checked />男
+                                                        <input type="radio" name="stu-sex"  value="1" />女
+                                                    </div>
+                                                    <div class="col-sm-5 stu-cards-num-error">
+                                                        <input type="text" class="form-control" id="stu-cards-num" placeholder="身份证号">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -412,7 +493,7 @@
                                                         <input type="text" class="form-control" id="bank-address" placeholder="银行所在支行">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
+                                                <!--<div class="form-group">
                                                     <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
                                                     <div class="col-sm-5 bank-marker-error">
                                                         <div class="input-group date datetimepicker5 pull-left">
@@ -426,7 +507,7 @@
                                                        注意:在此日期前结束
                                                     </div>
                                                    
-                                                </div>
+                                                </div>-->
                                                 <div class="form-group">
                                                     <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
                                                     <div class="col-sm-10 pull-right text-right">
@@ -437,12 +518,12 @@
                                                 </div>
                                             </div>
                                             <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
-                                            <div class="form-group">
+                                            <!--<div class="form-group">
                                                 <div class="col-sm-offset-4 col-sm-8 text-right">
                                                     <button type="button" class="btn btn-primary" onclick="window.location.href='start-project-2.html'">上一步</button>
                                                     <button type="submit" class="btn btn-primary">下一步</button>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                         </form>
                                     </div>
                                 </div>
@@ -943,16 +1024,23 @@
 
         //点击添加银行卡
         $(".add-bank-cards-click").click(function () {
-            $(".add-bank-cards-btn").hide();
-            $(".add-bank-cards-div").show();
-            $(".edit-bank-cards-div").show();
-            $(".edit-bank-cards-1").hide();
-            $(".add-bank-cards-1").show();
             var table_number = $(".bank-cards-table tr").length;
-            if (table_number < 10) {
-                table_number = "0" + table_number;
+            
+            if (table_number>=2) {
+                alert("只能添加一张银行卡");
+            } else {
+                if (table_number < 10) {
+                    table_number = "0" + table_number;
+                }
+                $(".add-bank-cards-btn").hide();
+                $(".add-bank-cards-div").show();
+                $(".edit-bank-cards-div").show();
+                $(".edit-bank-cards-1").hide();
+                $(".add-bank-cards-1").show();
+
+                $(".add-bank-option").html(table_number);
             }
-            $(".add-bank-option").html(table_number);
+           
 
         });
         //编辑银行卡
@@ -974,8 +1062,8 @@
             $("#bank-cards-num").val(bank_cards_num);
             var bank_address = $(editbtn).parents("tr").children("td").get(3).innerHTML;
             $("#bank-address").val(bank_address);
-            var bank_marker_time = $(editbtn).parents("tr").children("td").get(4).innerHTML;
-            $("#bank-marker-time").val(bank_marker_time);
+            //var bank_marker_time = $(editbtn).parents("tr").children("td").get(4).innerHTML;
+            //$("#bank-marker-time").val(bank_marker_time);
         }
         //取消编辑银行卡
         $(".cancel-bank-cards").click(function () {
@@ -993,7 +1081,7 @@
             var bank_name = $("#bank-name").val();
             var bank_cards_num = $("#bank-cards-num").val();
             var bank_address = $("#bank-address").val();
-            var bank_marker_time = $("#bank-marker-time").val();
+            //var bank_marker_time = $("#bank-marker-time").val();
             if (bank_cards_num.trim() == "" || bank_name.trim() == "") {
                 if (bank_cards_num.trim() == "") {
                     $(".bank-cards-num-error").addClass("has-error");
@@ -1008,11 +1096,11 @@
                         $(this).children("td:eq(1)").html(bank_name);
                         $(this).children("td:eq(2)").html(bank_cards_num);
                         $(this).children("td:eq(3)").html(bank_address);
-                        $(this).children("td:eq(4)").html(bank_marker_time);
+                        //$(this).children("td:eq(4)").html(bank_marker_time);
                         $("#bank-name").val("");
                         $("#bank-cards-num").val("");
                         $("#bank-address").val("");
-                        $("#bank-marker-time").val("");
+                        //$("#bank-marker-time").val("");
                         $(".add-bank-cards-btn").show();
                         $(".add-bank-cards-div").hide();
                         $(".edit-bank-cards").hide();
@@ -1027,32 +1115,79 @@
             var bank_name = $("#bank-name").val();
             var bank_cards_num = $("#bank-cards-num").val();
             var bank_address = $("#bank-address").val();
-            var bank_marker_time = $("#bank-marker-time").val();
-            if (bank_cards_num.trim() == "" || bank_name.trim() == "" || bank_marker_time.trim() == "") {
+            //var bank_marker_time = $("#bank-marker-time").val();
+            if (bank_cards_num.trim() == "" || bank_name.trim() == "") {
                 if (bank_cards_num.trim() == "") {
                     $(".bank-cards-num-error").addClass("has-error");
                 }
                 if (bank_name.trim() == "") {
                     $(".bank-name-error").addClass("has-error");
                 }
-                if (bank_marker_time.trim() == "") {
-                    $(".bank-marker-error").addClass("has-error");
-                }
+                //if (bank_marker_time.trim() == "") {
+                //    $(".bank-marker-error").addClass("has-error");
+                //}
             } else {
                 $(".bank-cards-table").append('<tr><td>' + t_num + '</td><td>' +
                      bank_name + '</td><td>' + bank_cards_num + '</td><td>' +
-                     bank_address + '</td><td>' + bank_marker_time +
+                     bank_address +
                      '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a  href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td></tr>');
                 $("#bank-name").val("");
                 $("#bank-cards-num").val("");
                 $("#bank-address").val("");
-                $("#bank-marker-time").val("");
+                //$("#bank-marker-time").val("");
                 $(".add-bank-cards-btn").show();
                 $(".add-bank-cards-div").hide();
                 $(".edit-bank-cards").hide();
                 $(".add-bank-cards").show();
             }
         });
+        //点击添加监护人
+        $(".add-guardian-click").click(function () {
+            $(".add-bank-cards-btn").hide();
+            $(".add-bank-cards-div").hide();
+            $(".add-guardian-click-div").show();
+            $(".add-guardian-info-div").show();
+            $(".edit-guardian-1").hide();
+            $(".add-guardian-1").show();
+           
+            $(".add-bank-option").html(table_number);
+
+
+        });
+        //确定添加监护人信息
+        $(".add-guardian-info").click(function () {
+            var guardian_name = $("#guardian-name").val();
+            var guardian_call =  $("#guardian-call").val();
+            var guardian_phone =  $("#guardian-phone").val();
+            var guardian_cards_num = $("#guardian-cards-num").val();
+            $(".add-bank-cards-btn").show();
+            $(".add-guardian-click-div").hide();
+            $(".add-guardian-info-div").hide();
+            $(".edit-guardian-1").show();
+            $(".add-guardian-1").hide();
+        });
+        //点击修改监护人信息
+        function editGuardians(editBtn) {
+            var option_num = $(editBtn).parents("tr").children("td").get(0).innerHTML;
+            $(".edit-guardian-option").html(option_num);
+            var guardian_name = $(editBtn).parents("tr").children("td").get(1).innerHTML;
+            $("#guardian-name").val(guardian_name);
+            var guardian_call = $(editBtn).parents("tr").children("td").get(2).innerHTML;
+            $("#guardian-call").val(guardian_call);
+            var guardian_phone = $(editBtn).parents("tr").children("td").get(4).innerHTML;
+            $("#guardian-phone").val(guardian_phone);
+            var guardian_cards_num = $(editBtn).parents("tr").children("td").get(3).innerHTML;
+            $("#guardian-cards-num").val(guardian_cards_num);
+
+            $(".edit-guardian-info").show();
+            $(".add-guardian-info").hide();
+            $(".add-bank-cards-btn").hide();
+            $(".add-bank-cards-div").hide();
+            $(".add-guardian-click-div").show();
+            $(".add-guardian-info-div").show();
+            $(".edit-guardian-1").show();
+            $(".add-guardian-1").hide();
+        }
         //众筹基本信息结束
         //删除一行
         function deltr(delbtn) {

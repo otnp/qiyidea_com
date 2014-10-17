@@ -80,29 +80,48 @@
                                                     <textarea rows="5" class="form-control" id="project-target" placeholder="项目目标描述…"></textarea>
                                                 </div>
                                             </div>
+                                            <div class="form-group yaoq-member-div" style="display:none">
+                                                <label for="project-member" class="col-sm-2 control-label">项目成员</label>
+                                                <div class="col-lg-10 yaoq-member" style="padding-top:7px;"></div>
+                                            </div>
                                             <div class="form-group">
-                                                <label for="project-target" class="col-sm-2 control-label">项目范围</label>
-                                                <div class="col-sm-5">
-                                                    <div class="input-group date datetimepicker5 pull-left">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon-calendar glyphicon"></span>
-                                                        </span>
-                                                        <input type="text" id="project-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-5">
-                                                    <div class="input-group date datetimepicker5 pull-left">
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon-calendar glyphicon"></span>
-                                                        </span>
-                                                        <input type="text" id="project-end-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
-                                                    </div>
+                                                <label for="project-member" class="col-sm-2 control-label"><span class="yaoq-member-span" style="display:block;">项目成员</span></label>
+                                                <div class="col-sm-10" >
+                                                    <select data-placeholder="输入联系人或群组的名字…" class="chosen-select lyp-ren-info-note-chosen" style="width: 100%; " multiple="" tabindex="-1">
+                                                        <option value=""></option>
+                                                        <optgroup label="联系人">
+                                                            <option>Dallas Cowboys</option>
+                                                            <option>New York Giants</option>
+                                                            <option>Philadelphia Eagles</option>
+                                                            <option>Washington Redskins</option>
+                                                            <option>Chicago Bears</option>
+                                                            <option>Detroit Lions</option>
+                                                            <option>Green Bay Packers</option>
+                                                            <option>Minnesota Vikings</option>
+                                                            <option>Atlanta Falcons</option>
+                                                            <option>Carolina Panthers</option>
+                                                            <option>New Orleans Saints</option>
+                                                            <option>Tampa Bay Buccaneers</option>
+                                                        </optgroup>
+                                                        <optgroup label="群组">
+                                                            <option>Arizona Cardinals</option>
+                                                            <option>St. Louis Rams</option>
+                                                            <option>San Francisco 49ers</option>
+                                                            <option>Seattle Seahawks</option>
+                                                            <option>Buffalo Bills</option>
+                                                            <option>Miami Dolphins</option>
+                                                            <option>New England Patriots</option>
+                                                            <option>New York Jets</option>
+                                                        </optgroup>
+
+                                                    </select>
+                                                   
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="project-range-description" class="col-sm-2 control-label"> </label>
                                                 <div class="col-sm-10">
-                                                    <textarea rows="5" class="form-control" id="project-range-description" placeholder="项目范围描述…"></textarea>
+                                                    <button type="button" class="btn btn-success btn-sm add-project-member pull-right">邀请成员</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -138,7 +157,7 @@
                                                     <textarea rows="3" class="form-control" id="project-marker-description" placeholder="里程碑描述…"></textarea>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="button" class="btn btn-success pull-right add-marker-event">添加里程碑</button>
+                                                    <button type="button" class="btn btn-success pull-right add-marker-event btn-sm">添加里程碑</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -213,7 +232,7 @@
                                                     <textarea rows="3" class="form-control" id="project-mission-description" placeholder="任务描述…"></textarea>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="button" class="btn btn-success pull-right add-mission-event">添加任务</button>
+                                                    <button type="button" class="btn btn-success pull-right add-mission-event btn-sm">添加任务</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -278,7 +297,7 @@
                                                     实物支持 <input type="radio" name="support" value="0" checked/>是 <input type="radio" name="support" value="1" />否
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="button" class="btn btn-success pull-right add-budget-event">添加预算</button>
+                                                    <button type="button" class="btn btn-success pull-right add-budget-event btn-sm">添加预算</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -309,7 +328,7 @@
                                                     <textarea rows="3" class="form-control" id="project-risk-description" placeholder="风险事件描述…"></textarea>
                                                 </div>
                                                 <div class="col-sm-2">
-                                                    <button type="button" class="btn btn-success pull-right add-risk-event">添加事件</button>
+                                                    <button type="button" class="btn btn-success pull-right add-risk-event btn-sm">添加事件</button>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -350,13 +369,14 @@
     <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
     <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
     <script src="../js/fileupload-ui/uploadPreview.min.js"></script>
-
+    <script src="../js/chosen/chosen.jquery.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
+            $(".lyp-ren-info-note-chosen").chosen();
             $(".dropdown-menu li a").bind("click", function () {
                 var $this = $(this);
                 var $a = $this.parent().parent().prev()
@@ -591,6 +611,22 @@
             }
         });
         //风险结束
+
+        //邀请成员
+        $(".add-project-member").click(function () {
+            //alert( $(".lyp-ren-info-note-chosen").val());
+            if ($(".lyp-ren-info-note-chosen").val() != "" && $(".lyp-ren-info-note-chosen").val()!=null) {
+                $(".yaoq-member-div").show();
+                $(".yaoq-member-span").hide();
+                if ($(".yaoq-member").html() == "") {
+                    $(".yaoq-member").append('<a href="#">' + $(".lyp-ren-info-note-chosen").val() + '</a>');
+                } else {
+                    $(".yaoq-member").append('<a href="#">' + $(".lyp-ren-info-note-chosen").val() + '</a>');
+                }
+                $(".lyp-ren-info-note-chosen").val(null);
+                
+            }
+        });
     </script>
 
 </body>
