@@ -1188,6 +1188,19 @@
             $(".edit-guardian-1").show();
             $(".add-guardian-1").hide();
         }
+        //确定修改监护人信息
+        $(".edit-guardian-info").click(function () {
+            var guardian_name = $("#guardian-name").val();
+            var guardian_call = $("#guardian-call").val();
+            var guardian_phone = $("#guardian-phone").val();
+            var guardian_cards_num = $("#guardian-cards-num").val();
+
+            $(".add-bank-cards-btn").show();
+            $(".add-guardian-click-div").hide();
+            $(".add-guardian-info-div").hide();
+            $(".edit-guardian-1").show();
+            $(".add-guardian-1").hide();
+        });
         //众筹基本信息结束
         //删除一行
         function deltr(delbtn) {
