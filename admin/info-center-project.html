@@ -84,7 +84,14 @@
                             </div>
                         </div>
                     </a>
-
+                    <a href="info-center-mange.html" class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm-8 col-lg-8">群组认证申请</div>
+                            <div class="col-sm-4 col-lg-4 text-right">
+                                <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
+                            </div>
+                        </div>
+                    </a>
 
 
                 </div>
@@ -512,28 +519,28 @@
 
             //user card info
             $(".ren-show-card").popover({
-                trigger: 'hover',
-                //delay: { show: 0, hide: 1000 },
                 html: true,
+                trigger: 'manual',
+                container: $(this).attr('id'),
+                //placement: 'top',
                 content: function () {
+                    //$return = '<div class="hover-hovercard"></div>';
                     return $('.user-info-card').html();
                 }
-            });
-
-            $('.user-info-card').mouseover(function () {
-                //$(".ren-show-card").popover('show');
-                $(".ren-show-card").popover({
-                    trigger: 'hover',
-                    //delay: { show: 0, hide: 1000 },
-                    html: true,
-                    content: function () {
-                        return $('.user-info-card').html();
-                    }
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(this).siblings(".popover").on("mouseleave", function () {
+                    $(_this).popover('hide');
                 });
-            })
-            $('.user-info-card').mouseout(function () {
-                $(".ren-show-card").popover('hide');
-            })
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        $(_this).popover("hide")
+                    }
+                }, 100);
+            });
             //end user card info
 
 
