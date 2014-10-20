@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-7" style="padding-left:0px;">
+                <div class="col-lg-8" style="padding-left:0px;">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
@@ -222,12 +222,12 @@
                                                     <td>收入/支出</td>
                                                     <td>类别</td>
                                                     <td>名称</td>
-                                                    <td>单价</td>
+                                                    <td>单价(元)</td>
                                                     <td>数量</td>
-                                                    <td>金额</td>
-                                                    <td>小计</td>
+                                                    <td>金额(元)</td>
+                                                    <td>小计(元)</td>
                                                     <td>实物</td>
-                                                    <td>实际使用</td>
+                                                    <td>实际使用(元)</td>
                                                 </tr>
                                                 <tr>
                                                     <td>支出</td>
@@ -238,7 +238,7 @@
                                                     <td>500</td>
                                                     <td>500</td>
                                                     <td>是</td>
-                                                    <td>-480</td>
+                                                    <td>已成功</td>
                                                 </tr>
                                                 <tr>
                                                     <td>支出</td>
@@ -249,7 +249,7 @@
                                                     <td>1000</td>
                                                     <td>1000</td>
                                                     <td>否</td>
-                                                    <td>-1000</td>
+                                                    <td>-<input type="text" value="" size="4" /></td>
                                                 </tr>
                                                 <tr>
                                                     <td>支出</td>
@@ -260,14 +260,17 @@
                                                     <td>200</td>
                                                     <td>200</td>
                                                     <td>否</td>
-                                                    <td>-300</td>
+                                                    <td>-<input type="text" value="" size="4" /></td>
                                                 </tr>
                                             </table>
                                         </div>
                                     </div>
                                    <div class="row martop10">
-                                       <div class="col-lg-12 text-right">
+                                       <div class="col-lg-6 text-left">
                                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#extra-budgetary-expenditure">预算外支出</button>
+                                       </div>
+                                       <div class="col-lg-6 text-right">
+                                           <button type="button" class="btn btn-sm btn-success save-extra-budgetary">保存</button>
                                        </div>
                                    </div>
                                 </div>
@@ -358,7 +361,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5" style="padding-right:0px;">
+                <div class="col-lg-4" style="padding-right:0px;">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
@@ -368,16 +371,16 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-lg-3 paddright0 "><a href="#">2014-10-17</a></div>
-                                        <div class="col-lg-9 paddleft0 ">这是第一个记录</div>
+                                        <div class="col-lg-4 paddright0 "><a href="#">2014-10-17</a></div>
+                                        <div class="col-lg-8 paddleft0 ">这是第一个记录</div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3 paddright0 "><a href="#">2014-10-10</a></div>
-                                        <div class="col-lg-9 paddleft0 ">这是第一个记录 <a href="#">http://www.baidu.com</a></div>
+                                        <div class="col-lg-4 paddright0 "><a href="#">2014-10-10</a></div>
+                                        <div class="col-lg-8 paddleft0 ">这是第一个记录 <a href="#">http://www.baidu.com</a></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3 paddright0"><a href="#">2014-10-01</a></div>
-                                        <div class="col-lg-9 paddleft0">这是第一个记录</div>
+                                        <div class="col-lg-4 paddright0"><a href="#">2014-10-01</a></div>
+                                        <div class="col-lg-8 paddleft0">这是第一个记录</div>
                                     </div>
                                 </div>
                             </div>
@@ -388,8 +391,8 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading current-calendar">
                                     <div class="row">
-                                        <div class="col-lg-3">  任务日历 </div>
-                                        <div class="col-lg-9 text-right"><span></span> </div>
+                                        <div class="col-lg-4">  任务日历 </div>
+                                        <div class="col-lg-8 text-right"><span></span> </div>
                                     </div>
                                 </div>
                                 <div class="panel-body ">
@@ -402,10 +405,10 @@
                                                     <button class="btn btn-primary btn-sm" data-calendar-nav="next">后 >></button>
                                                 </div>
                                                 <div class="btn-group">
-                                                    <button class="btn btn-warning btn-sm" data-calendar-view="year">年</button>
+                                                    <!--<button class="btn btn-warning btn-sm" data-calendar-view="year">年</button>-->
                                                     <button class="btn btn-warning active btn-sm" data-calendar-view="month">月</button>
-                                                    <button class="btn btn-warning btn-sm" data-calendar-view="week">周</button>
-                                                    <button class="btn btn-warning btn-sm" data-calendar-view="day">日</button>
+                                                    <!--<button class="btn btn-warning btn-sm" data-calendar-view="week">周</button>
+                                                    <button class="btn btn-warning btn-sm" data-calendar-view="day">日</button>-->
                                                 </div>
                                             </div>
                                         </div>
@@ -430,31 +433,31 @@
                                 <div class="panel-body">
                                     <div class="row marbottom15">
                                         <div class="pull-left pl15">
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
-                                            <a class="pull-left text-center marginr14 marbottom10" href="#" title="sunshine">
+                                            <a class="pull-left text-center marginr10 marbottom10" href="#" title="sunshine">
                                                 <img class="media-object" src="../img/login/user_normal.jpg" alt="48*48" style="width:48px;height:48px;" width="48" height="48">
                                                 <div class="text-overflow nulinkunderline small">sunshine</div>
                                             </a>
@@ -627,8 +630,12 @@
             var total = price * number;
             $(".budget-table").append('<tr style="background:pink "><td>' + sz + '</td><td>' + type + '</td><td>' + name +
                 '</td><td>' + price + '</td><td>' + number + '</td><td>' + total + '</td><td>' + total +
-                '</td><td>否</td><td>'  + actual_user + '</td></tr>');
+                '</td><td>否</td><td>' + actual_user + '</td></tr>');
 
+            $("#name").val("");
+            $("#price").val("");
+            $("#number").val("");
+            $("#actual-user").val("");
             $("#extra-budgetary-expenditure").modal("hide");
         });
 
