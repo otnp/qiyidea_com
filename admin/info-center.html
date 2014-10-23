@@ -33,7 +33,7 @@
       <script src="../js/assets/html5shiv.min.js"></script>
       <script src="../js/assets/respond.min.js"></script>
     <![endif]-->
-     
+
 
 </head>
 <body>
@@ -76,9 +76,9 @@
                         </div>
                     </a>
 
-                    <a href="info-center.html" class="list-group-item">
+                    <a href="info-center-inbox.html" class="list-group-item">
                         <div class="row">
-                            <div class="col-sm-8 col-lg-8">联系人消息</div>
+                            <div class="col-sm-8 col-lg-8">私信消息</div>
                             <div class="col-sm-4 col-lg-4 text-right">
                                 <i class="glyphicon glyphicon-chevron-right fz10"></i><span class="sr-only">更多</span>
                             </div>
@@ -103,7 +103,7 @@
 
                 <!--为post 消息列表-->
                 <div class="panel panel-default">
-                     
+
                     <div class="panel-body">
                         <div class="col-lg-9">
                             <b>最新消息</b>
@@ -116,7 +116,7 @@
                 </div>
 
 
-               
+
 
                 <!--帖子回复1-->
                 <div class="panel panel-default">
@@ -125,7 +125,7 @@
                             <div class="col-lg-6">最新消息</div>
                             <div class="col-lg-6 text-right">
                                 <!-- Small button group -->
-                                 
+
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                                         </dl>
                                     </div>
                                     <div class="col-lg-1">
-                                        
+
                                     </div>
                                 </div>
 
@@ -160,20 +160,20 @@
                     <div class="panel-footer">
                         <div class="row">
                             <div class="col-lg-offset-1 col-lg-8 pt10">
-                                
-                                    <a href="javascript:void(0)" class="repaly-post">
-                                        <span class="glyphicon glyphicon-comment"> </span><span class="total-reply"></span> 回复
-                                    </a> &nbsp;
-                                    <a href="javascript:void(0)" class="marleft10">
-                                        <span class="glyphicon glyphicon-share"> </span><span class="total-reply">转发 </span>
-                                    </a> &nbsp;
-                                    <a href="javascript:void(0)" class="marleft10">
-                                        <span class="glyphicon glyphicon-star"> </span><span class="total-reply">收藏 </span>
-                                    </a>&nbsp;
-                                    <a href="javascript:void(0)" class="marleft10">
-                                        <span class="glyphicon glyphicon-share"> </span><span class="total-reply">举报 </span>
-                                    </a>
-                                
+
+                                <a href="javascript:void(0)" class="repaly-post">
+                                    <span class="glyphicon glyphicon-comment"> </span><span class="total-reply"></span> 回复
+                                </a> &nbsp;
+                                <a href="javascript:void(0)" class="marleft10">
+                                    <span class="glyphicon glyphicon-share"> </span><span class="total-reply">转发 </span>
+                                </a> &nbsp;
+                                <a href="javascript:void(0)" class="marleft10" data-toggle="modal" data-target=".ren-favorites">
+                                    <span class="glyphicon glyphicon-star"> </span><span class="total-reply">收藏 </span>
+                                </a>&nbsp;
+                                <a href="javascript:void(0)" class="marleft10" data-toggle="modal" data-target="#ren-report">
+                                    <span class="glyphicon glyphicon-share"> </span><span class="total-reply">举报 </span>
+                                </a>
+
                             </div>
                             <div class="col-lg-3">
                                 <div class="text-right">
@@ -244,10 +244,10 @@
                                 <a href="javascript:void(0)" class="marleft10">
                                     <span class="glyphicon glyphicon-share"> </span><span class="total-reply">转发 </span>
                                 </a> &nbsp;
-                                <a href="javascript:void(0)" class="marleft10">
+                                <a href="javascript:void(0)" class="marleft10" data-toggle="modal" data-target=".ren-favorites">
                                     <span class="glyphicon glyphicon-star"> </span><span class="total-reply">收藏 </span>
                                 </a>&nbsp;
-                                <a href="javascript:void(0)" class="marleft10">
+                                <a href="javascript:void(0)" class="marleft10" data-toggle="modal" data-target="#ren-report">
                                     <span class="glyphicon glyphicon-share"> </span><span class="total-reply">举报 </span>
                                 </a>
 
@@ -282,6 +282,78 @@
     <div id="footer"></div>
 
 
+
+    <!-- 举报页面 -->
+    <div class="modal fade" id="ren-report" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">为什么举报这个内容？</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="pl15">
+                        <h5>请选择理由</h5>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked>
+                                广告等垃圾信息
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">
+                                不友善内容
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">
+                                违法违规内容
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="4">
+                                不宜公共讨论的政治内容
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios5" value="5">
+                                其它
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void()" class="btn btn-link nulinkunderline" data-dismiss="modal">取消</a>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--收藏成功-->
+    <div class="modal fade ren-favorites" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">恭喜你</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ptb5 text-center">
+                        <span class="fz28 bg-color-v glyphicon glyphicon-ok"></span>  收藏内容成功！
+                        <br />
+                        <br />
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

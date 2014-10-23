@@ -131,6 +131,10 @@ div.mp0, p.mp0, h3.mp0,hr.mp0 {
     font-size:28px;
     font-weight:normal;
 }
+div.minheight30,p.minheight30 {
+    min-height:30px;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
