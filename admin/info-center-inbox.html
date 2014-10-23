@@ -109,7 +109,7 @@
                             <h4>我的私信</h4>
                         </div>
                         <div class="col-lg-3 text-right ptb5">
-                            <a href="info-center-inbox-msg.html" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-pencil"></span> 写私信</a>
+                            <button type="button" data-toggle="modal" data-target="#ren-info-box" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-pencil"></span> 写私信</button>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <a href="/people/xing-xing-50-51" data-tip="p$b$xing-xing-50-51" class="pm-touser" data-original_title="星星">星星</a>
-                                <span class="badge">3</span> 
+                                <span class="badge">3</span>
                             </div>
                             <div class="col-lg-6 text-right">
 
@@ -211,9 +211,9 @@
                                         <span class="glyphicon glyphicon-phone-alt"> </span> 举报
                                     </a> &nbsp;-->
                                     <a href="javascript:void(0)" class="nulinkunderline">
-                                        <span class="glyphicon glyphicon-star"> </span>  删除 
+                                        <span class="glyphicon glyphicon-star"> </span>  删除
                                     </a>
- 
+
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
 
-                
+
 
             </div>
         </div>
@@ -231,6 +231,54 @@
 
 
     <div id="footer"></div>
+
+
+    <!-- 写私信 -->
+    <div class="modal fade" id="ren-info-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">发送私信</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="pl15">
+                        <form role="form">
+
+                            <div class="form-group">
+                                <select data-placeholder="发给谁…" class="chosen-select ren-info-note-chosen" style="width:100%;" multiple tabindex="6">
+                                    <option value=""></option>
+                                    <option>Dallas Cowboys</option>
+                                    <option>New York Giants</option>
+                                    <option>Philadelphia Eagles</option>
+                                    <option>Washington Redskins</option>
+                                    <option>Chicago Bears</option>
+                                    <option>Detroit Lions</option>
+                                    <option>Green Bay Packers</option>
+                                    <option>Minnesota Vikings</option>
+                                    <option>Atlanta Falcons</option>
+                                    <option>Carolina Panthers</option>
+                                    <option>New Orleans Saints</option>
+                                    <option>Tampa Bay Buccaneers</option>
+                                </select>
+                            </div>
+                            <div class="clearfix mt5mb15"></div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="sr-only">内容</label>
+                                <textarea class="form-control ren-textarea" placeholder="说点什么吧…" rows="3"></textarea>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void()" class="btn btn-link nulinkunderline" data-dismiss="modal">取消</a>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -243,7 +291,7 @@
     <script src="../js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
     <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
-    <script src="../js/chosen/chosen.jquery.js"></script>
+    <script src="../js/chosen/chosen.jquery-1.2.0.js"></script>
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -268,13 +316,12 @@
                     $(this).addClass('glyphicon-star').removeClass('glyphicon-star-empty');
             })
             //鼠标移出结束
+
+
             //$('.ren-info-note-chosen').chosen();
-
-            // $('.ren-btn-tooltip').tooltip('toggle');
-
-
-
-
+            $('#ren-info-box').on('shown.bs.modal', function () {
+                $('.ren-info-note-chosen', this).chosen();
+            });
 
 
 
