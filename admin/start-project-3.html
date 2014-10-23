@@ -45,502 +45,122 @@
             <div class="row">
                 <div class="btn-group btn-group-justified marbottom15">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary active disabled">基本信息</button>
+                        <button type="button" class="btn btn-success active disabled">项目基本信息</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary active disabled">项目详述</button>
+                        <button type="button" class="btn btn-success active disabled">项目详述</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary active">项目回馈</button>
+                        <button type="button" class="btn btn-success active">实施计划</button>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default disabled">预览</button>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default disabled">发布</button>
+                        <button type="button" class="btn btn-default disabled">预览及创建</button>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                   
+                <div class="panel panel-primary">
+
                     <div class="panel-body text-center">
-                        <div class="col-lg-12">
+                        <div class="col-lg-10">
                             <div class="text-left">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
+
                                         <form class="form-horizontal" role="form" action="start-project-4.html">
-                                            <!------------------------------------------------------实物支持------------------------------------------------------------------>
+                                            <fieldset>
+                                                <legend>里程碑一：</legend>
+                                                <div class="form-group">
+                                                    <label for="project-target" class="col-sm-2 control-label">里程碑命名：</label>
+                                                    <div class="col-sm-10 paddleft0">
+                                                        <input type="text" class="form-control" id="project-name" placeholder="请勿超过8个字">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                             <div class="form-group">
-                                                <label for="physical-support" class="col-sm-2 control-label">实物支持</label>
-                                                <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center physical-support-table" style="margin-bottom:0px;">
-                                                        <tr>
-                                                            <td width="50">回报</td>
-                                                            <td width="90">支持实物</td>
-                                                            <td width="50">数量</td>
-                                                            <td width="90">名额</td>
-                                                            <td>回报内容</td>
-                                                            <td width="90">回报时间</td>
-                                                            <td width="50">运费</td>
-                                                            <td width="50">操作</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>01</td>
-                                                            <td style="font-weight:bold;">笔记本</td>
-                                                            <td>1</td>
-                                                            <td>500</td>
-                                                            <td class="text-left">123</td>
-                                                            <td>项目结束后30天</td>
-                                                            <td>无</td>
-                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a href="javascript:void(0)" onclick="editingPhysicalSupport(this)">编辑</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="form-group  add-physical-support-btn" style="display:block;">
-                                                <label for="physical-support" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10">
-                                                    <button type="button" class="btn btn-success pull-right add-physical-support-btn-click">添加实物支持</button>
-                                                </div>
-                                            </div>
-                                            <div class="add-physical-support-div" style="display:none;">
-                                                <!-- 选项名div -->
-                                                <div class="form-group edit-physical-support-div" style="display:none;margin-bottom:0px;">
-                                                    <label for="" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10">
-                                                        <div class="alert alert-success edit-support-1" role="alert" style="display:block;">修改实物支持回报选项<span class="edit-support-option"></span></div>
-                                                        <div class="alert alert-success add-support-1" role="alert" style="display:none;">添加实物支持回报选项<span class="add-support-option"></span></div>
+                                                <label for="project-introduction" class="col-sm-2 control-label">设定时间：</label>
+                                                <div class="col-sm-5 paddleft0">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-marker-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="physical-support-select" class="col-sm-2 control-label"></label>
-
-                                                    <div class="col-sm-5 support-select-error">
-                                                        <input type="hidden" class="physical-support-sel">
-                                                        <div class="dropdown">
-                                                            <button class="btn btn-default dropdown-toggle support-select-error" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                                                选择要支持的实物
-                                                                <span class="caret"></span>
-                                                            </button>
-                                                            <ul class="dropdown-menu physical-support-s" role="menu" aria-labelledby="dropdownMenu1">
-                                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                                                            </ul>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                    <input type="text" class="form-control" id="physical-support-number" placeholder="支持数量"></div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="physical-support-description" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 support-description-error">
-                                                        <textarea rows="3" class="form-control" id="physical-support-description" placeholder="回馈描述…"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="physical-support-explain" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 support-explain-error">
-                                                        <textarea rows="3" class="form-control" id="physical-support-explain" placeholder="回馈说明…"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-people" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="physical-suppor-people" placeholder="限定名额">
-                                                    </div>
-                                                    <div class="col-sm-5 padding0 paddtop2"> 个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不填写为不限名额  </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-freight" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="physical-suppor-freight" placeholder="运费">
-                                                    </div>
-                                                    <div class="col-sm-5 padding0 paddtop2"> 个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不填写为不收运费  </div>
-                                                </div>
-                                                <div class="form-group support-time-error">
-                                                    <label for="physical-support-time" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="physical-support-time" placeholder="回报时间">
-                                                    </div>
-                                                    <div class="col-sm-3 padding0 paddtop2"> 天&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目结束后多少天内  </div>
-                                                    <div class="col-sm-2 pull-right">
-                                                        <a href="javascript:void(0)" class="cancel-physical-support martop5">取消</a>
-                                                        <button type="button" class="btn btn-success pull-right add-physical-support" style="display:block;">保存</button>
-                                                        <button type="button" class="btn btn-success pull-right edit-physical-support" style="display:none;">确定修改</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!------------------------------------------------------实物支持------------------------------------------------------------------>
-                                            <!------------------------------------------------------资金支持------------------------------------------------------------------>
-
-                                            <div class="form-group">
-                                                <label for="funds-feedback" class="col-sm-2 control-label">资金支持</label>
-                                                <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center funds-feedback-table" style="margin-bottom:0px;">
-                                                        <tr>
-                                                            <td width="50">回报</td>
-                                                            <td width="90">支持金额</td>
-                                                            <td width="90">名额</td>
-                                                            <td>回报内容</td>
-                                                            <td width="90">回报时间</td>
-                                                            <td width="50">运费</td>
-                                                            <td width="50">操作</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>01</td>
-                                                            <td style="font-weight:bold;">￥100</td>
-                                                            <td>500</td>
-                                                            <td class="text-left">123</td>
-                                                            <td>项目结束后30天</td>
-                                                            <td>无</td>
-                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a href="javascript:void(0)" onclick="    editingFundsFeedback(this)">编辑</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="form-group  add-funds-feedback-btn" style="display:block;">
-                                                <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10 feedback-money-error">
-                                                    <button type="button" class="btn btn-success pull-right add-funds-feedback-btn-click">添加回报</button>
-                                                </div>
-                                            </div>
-                                            <div class="add-funds-feedback-div" style="display:none;">
-                                                <div class="form-group edit-funds-feedback-div" style="display:none;margin-bottom:0px;">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 feedback-money-error">
-                                                        <div class="alert alert-success edit-1" role="alert" style="display:block">修改支持回报选项<span class="project-option"></span></div>
-                                                        <div class="alert alert-success add-1" role="alert" style="display:none">添加支持回报选项<span class="project-option"></span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3 feedback-money-error">
-                                                        <input type="text" class="form-control" id="funds-feedback-money" placeholder="支持金额">
-                                                    </div>
-                                                    <div class="col-sm-5 padding0 paddtop2"> 元 </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-content" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 feedback-content-error">
-                                                        <textarea rows="8" class="form-control" id="funds-feedback-content" placeholder="请填写关于回报或任何你希望项目发起人知道的信息，不少于500字..."></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group" style="margin-bottom:0px">
-                                                    <label for="funds-feedback-images" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10">
-                                                        说明图片，支持jpg、jpeg、png、gif格式，大小不超过500KB，最多上传3张。
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-images" class="col-sm-2 control-label"></label>
-                                                    <!--<div class="col-sm-2">
-            <span class="btn btn-primary fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>添加图片</span>
-                <input type="file" name="files[]" multiple="" id="project-cover-image">
-            </span>
-
-        </div>-->
-                                                    <div class="col-lg-10 edui-image">
-                                                        <ul id="JS-deal_item_imgload">
-                                                            <li class="image-val"><a href="javascript:;"><img src="../img/project/5.jpg"><input type="hidden" name="image[]" value="/attachment/201410/16/10/58758aee52a11c2a6aac21c24a73ade874.jpg"><span class="pos-bg"></span><span class="pos-opt red">删除</span></a></li>
-                                                            <li><a href="javascript:void(0);"><span class="upimg video_lab pos-upd"><input class="testfile" type="file" id="project-cover-image" name="image_file" maxlength="30"></span></a></li>
-                                                        </ul>
-                                                        <!--<img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px; margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">
-            <img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px;margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">
-            <img class="media-object pull-left" id="preview-img" width="180" height="130" style="width:180px;height:130px;margin-right:10px;" src="../img/bg_plists_thumb.png" alt="180*130">-->
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-people" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="funds-feedback-people" placeholder="限定名额">
-                                                    </div>
-                                                    <div class="col-sm-5 padding0 paddtop2"> 个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不填写为不限名额  </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-freight" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3">
-                                                        <input type="text" class="form-control" id="funds-feedback-freight" placeholder="运费">
-                                                    </div>
-                                                    <div class="col-sm-5 padding0 paddtop2"> 个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不填写为不收运费  </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-time" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3 feedback-time-error">
-                                                        <input type="text" class="form-control" id="funds-feedback-time" placeholder="回报时间">
-                                                    </div>
-                                                    <div class="col-sm-3 padding0 paddtop2"> 天&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目结束后多少天内  </div>
-                                                    <div class="col-sm-2 pull-right">
-                                                        <a href="javascript:void(0)" class="cancel-funds-feedback martop5">取消</a>
-                                                        <button type="button" class="btn btn-success pull-right add-funds-feedback" style="display:block;">保存</button>
-                                                        <button type="button" class="btn btn-success pull-right edit-funds-feedback" style="display:none;">确定修改</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!------------------------------------------------------资金支持------------------------------------------------------------------>
-                                            <!------------------------------------------------------成员招募------------------------------------------------------------------>
-
-                                            <div class="form-group">
-                                                <label for="member-recruitment" class="col-sm-2 control-label">成员招募</label>
-                                                <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center physical-support-table" style="margin-bottom:0px;">
-                                                        <tr>
-                                                            <td width="50">序号</td>
-                                                            <td width="90">任务</td>
-                                                            <td>工作描述</td>
-                                                            <td width="100">技能</td>
-                                                            <td width="90">工作地点</td>
-                                                            <td width="50">操作</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>01</td>
-                                                            <td>500</td>
-                                                            <td class="text-left">123</td>
-                                                            <td>php</td>
-                                                            <td>无</td>
-                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a href="javascript:void(0)" onclick="editingMember(this)">编辑</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="form-group  add-member-recruitment-btn" style="display:block;">
-                                                <label for="physical-support" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10">
-                                                    <button type="button" class="btn btn-success pull-right add-member-recruitment-btn-click">添加招募信息</button>
-                                                </div>
-                                            </div>
-                                            <div class="add-member-recruitment-div" style="display:none;">
-                                                <div class="form-group edit-physical-support-div" style="margin-bottom:0px;">
-                                                    <label for="" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10">
-                                                        <div class="alert alert-success edit-member-1" role="alert" style="display:none;">修改招募信息选项<span class="edit-member-option"></span></div>
-                                                        <div class="alert alert-success add-member-1" role="alert" style="display:block;">添加招募信息选项<span class="add-member-option"></span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="member-recruitment" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10">
-                                                        <select>
-                                                            <option value="volvo">选择任务</option>
-                                                            <option value="saab">Saab</option>
-                                                            <option value="opel">Opel</option>
-                                                            <option value="audi">Audi</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="project-url" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10">
-                                                        <textarea rows="3" class="form-control" id="member-recruitment-job" placeholder="工作描述…"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group support-time-error">
-                                                    <label for="physical-support-time" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 pull-right">
-                                                        <a href="javascript:void(0)" class="cancel-member-recruitment martop5">取消</a>
-                                                        <button type="button" class="btn btn-success pull-right add-member-recruitment" style="display:block;">保存</button>
-                                                        <button type="button" class="btn btn-success pull-right edit-member-recruitment" style="display:none;">确定修改</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-
-                                            <!------------------------------------------------------成员招募------------------------------------------------------------------>
-                                            <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
-
-                                            <div class="form-group">
-                                                <label for="raise-public-all-money" class="col-sm-2 control-label">众筹基本设置</label>
-                                                <div class="col-sm-3">
-                                                    <input type="text" class="form-control" id="raise-public-all-money" placeholder="总金额">
-                                                </div>
-                                                <div class="col-sm-7 padding0 paddtop2">
-                                                    /10000 <span class="marleft10">总金额不能超过预算中值</span>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="raise-public-time" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-3 bank-marker-error">
-                                                    <input type="text" class="form-control" id="bank-marker-time" placeholder="众筹时间">
+                                                <label for="project-introduction" class="col-sm-2 control-label">里程碑简述：</label>
+                                                <div class="col-sm-10 paddleft0">
+                                                    <textarea rows="5" class="form-control" id="project-introduction" placeholder="请输入相关描述内容"></textarea>
                                                 </div>
-                                                <div class="col-sm-7 padding0 paddtop2"> 天&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最多90天  </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="project-url" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center bank-cards-table" style="margin-bottom:0px;">
-                                                        <tr>
-                                                            <td width="50">序号</td>
-                                                            <td width="50">姓名</td>
-                                                            <td width="50">性别</td>
-                                                            <td>身份证号</td>
-                                                            <td width="75">银行名称</td>
-                                                            <td >卡号</td>
-                                                            <td width="120">银行网点</td>
-                                                            <td width="64">操作</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>01</td>
-                                                            <td>张三</td>
-                                                            <td>男</td>
-                                                            <td>123456789012345678</td>
-                                                            <td>XX银行</td>
-                                                            <td>XXXX XXXX XXXX XXXX XXX</td>
-                                                            <td>锦江区东光支行</td>
-                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td>
-                                                        </tr>
-                                                    </table>
+                                                <label for="project-introduction" class="col-sm-2 control-label">创建任务</label>
+                                                <div class="col-sm-10 paddleft0">
                                                 </div>
                                             </div>
-                                            <div class="form-group guardians-info-table">
-                                                <label for="guardians-info" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10">
-                                                    <table class="table table-bordered text-center guardians-table" style="margin-bottom:0px;">
-                                                        <tr>
-                                                            <td width="70">序号</td>
-                                                            <td width="70">姓名</td>
-                                                            <td width="70">称呼</td>
-                                                            <td>身份证号</td>
-                                                            <td width="90">手机号码</td>
-                                                            <td width="80">操作</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>01</td>
-                                                            <td>张三</td>
-                                                            <td>父亲</td>
-                                                            <td>123456789012345678</td>
-                                                            <td>12345678901</td>
-                                                            <td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a href="javascript:void(0)" onclick="editGuardians(this)">编辑</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div class="form-group  add-bank-cards-btn" style="display:block;">
-                                                <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10 feedback-money-error">
-                                                    未满18?<a href="#" class="add-guardian-click">添加监护人</a>
-                                                    <button type="button" class="btn btn-success pull-right add-bank-cards-click">添加银行卡</button>
-                                                </div>
-                                            </div>
-                                            <!--监护人-->
-                                            <div class="add-guardian-click-div" style="display:none;">
-                                                <div class="form-group add-guardian-info-div" style="display:none;margin-bottom:0px;">
-                                                    <label for="y" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 add-guardian-error">
-                                                        <div class="alert alert-success edit-guardian-1" role="alert" style="display:block">修改监护人选项<span class="edit-guardian-option"></span></div>
-                                                        <div class="alert alert-success add-guardian-1" role="alert" style="display:none">添加监护人选项<span class="add-guardian-option"></span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3 guardian-name-error">
-                                                        <input type="text" class="form-control" id="guardian-name" placeholder="姓名">
-                                                    </div>
-                                                    <div class="col-sm-2 guardian-call-error">
-                                                        <input type="text" class="form-control" id="guardian-call" placeholder="称呼">
-                                                    </div>
-                                                    <div class="col-sm-5 guardian-phone-num-error">
-                                                        <input type="text" class="form-control" id="guardian-phone" placeholder="手机号码">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-8 guardian-cards-num-error">
-                                                        <input type="text" class="form-control" id="guardian-cards-num" placeholder="身份证号">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <button type="button" class="btn btn-success btn-sm edit-guardian-info" style="display:none">修改</button>
-                                                        <button type="button" class="btn btn-success btn-sm add-guardian-info" style="display:block">保存</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--银行卡-->
-                                            <div class="add-bank-cards-div" style="display:none;">
-                                                <div class="form-group edit-bank-cards-div" style="display:none;margin-bottom:0px;">
-                                                    <label for="y" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 feedback-money-error">
-                                                        <div class="alert alert-success edit-bank-cards-1" role="alert" style="display:block">修改银行卡选项<span class="edit-bank-option"></span></div>
-                                                        <div class="alert alert-success add-bank-cards-1" role="alert" style="display:none">添加银行卡选项<span class="add-bank-option"></span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-3 stu-name-error">
-                                                        <input type="text" class="form-control" id="stu-name" placeholder="真实姓名">
-                                                    </div>
-                                                    <div class="col-sm-2 paddtop2">
-                                                        <input type="radio" name="stu-sex"  value="0" checked />男
-                                                        <input type="radio" name="stu-sex"  value="1" />女
-                                                    </div>
-                                                    <div class="col-sm-5 stu-cards-num-error">
-                                                        <input type="text" class="form-control" id="stu-cards-num" placeholder="身份证号">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-5 bank-name-error">
-                                                        <input type="text" class="form-control" id="bank-name" placeholder="银行名称">
-                                                    </div>
-                                                    <div class="col-sm-5 bank-cards-num-error">
-                                                        <input type="text" class="form-control" id="bank-cards-num" placeholder="银行卡号">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 bank-address-error">
-                                                        <input type="text" class="form-control" id="bank-address" placeholder="银行所在支行">
-                                                    </div>
-                                                </div>
-                                                <!--<div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-5 bank-marker-error">
-                                                        <div class="input-group date datetimepicker5 pull-left">
-                                                            <span class="input-group-addon">
-                                                                <span class="glyphicon-calendar glyphicon"></span>
-                                                            </span>
-                                                            <input type="text" id="bank-marker-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="选择时间">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-5 paddleft0 paddtop2">
-                                                       注意:在此日期前结束
-                                                    </div>
-                                                   
-                                                </div>-->
-                                                <div class="form-group">
-                                                    <label for="funds-feedback-money" class="col-sm-2 control-label"></label>
-                                                    <div class="col-sm-10 pull-right text-right">
-                                                        <a href="javascript:void(0)" class="cancel-bank-cards martop5 marginr20">取消</a>
-                                                        <button type="button" class="btn btn-success pull-right add-bank-cards" style="display:block;">保存</button>
-                                                        <button type="button" class="btn btn-success pull-right edit-bank-cards" style="display:none;">确定修改</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!------------------------------------------------------众筹基本设置------------------------------------------------------------------>
                                             <div class="form-group">
-                                                <div class="col-sm-offset-4 col-sm-8 text-right">
-                                                    <button type="button" class="btn btn-primary" onclick="window.location.href='start-project-2.html'">上一步</button>
-                                                    <button type="submit" class="btn btn-primary">下一步</button>
+                                                <div class="col-sm-12">
+                                                    <hr style="margin-bottom:0px;margin-top:0px;" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-introduction" class="col-sm-2 control-label">任务命名：</label>
+                                                <div class="col-sm-10 paddleft0">
+                                                    <input type="text" class="form-control" id="project-name" placeholder="请勿超过8个字">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-introduction" class="col-sm-2 control-label">设定日期：</label>
+                                                <div class="col-sm-5 paddleft0">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-marker-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="开始时间">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-5 paddleft0">
+                                                    <div class="input-group date datetimepicker5 pull-left">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon-calendar glyphicon"></span>
+                                                        </span>
+                                                        <input type="text" id="project-marker-start-time" class="form-control" data-date-format="YYYY-MM-DD" placeholder="截止时间">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-introduction" class="col-sm-2 control-label">任务简述：</label>
+                                                <div class="col-sm-10 paddleft0">
+                                                    <textarea rows="5" class="form-control" id="project-introduction" placeholder="请输入相关描述内容"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group text-center">
+                                                <label for="project-introduction" class="col-sm-2 control-label"></label>
+                                                <div class=" col-sm-10">
+                                                    <button type="button" class="btn btn-success" onclick="window.location.href='start-project-2.html'">上一步</button>
+                                                    <button type="submit" class="btn btn-success">下一步</button>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-             
+                        <div class="col-lg-2">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    帮助信息
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--<div class="panel-footer text-right">
-                       <button class="btn btn-primary">下一步</button>
-                    </div>-->
+
                 </div>
             </div>
         </div>
         <div id="footer"></div>
     </div>
 
+    <!--<div class="footer"></div>-->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -551,19 +171,14 @@
     <script src="../js/bootstrap-datetimepicker/js/locale/zh-cn.js"></script>
     <script src="../js/bootstrap-datetimepicker/js/locale/ru.js"></script>
     <script src="../js/fileupload-ui/uploadPreview.min.js"></script>
-
+    <script src="../js/chosen/chosen.jquery.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/assets/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#head").load("head.html");
             $("#footer").load("footer.html");
-            $(".dropdown-menu li a").bind("click", function () {
-                var $this = $(this);
-                var $a = $this.parent().parent().prev()
-                $a.text($this.text());
-                $a.append("<span class='caret'>");
-            });
+
             //时间日历
             $('.datetimepicker5').datetimepicker({
                 language: 'zh-CN',
@@ -584,631 +199,7 @@
                 e.preventDefault()
                 $(this).tab('show')
             });
-
         });
-        //实物支持
-        //取消添加实物支持
-        $(".cancel-physical-support").click(function () {
-            $(".add-physical-support-div").hide();
-            $(".add-physical-support-btn").show();
-            $(".add-physical-support").show();
-            $(".edit-physical-support").hide();
-            $(".physical-support-sel").val("");//实物选择
-            $("#physical-support-number").val("");//数量 
-            $("#physical-support-description").val("");//回馈描述
-            $("#physical-support-explain").val("");//回馈说明
-            $("#physical-suppor-people").val("");//名额
-            $("#physical-suppor-freight").val("");//运费
-            $("#physical-support-time").val("");//时间
-            $(".add-physical-support-div").hide();
-            $(".add-physical-support-btn").show();
-        });
-        //点击添加实物支持
-        $(".add-physical-support-btn-click").click(function () {
-            var table_number = $(".physical-support-table tr").length;
-            if (table_number < 10) {
-                table_number = "0" + table_number;
-            }
-            $(".add-physical-support-div").show();
-            $(".add-physical-support-btn").hide();
-            $(".edit-physical-support-div").show();
-            $(".add-support-1").show();
-            $(".edit-support-1").hide();
-            $(".add-support-option").html(table_number);
-        });
-        //回报时间
-        $("#physical-support-time").focus(function () {
-            if ($("#physical-support-time").val().trim() == "") {
-                $(".support-time-error").addClass("has-error");
-            }
-        });
-        $("#physical-support-time").keyup(function () {
-            if ($("#physical-support-time").val().trim() > 0) {
-                $(".support-time-error").removeClass("has-error");
-            } else {
-                $(".support-time-error").addClass("has-error");
-            }
-        });
-        //选择下拉给隐藏文本框赋值
-        $(".physical-support-s li").click(function () {
-            $(".physical-support-sel").val($(this).find("a").text());
-        });
-        //保存实物支持
-        $(".add-physical-support").click(function () {
-            var table_number = $(".add-support-option").html();
-            var physical_support_sel = $(".physical-support-sel").val();//实物选择
-            var physical_support_number = $("#physical-support-number").val();//数量 
-            var physical_support_description = $("#physical-support-description").val();//回馈描述
-            var physical_support_explain = $("#physical-support-explain").val();//回馈说明
-            var physical_suppor_people = $("#physical-suppor-people").val();//名额
-            var physical_suppor_freight = $("#physical-suppor-freight").val();//运费
-            if (physical_suppor_freight == "") {
-                physical_suppor_freight = "无";
-            } else {
-                physical_suppor_freight = "￥" + physical_suppor_freight;
-            }
-            var physical_suppor_time = $("#physical-support-time").val();//时间
-
-            if (physical_suppor_time.trim() == "" || physical_support_sel.trim() == "") {
-                if (physical_suppor_time.trim() == "") {
-                    $(".support-time-error").addClass("has-error");
-                }
-                if (physical_support_sel.trim() == "") {
-                    $(".support-select-error").addClass("has-error");
-                }
-
-            } else {
-
-                $(".physical-support-table").append('<tr><td>' + table_number + '</td><td>' +
-            			physical_support_sel + '</td><td>' + physical_suppor_people + '</td><td>' + physical_support_number + '</td><td class="text-left">' +
-            			physical_support_description + '</td><td>项目结束后' + physical_suppor_time + '天</td><td>' +
-                        physical_suppor_freight + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a  href="javascript:void(0)" onclick="editingPhysicalSupport(this)">编辑</a></td></tr>');
-                $(".physical-support-sel").val("");//实物选择
-                $("#physical-support-number").val("");//数量 
-                $("#physical-support-description").val("");//回馈描述
-                $("#physical-support-explain").val("");//回馈说明
-                $("#physical-suppor-people").val("");//名额
-                $("#physical-suppor-freight").val("");//运费
-                $("#physical-support-time").val("");//时间
-                $(".add-physical-support-div").hide();
-                $(".add-physical-support-btn").show();
-            }
-
-        });
-        //编辑实物支持
-        function editingPhysicalSupport(editbtn) {
-            $(".add-physical-support-div").show();
-            $(".edit-physical-support-div").show();
-            $(".add-physical-support-btn").hide();
-            $(".add-support-1").hide();
-            $(".edit-support-1").show();
-            var option_num = $(editbtn).parents("tr").children("td").get(0).innerHTML;
-            $(".edit-support-option").html(option_num);
-            var physical_support_sel = $(editbtn).parents("tr").children("td").get(1).innerHTML;
-            $(".physical-support-sel").val(physical_support_sel);//实物选择
-
-            var con = $(editbtn).parents("tr").children("td").get(4).innerHTML;
-            $("#physical-support-description").val(con);//回馈描述
-
-            var people = $(editbtn).parents("tr").children("td").get(3).innerHTML;
-            $("#physical-suppor-people").val(people);//名额
-
-            var money = $(editbtn).parents("tr").children("td").get(6).innerHTML;
-            if (money == "无") {
-                money = "";
-            } else {
-                money = money.substring(1, money.length);
-            }
-            $("#physical-suppor-freight").val(money);//运费
-
-            var number = $(editbtn).parents("tr").children("td").get(2).innerHTML;
-            $("#physical-support-number").val(number);//数量
-
-            var time = $(editbtn).parents("tr").children("td").get(5).innerHTML;
-            time = time.substring(5, time.length - 1);
-          
-            $("#physical-support-time").val(time);//时间
-            $(".add-physical-support").hide();
-            $(".edit-physical-support").show();
-        }
-        //确定修改
-        $(".edit-physical-support").click(function () {
-            var table_number = $(".add-support-option").html();
-            var physical_support_sel = $(".physical-support-sel").val();//实物选择
-            var physical_support_number = $("#physical-support-number").val();//数量 
-            var physical_support_description = $("#physical-support-description").val();//回馈描述
-            var physical_support_explain = $("#physical-support-explain").val();//回馈说明
-            var physical_suppor_people = $("#physical-suppor-people").val();//名额
-            var physical_suppor_freight = $("#physical-suppor-freight").val();//运费
-            
-            if (physical_suppor_freight == "") {
-                physical_suppor_freight = "无";
-            } else {
-                physical_suppor_freight = "￥" + physical_suppor_freight;
-            }
-            var physical_suppor_time = $("#physical-support-time").val();//时间
-            if (physical_suppor_time.trim() == "" || physical_support_sel.trim() == "") {
-                
-                if (physical_suppor_time.trim() == "") {
-                    $(".support-time-error").addClass("has-error");
-                }
-                if (physical_support_sel.trim() == "") {
-                    $(".support-select-error").addClass("has-error");
-                }
-               
-            } else {
-               
-                //表格行重新赋值
-                var num = $(".edit-support-option").html();
-                $(".physical-support-table tr").each(function () {
-                    var edit = $(this).children("td:first").text();
-                    if (num == edit) {
-                        $(this).children("td:eq(1)").html(physical_support_sel);
-                        $(this).children("td:eq(2)").html(physical_support_number);
-                        $(this).children("td:eq(3)").html(physical_suppor_people);
-                        $(this).children("td:eq(4)").html(physical_support_description);
-                        $(this).children("td:eq(5)").html("项目结束后" + physical_suppor_time + "天");
-                        $(this).children("td:eq(6)").html(physical_suppor_freight);
-                    }
-                });
-                $(".physical-support-sel").val("");//实物选择
-                $("#physical-support-number").val("");//数量 
-                $("#physical-support-description").val("");//回馈描述
-                $("#physical-support-explain").val("");//回馈说明
-                $("#physical-suppor-people").val("");//名额
-                $("#physical-suppor-freight").val("");//运费
-                $("#physical-support-time").val("");//时间
-                $(".add-physical-support-div").hide();
-                $(".add-physical-support-btn").show();
-            }
-        });
-        //资金支持开始
-        //取消编辑
-        $(".cancel-funds-feedback").click(function () {
-            $(".add-funds-feedback-div").hide();
-            $(".add-funds-feedback-btn").show();
-            $(".add-funds-feedback").show();
-            $(".edit-funds-feedback").hide();
-            
-        });
-        $(".add-funds-feedback-btn-click").click(function () {
-            var table_number = $(".funds-feedback-table tr").length;
-            if (table_number < 10) {
-                table_number = "0" + table_number;
-            }
-            $(".project-option").html(table_number);
-            $(".add-funds-feedback-div").show();
-            $(".add-funds-feedback-btn").hide();
-            $(".edit-funds-feedback-div").show();
-            $(".add-1").show();
-            $(".edit-1").hide();
-            $("#funds-feedback-money").focus();
-        });
-        $("#funds-feedback-money").focus(function () {
-            if ($("#funds-feedback-money").val().trim() == "") {
-                $(".feedback-money-error").addClass("has-error");
-            }
-        });
-        $("#funds-feedback-money").keyup(function () {
-            if ($("#funds-feedback-money").val().trim() > 0) {
-                $(".feedback-money-error").removeClass("has-error");
-            } else {
-                $(".feedback-money-error").addClass("has-error");
-            }
-        });
-        $("#funds-feedback-content").focus(function () {
-            if ($("#funds-feedback-content").val().trim() == "") {
-                $(".feedback-content-error").addClass("has-error");
-            }
-        });
-        $("#funds-feedback-content").keyup(function () {
-            if ($("#funds-feedback-content").val().trim() > 0) {
-                $(".feedback-content-error").removeClass("has-error");
-            } else {
-                $(".feedback-content-error").addClass("has-error");
-            }
-        });
-        $("#funds-feedback-time").focus(function () {
-            if ($("#funds-feedback-time").val().trim() == "") {
-                $(".feedback-time-error").addClass("has-error");
-            }
-        });
-        $("#funds-feedback-time").keyup(function () {
-            if ($("#funds-feedback-time").val().trim() > 0) {
-                $(".feedback-time-error").removeClass("has-error");
-            } else {
-                $(".feedback-time-error").addClass("has-error");
-            }
-        });
-        //添加新支持
-        $(".add-funds-feedback").click(function () {
-            var funds_feedback_money = $("#funds-feedback-money").val().trim();//金额
-            var funds_feedback_content = $("#funds-feedback-content").val().trim();//内容
-            var funds_feedback_time = $("#funds-feedback-time").val().trim();//回报时间
-            var funds_feedback_people = $("#funds-feedback-people").val().trim();//名额
-            var funds_feedback_freight = $("#funds-feedback-freight").val().trim();//运费
-            if (funds_feedback_freight == "") {
-                funds_feedback_freight = "无";
-            } else {
-                funds_feedback_freight = "￥" + funds_feedback_freight;
-            }
-            if (funds_feedback_money == "" || funds_feedback_content == "" || funds_feedback_time == "") {
-                if (funds_feedback_money == "") {
-                    $(".feedback-money-error").addClass("has-error");
-                }
-                if (funds_feedback_content == "") {
-                    $(".feedback-content-error").addClass("has-error");
-                }
-                if (funds_feedback_time == "") {
-                    $(".feedback-time-error").addClass("has-error");
-                }
-            } else {
-                var table_number = $(".funds-feedback-table tr").length;
-                if (table_number < 10) {
-                    table_number = "0" + table_number;
-                }
-
-                $(".funds-feedback-table").append('<tr><td>' + table_number + '</td><td style="font-weight:bold;">￥' +
-                     funds_feedback_money + '</td><td>' + funds_feedback_people + '</td><td class="text-left">' +
-                     funds_feedback_content + '</td><td>项目结束后' + funds_feedback_time + '天</td><td>' +
-                     funds_feedback_freight + '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a><a  href="javascript:void(0)" onclick="editingFundsFeedback(this)">编辑</a></td></tr>');
-                $("#funds-feedback-money").val("");
-                $("#funds-feedback-content").val("");
-                $("#funds-feedback-time").val("");
-                $("#funds-feedback-people").val("");
-                $("#funds-feedback-freight").val("");
-                $(".add-funds-feedback-div").hide();
-                $(".add-funds-feedback-btn").show();
-                $(".edit-funds-feedback-div").hide();
-            }
-        });
-        //编辑资金支持
-        function editingFundsFeedback(editbtn) {
-            $(".feedback-money-error").removeClass("has-error");
-            var option_num = $(editbtn).parents("tr").children("td").get(0).innerHTML;
-            $(".edit-funds-feedback-div").show();
-            $(".add-funds-feedback-div").show();
-            $(".add-funds-feedback-btn").hide();
-            $(".edit-funds-feedback-div").show();
-            $(".edit-funds-feedback").show();
-            $(".add-funds-feedback").hide();
-
-            $(".add-1").hide();
-            $(".edit-1").show();
-            $(".project-option").html(option_num);
-            var funds_feedback_money = $(editbtn).parents("tr").children("td").get(1).innerHTML;
-            funds_feedback_money = funds_feedback_money.substring(1, funds_feedback_money.length);
-            var funds_feedback_content = $(editbtn).parents("tr").children("td").get(3).innerHTML;
-            var funds_feedback_people = $(editbtn).parents("tr").children("td").get(2).innerHTML;
-            var funds_feedback_time = $(editbtn).parents("tr").children("td").get(4).innerHTML;
-            funds_feedback_time = funds_feedback_time.substring(5, funds_feedback_time.length - 1);
-            var funds_feedback_freight = $(editbtn).parents("tr").children("td").get(5).innerHTML;
-            if (funds_feedback_freight == "无") {
-                funds_feedback_freight = "";
-            } else {
-                funds_feedback_freight = funds_feedback_freight.substring(1, funds_feedback_freight.length);
-            }
-            $("#funds-feedback-money").val(funds_feedback_money);
-            $("#funds-feedback-content").val(funds_feedback_content);
-            $("#funds-feedback-time").val(funds_feedback_time);
-            $("#funds-feedback-people").val(funds_feedback_people);
-            $("#funds-feedback-freight").val(funds_feedback_freight);
-        }
-        //确定编辑
-        $(".edit-funds-feedback").click(function () {
-            var funds_feedback_money = $("#funds-feedback-money").val().trim();//金额
-            var funds_feedback_content = $("#funds-feedback-content").val().trim();//内容
-            var funds_feedback_time = $("#funds-feedback-time").val().trim();//回报时间
-            var funds_feedback_people = $("#funds-feedback-people").val().trim();//名额
-            var funds_feedback_freight = $("#funds-feedback-freight").val().trim();//运费
-            if (funds_feedback_freight == "") {
-                funds_feedback_freight = "无";
-            } else {
-                funds_feedback_freight = "￥" + funds_feedback_freight;
-            }
-            if (funds_feedback_money == "" || funds_feedback_content == "" || funds_feedback_time == "") {
-                if (funds_feedback_money == "") {
-                    $(".feedback-money-error").addClass("has-error");
-                }
-                if (funds_feedback_content == "") {
-                    $(".feedback-content-error").addClass("has-error");
-                }
-                if (funds_feedback_time == "") {
-                    $(".feedback-time-error").addClass("has-error");
-                }
-            } else {
-                //表格行重新赋值
-                var num = $(".project-option").html();
-                var table_number = $(".funds-feedback-table tr").length;
-                $(".funds-feedback-table tr").each(function () {
-                    var edit = $(this).children("td:first").text();
-                    if (num == edit) {//定位行
-                        $(this).children("td:eq(1)").html("￥" + funds_feedback_money);
-                        $(this).children("td:eq(2)").html(funds_feedback_people);
-                        $(this).children("td:eq(3)").html(funds_feedback_content);
-                        $(this).children("td:eq(4)").html("项目结束后" + funds_feedback_time + "天");
-                        $(this).children("td:eq(5)").html(funds_feedback_freight);
-
-                        $("#funds-feedback-money").val("");
-                        $("#funds-feedback-content").val("");
-                        $("#funds-feedback-time").val("");
-                        $("#funds-feedback-people").val("");
-                        $("#funds-feedback-freight").val("");
-                        $(".add-funds-feedback-div").hide();
-                        $(".add-funds-feedback-btn").show();
-                        $(".edit-funds-feedback-div").hide();
-                        $(".add-funds-feedback").show();
-                        $(".edit-funds-feedback").hide();
-                    }
-                });
-
-            }
-        });
-        //资金支持结束
-
-        //成员招募开始
-        //取消编辑成员招募
-        $(".cancel-member-recruitment").click(function () {
-            $(".add-member-recruitment-btn").show();
-            $(".add-member-recruitment-div").hide();
-            $(".edit-member-recruitment").hide();
-            $(".edit-member-recruitment").show();
-            $(".edit-member-option").hide();
-            $(".add-member-option").show();
-        });
-        //点击添加按钮
-        $(".add-member-recruitment-btn-click").click(function () {
-            $(".add-member-recruitment-btn").hide();
-            $(".add-member-recruitment-div").show();
-            $(".edit-member-recruitment").hide();
-            $(".add-member-recruitment").show();
-            $(".edit-member-1").hide();
-            $(".add-member-1").show();
-        });
-        //确定添加招募信息
-        $(".add-member-recruitment").click(function () {
-
-        });
-        //编辑成员招募
-        function editingMember(editbtn) {
-            $(".add-member-recruitment-btn").hide();
-            $(".add-member-recruitment-div").show();
-            $(".edit-member-recruitment").show();
-            $(".add-member-recruitment").hide();
-            $(".edit-member-1").show();
-            $(".add-member-1").hide();
-        }
-        //确定修改
-        $(".edit-member-recruitment").click(function () {
-
-        });
-        //成员招募结束
-
-        //众筹基本信息开始
-        $("#bank-name").focus(function () {
-            if ($("#bank-name").val().trim()=="") {
-                $(".bank-name-error").addClass("has-error");
-            }
-        });
-        $("#bank-name").keyup(function () {
-            if ($("#bank-name").val().trim().length > 0) {
-                $(".bank-name-error").removeClass("has-error");
-            } else {
-                $(".bank-name-error").addClass("has-error");
-            }
-        });
-        $("#bank-cards-num").focus(function () {
-            if ($("#bank-cards-num").val().trim() == "") {
-                $(".bank-cards-num-error").addClass("has-error");
-            }
-        });
-        $("#bank-cards-num").keyup(function () {
-            if ($("#bank-cards-num").val().trim().length > 0) {
-                $(".bank-cards-num-error").removeClass("has-error");
-            } else {
-                $(".bank-cards-num-error").addClass("has-error");
-            }
-        });
-        $("#bank-marker-time").focus(function () {
-            if ($("#bank-marker-time").val().trim() == "") {
-                $(".bank-marker-error").addClass("has-error");
-            }
-        });
-        $("#bank-marker-time").keyup(function () {
-            if ($("#bank-marker-time").val().trim().length > 0) {
-                $(".bank-marker-error").removeClass("has-error");
-            } else {
-                $(".bank-marker-error").addClass("has-error");
-            }
-        });
-
-        //点击添加银行卡
-        $(".add-bank-cards-click").click(function () {
-            var table_number = $(".bank-cards-table tr").length;
-            
-            if (table_number>=2) {
-                alert("只能添加一张银行卡");
-            } else {
-                if (table_number < 10) {
-                    table_number = "0" + table_number;
-                }
-                $(".add-bank-cards-btn").hide();
-                $(".add-bank-cards-div").show();
-                $(".edit-bank-cards-div").show();
-                $(".edit-bank-cards-1").hide();
-                $(".add-bank-cards-1").show();
-
-                $(".add-bank-option").html(table_number);
-            }
-           
-
-        });
-        //编辑银行卡
-        function editingBankInfo(editbtn) {
-            $(".bank-name-error").removeClass("has-error");
-            $ (".bank-cards-num-error").removeClass("has-error");
-            $(".add-bank-cards-btn").hide();
-            $(".add-bank-cards-div").show();
-            $(".edit-bank-cards-div").show();
-            $(".edit-bank-cards-1").show();
-            $(".add-bank-cards-1").hide();
-            $(".edit-bank-cards").show();
-            $(".add-bank-cards").hide();
-            var option_num = $(editbtn).parents("tr").children("td").get(0).innerHTML;
-            $(".edit-bank-option").html(option_num);
-            var bank_name = $(editbtn).parents("tr").children("td").get(1).innerHTML;
-            $("#bank-name").val(bank_name);
-            var bank_cards_num = $(editbtn).parents("tr").children("td").get(2).innerHTML;
-            $("#bank-cards-num").val(bank_cards_num);
-            var bank_address = $(editbtn).parents("tr").children("td").get(3).innerHTML;
-            $("#bank-address").val(bank_address);
-            //var bank_marker_time = $(editbtn).parents("tr").children("td").get(4).innerHTML;
-            //$("#bank-marker-time").val(bank_marker_time);
-        }
-        //取消编辑银行卡
-        $(".cancel-bank-cards").click(function () {
-            $(".add-bank-cards-btn").show();
-            $(".add-bank-cards-div").hide();
-            $(".edit-bank-cards").hide();
-            $(".add-bank-cards").show();
-            $("#bank-name").val("");
-            $("#bank-cards-num").val("");
-            $("#bank-address").val("");
-        });
-        //确定修改银行卡信息
-        $(".edit-bank-cards").click(function () {
-            var t_num = $(".edit-bank-option").html();
-            var bank_name = $("#bank-name").val();
-            var bank_cards_num = $("#bank-cards-num").val();
-            var bank_address = $("#bank-address").val();
-            //var bank_marker_time = $("#bank-marker-time").val();
-            if (bank_cards_num.trim() == "" || bank_name.trim() == "") {
-                if (bank_cards_num.trim() == "") {
-                    $(".bank-cards-num-error").addClass("has-error");
-                }
-                if (bank_name.trim() == "") {
-                    $(".bank-name-error").addClass("has-error");
-                }
-            } else {
-                $(".bank-cards-table tr").each(function () {
-                    var edit = $(this).children("td:first").text();
-                    if (t_num==edit) {
-                        $(this).children("td:eq(1)").html(bank_name);
-                        $(this).children("td:eq(2)").html(bank_cards_num);
-                        $(this).children("td:eq(3)").html(bank_address);
-                        //$(this).children("td:eq(4)").html(bank_marker_time);
-                        $("#bank-name").val("");
-                        $("#bank-cards-num").val("");
-                        $("#bank-address").val("");
-                        //$("#bank-marker-time").val("");
-                        $(".add-bank-cards-btn").show();
-                        $(".add-bank-cards-div").hide();
-                        $(".edit-bank-cards").hide();
-                        $(".add-bank-cards").show();
-                    }
-                });
-            }
-        });
-        //保存银行卡信息
-        $(".add-bank-cards").click(function () {
-            var t_num =  $(".add-bank-option").html();
-            var bank_name = $("#bank-name").val();
-            var bank_cards_num = $("#bank-cards-num").val();
-            var bank_address = $("#bank-address").val();
-            //var bank_marker_time = $("#bank-marker-time").val();
-            if (bank_cards_num.trim() == "" || bank_name.trim() == "") {
-                if (bank_cards_num.trim() == "") {
-                    $(".bank-cards-num-error").addClass("has-error");
-                }
-                if (bank_name.trim() == "") {
-                    $(".bank-name-error").addClass("has-error");
-                }
-                //if (bank_marker_time.trim() == "") {
-                //    $(".bank-marker-error").addClass("has-error");
-                //}
-            } else {
-                $(".bank-cards-table").append('<tr><td>' + t_num + '</td><td>' +
-                     bank_name + '</td><td>' + bank_cards_num + '</td><td>' +
-                     bank_address +
-                     '</td><td><a class="delete-marker" href="javascript:void(0)" onclick="deltr(this)">删除</a>&nbsp;<a  href="javascript:void(0)" onclick="editingBankInfo(this)">编辑</a></td></tr>');
-                $("#bank-name").val("");
-                $("#bank-cards-num").val("");
-                $("#bank-address").val("");
-                //$("#bank-marker-time").val("");
-                $(".add-bank-cards-btn").show();
-                $(".add-bank-cards-div").hide();
-                $(".edit-bank-cards").hide();
-                $(".add-bank-cards").show();
-            }
-        });
-        //点击添加监护人
-        $(".add-guardian-click").click(function () {
-            $(".add-bank-cards-btn").hide();
-            $(".add-bank-cards-div").hide();
-            $(".add-guardian-click-div").show();
-            $(".add-guardian-info-div").show();
-            $(".edit-guardian-1").hide();
-            $(".add-guardian-1").show();
-           
-            $(".add-bank-option").html(table_number);
-
-
-        });
-        //确定添加监护人信息
-        $(".add-guardian-info").click(function () {
-            var guardian_name = $("#guardian-name").val();
-            var guardian_call =  $("#guardian-call").val();
-            var guardian_phone =  $("#guardian-phone").val();
-            var guardian_cards_num = $("#guardian-cards-num").val();
-            $(".add-bank-cards-btn").show();
-            $(".add-guardian-click-div").hide();
-            $(".add-guardian-info-div").hide();
-            $(".edit-guardian-1").show();
-            $(".add-guardian-1").hide();
-        });
-        //点击修改监护人信息
-        function editGuardians(editBtn) {
-            var option_num = $(editBtn).parents("tr").children("td").get(0).innerHTML;
-            $(".edit-guardian-option").html(option_num);
-            var guardian_name = $(editBtn).parents("tr").children("td").get(1).innerHTML;
-            $("#guardian-name").val(guardian_name);
-            var guardian_call = $(editBtn).parents("tr").children("td").get(2).innerHTML;
-            $("#guardian-call").val(guardian_call);
-            var guardian_phone = $(editBtn).parents("tr").children("td").get(4).innerHTML;
-            $("#guardian-phone").val(guardian_phone);
-            var guardian_cards_num = $(editBtn).parents("tr").children("td").get(3).innerHTML;
-            $("#guardian-cards-num").val(guardian_cards_num);
-
-            $(".edit-guardian-info").show();
-            $(".add-guardian-info").hide();
-            $(".add-bank-cards-btn").hide();
-            $(".add-bank-cards-div").hide();
-            $(".add-guardian-click-div").show();
-            $(".add-guardian-info-div").show();
-            $(".edit-guardian-1").show();
-            $(".add-guardian-1").hide();
-        }
-        //确定修改监护人信息
-        $(".edit-guardian-info").click(function () {
-            var guardian_name = $("#guardian-name").val();
-            var guardian_call = $("#guardian-call").val();
-            var guardian_phone = $("#guardian-phone").val();
-            var guardian_cards_num = $("#guardian-cards-num").val();
-
-            $(".add-bank-cards-btn").show();
-            $(".add-guardian-click-div").hide();
-            $(".add-guardian-info-div").hide();
-            $(".edit-guardian-1").show();
-            $(".add-guardian-1").hide();
-        });
-        //众筹基本信息结束
-        //删除一行
-        function deltr(delbtn) {
-            $(delbtn).parents("tr").remove();
-        };
-
-        //图片上传本地预览
-        $("#project-cover-image").uploadPreview({ Img: "preview-img", Width: 220, Height: 160, ImgType: ["gif", "jpeg", "jpg", "bmp", "png"], Callback: function () { } });
     </script>
 
 </body>
